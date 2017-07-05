@@ -2,18 +2,22 @@
  */
 package pascalito.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+import pascalito.Comando;
 import pascalito.Expressao;
 import pascalito.Loop;
 import pascalito.PascalitoPackage;
-import pascalito.SeqComandos;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,14 +45,14 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	protected Expressao se;
 
 	/**
-	 * The cached value of the '{@link #getFaca() <em>Faca</em>}' containment reference.
+	 * The cached value of the '{@link #getFaca() <em>Faca</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFaca()
 	 * @generated
 	 * @ordered
 	 */
-	protected SeqComandos faca;
+	protected EList<Comando> faca;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,42 +121,11 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeqComandos getFaca() {
+	public EList<Comando> getFaca() {
+		if (faca == null) {
+			faca = new EObjectContainmentEList<Comando>(Comando.class, this, PascalitoPackage.LOOP__FACA);
+		}
 		return faca;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetFaca(SeqComandos newFaca, NotificationChain msgs) {
-		SeqComandos oldFaca = faca;
-		faca = newFaca;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.LOOP__FACA, oldFaca, newFaca);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFaca(SeqComandos newFaca) {
-		if (newFaca != faca) {
-			NotificationChain msgs = null;
-			if (faca != null)
-				msgs = ((InternalEObject)faca).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.LOOP__FACA, null, msgs);
-			if (newFaca != null)
-				msgs = ((InternalEObject)newFaca).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.LOOP__FACA, null, msgs);
-			msgs = basicSetFaca(newFaca, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.LOOP__FACA, newFaca, newFaca));
 	}
 
 	/**
@@ -166,7 +139,7 @@ public class LoopImpl extends ComandoImpl implements Loop {
 			case PascalitoPackage.LOOP__SE:
 				return basicSetSe(null, msgs);
 			case PascalitoPackage.LOOP__FACA:
-				return basicSetFaca(null, msgs);
+				return ((InternalEList<?>)getFaca()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -192,6 +165,7 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -199,7 +173,8 @@ public class LoopImpl extends ComandoImpl implements Loop {
 				setSe((Expressao)newValue);
 				return;
 			case PascalitoPackage.LOOP__FACA:
-				setFaca((SeqComandos)newValue);
+				getFaca().clear();
+				getFaca().addAll((Collection<? extends Comando>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,7 +192,7 @@ public class LoopImpl extends ComandoImpl implements Loop {
 				setSe((Expressao)null);
 				return;
 			case PascalitoPackage.LOOP__FACA:
-				setFaca((SeqComandos)null);
+				getFaca().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -234,7 +209,7 @@ public class LoopImpl extends ComandoImpl implements Loop {
 			case PascalitoPackage.LOOP__SE:
 				return se != null;
 			case PascalitoPackage.LOOP__FACA:
-				return faca != null;
+				return faca != null && !faca.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

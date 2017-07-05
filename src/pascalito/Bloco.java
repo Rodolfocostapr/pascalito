@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link pascalito.Bloco#getDefvariavel <em>Defvariavel</em>}</li>
  *   <li>{@link pascalito.Bloco#getDefprocedimento <em>Defprocedimento</em>}</li>
- *   <li>{@link pascalito.Bloco#getSeqcomando <em>Seqcomando</em>}</li>
+ *   <li>{@link pascalito.Bloco#getExecuta <em>Executa</em>}</li>
  * </ul>
  *
  * @see pascalito.PascalitoPackage#getBloco()
@@ -58,29 +58,19 @@ public interface Bloco extends EObject {
 	EList<Procedimento> getDefprocedimento();
 
 	/**
-	 * Returns the value of the '<em><b>Seqcomando</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Executa</b></em>' containment reference list.
+	 * The list contents are of type {@link pascalito.Comando}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Seqcomando</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Executa</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Seqcomando</em>' containment reference.
-	 * @see #setSeqcomando(SeqComandos)
-	 * @see pascalito.PascalitoPackage#getBloco_Seqcomando()
+	 * @return the value of the '<em>Executa</em>' containment reference list.
+	 * @see pascalito.PascalitoPackage#getBloco_Executa()
 	 * @model containment="true"
 	 * @generated
 	 */
-	SeqComandos getSeqcomando();
-
-	/**
-	 * Sets the value of the '{@link pascalito.Bloco#getSeqcomando <em>Seqcomando</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Seqcomando</em>' containment reference.
-	 * @see #getSeqcomando()
-	 * @generated
-	 */
-	void setSeqcomando(SeqComandos value);
+	EList<Comando> getExecuta();
 
 } // Bloco

@@ -23,7 +23,6 @@ import pascalito.PascalitoFactory;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
 import pascalito.Programa;
-import pascalito.SeqComandos;
 import pascalito.Variavel;
 import pascalito.newRole15;
 
@@ -85,7 +84,6 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 			case PascalitoPackage.NEW_ROLE15: return createnewRole15();
 			case PascalitoPackage.VARIAVEL: return createVariavel();
 			case PascalitoPackage.PROCEDIMENTO: return createProcedimento();
-			case PascalitoPackage.SEQ_COMANDOS: return createSeqComandos();
 			case PascalitoPackage.LISTA_PARMETROS: return createListaParmetros();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -230,16 +228,6 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	public Procedimento createProcedimento() {
 		ProcedimentoImpl procedimento = new ProcedimentoImpl();
 		return procedimento;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SeqComandos createSeqComandos() {
-		SeqComandosImpl seqComandos = new SeqComandosImpl();
-		return seqComandos;
 	}
 
 	/**

@@ -131,13 +131,13 @@ public interface PascalitoPackage extends EPackage {
 	int BLOCO__DEFPROCEDIMENTO = 1;
 
 	/**
-	 * The feature id for the '<em><b>Seqcomando</b></em>' containment reference.
+	 * The feature id for the '<em><b>Executa</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCO__SEQCOMANDO = 2;
+	int BLOCO__EXECUTA = 2;
 
 	/**
 	 * The number of structural features of the '<em>Bloco</em>' class.
@@ -380,7 +380,7 @@ public interface PascalitoPackage extends EPackage {
 	int DESVIO__SE = COMANDO_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Faca</b></em>' containment reference.
+	 * The feature id for the '<em><b>Faca</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -389,7 +389,7 @@ public interface PascalitoPackage extends EPackage {
 	int DESVIO__FACA = COMANDO_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Se Nao</b></em>' containment reference.
+	 * The feature id for the '<em><b>Se Nao</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -435,7 +435,7 @@ public interface PascalitoPackage extends EPackage {
 	int LOOP__SE = COMANDO_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Faca</b></em>' containment reference.
+	 * The feature id for the '<em><b>Faca</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -847,44 +847,6 @@ public interface PascalitoPackage extends EPackage {
 	int PROCEDIMENTO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.SeqComandosImpl <em>Seq Comandos</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.SeqComandosImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getSeqComandos()
-	 * @generated
-	 */
-	int SEQ_COMANDOS = 16;
-
-	/**
-	 * The feature id for the '<em><b>Comando</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQ_COMANDOS__COMANDO = 0;
-
-	/**
-	 * The number of structural features of the '<em>Seq Comandos</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQ_COMANDOS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Seq Comandos</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQ_COMANDOS_OPERATION_COUNT = 0;
-
-
-	/**
 	 * The meta object id for the '{@link pascalito.impl.ListaParmetrosImpl <em>Lista Parmetros</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -892,7 +854,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @see pascalito.impl.PascalitoPackageImpl#getListaParmetros()
 	 * @generated
 	 */
-	int LISTA_PARMETROS = 17;
+	int LISTA_PARMETROS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Variavel</b></em>' containment reference list.
@@ -987,15 +949,15 @@ public interface PascalitoPackage extends EPackage {
 	EReference getBloco_Defprocedimento();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Bloco#getSeqcomando <em>Seqcomando</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Bloco#getExecuta <em>Executa</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Seqcomando</em>'.
-	 * @see pascalito.Bloco#getSeqcomando()
+	 * @return the meta object for the containment reference list '<em>Executa</em>'.
+	 * @see pascalito.Bloco#getExecuta()
 	 * @see #getBloco()
 	 * @generated
 	 */
-	EReference getBloco_Seqcomando();
+	EReference getBloco_Executa();
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.CallVariavel <em>Call Variavel</em>}'.
@@ -1114,10 +1076,10 @@ public interface PascalitoPackage extends EPackage {
 	EReference getDesvio_Se();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Desvio#getFaca <em>Faca</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Desvio#getFaca <em>Faca</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Faca</em>'.
+	 * @return the meta object for the containment reference list '<em>Faca</em>'.
 	 * @see pascalito.Desvio#getFaca()
 	 * @see #getDesvio()
 	 * @generated
@@ -1125,10 +1087,10 @@ public interface PascalitoPackage extends EPackage {
 	EReference getDesvio_Faca();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Desvio#getSeNao <em>Se Nao</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Desvio#getSeNao <em>Se Nao</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Se Nao</em>'.
+	 * @return the meta object for the containment reference list '<em>Se Nao</em>'.
 	 * @see pascalito.Desvio#getSeNao()
 	 * @see #getDesvio()
 	 * @generated
@@ -1157,10 +1119,10 @@ public interface PascalitoPackage extends EPackage {
 	EReference getLoop_Se();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Loop#getFaca <em>Faca</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Loop#getFaca <em>Faca</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Faca</em>'.
+	 * @return the meta object for the containment reference list '<em>Faca</em>'.
 	 * @see pascalito.Loop#getFaca()
 	 * @see #getLoop()
 	 * @generated
@@ -1446,27 +1408,6 @@ public interface PascalitoPackage extends EPackage {
 	EReference getProcedimento_Listaparmetros();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.SeqComandos <em>Seq Comandos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Seq Comandos</em>'.
-	 * @see pascalito.SeqComandos
-	 * @generated
-	 */
-	EClass getSeqComandos();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.SeqComandos#getComando <em>Comando</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Comando</em>'.
-	 * @see pascalito.SeqComandos#getComando()
-	 * @see #getSeqComandos()
-	 * @generated
-	 */
-	EReference getSeqComandos_Comando();
-
-	/**
 	 * Returns the meta object for class '{@link pascalito.ListaParmetros <em>Lista Parmetros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1563,12 +1504,12 @@ public interface PascalitoPackage extends EPackage {
 		EReference BLOCO__DEFPROCEDIMENTO = eINSTANCE.getBloco_Defprocedimento();
 
 		/**
-		 * The meta object literal for the '<em><b>Seqcomando</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Executa</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BLOCO__SEQCOMANDO = eINSTANCE.getBloco_Seqcomando();
+		EReference BLOCO__EXECUTA = eINSTANCE.getBloco_Executa();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.CallVariavelImpl <em>Call Variavel</em>}' class.
@@ -1669,7 +1610,7 @@ public interface PascalitoPackage extends EPackage {
 		EReference DESVIO__SE = eINSTANCE.getDesvio_Se();
 
 		/**
-		 * The meta object literal for the '<em><b>Faca</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Faca</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1677,7 +1618,7 @@ public interface PascalitoPackage extends EPackage {
 		EReference DESVIO__FACA = eINSTANCE.getDesvio_Faca();
 
 		/**
-		 * The meta object literal for the '<em><b>Se Nao</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Se Nao</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1703,7 +1644,7 @@ public interface PascalitoPackage extends EPackage {
 		EReference LOOP__SE = eINSTANCE.getLoop_Se();
 
 		/**
-		 * The meta object literal for the '<em><b>Faca</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Faca</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1933,24 +1874,6 @@ public interface PascalitoPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROCEDIMENTO__LISTAPARMETROS = eINSTANCE.getProcedimento_Listaparmetros();
-
-		/**
-		 * The meta object literal for the '{@link pascalito.impl.SeqComandosImpl <em>Seq Comandos</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.SeqComandosImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getSeqComandos()
-		 * @generated
-		 */
-		EClass SEQ_COMANDOS = eINSTANCE.getSeqComandos();
-
-		/**
-		 * The meta object literal for the '<em><b>Comando</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEQ_COMANDOS__COMANDO = eINSTANCE.getSeqComandos_Comando();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.ListaParmetrosImpl <em>Lista Parmetros</em>}' class.

@@ -24,7 +24,6 @@ import pascalito.PascalitoFactory;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
 import pascalito.Programa;
-import pascalito.SeqComandos;
 import pascalito.Variavel;
 import pascalito.newRole15;
 
@@ -146,13 +145,6 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * @generated
 	 */
 	private EClass procedimentoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass seqComandosEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,7 +273,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBloco_Seqcomando() {
+	public EReference getBloco_Executa() {
 		return (EReference)blocoEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -668,24 +660,6 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSeqComandos() {
-		return seqComandosEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSeqComandos_Comando() {
-		return (EReference)seqComandosEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getListaParmetros() {
 		return listaParmetrosEClass;
 	}
@@ -734,7 +708,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		blocoEClass = createEClass(BLOCO);
 		createEReference(blocoEClass, BLOCO__DEFVARIAVEL);
 		createEReference(blocoEClass, BLOCO__DEFPROCEDIMENTO);
-		createEReference(blocoEClass, BLOCO__SEQCOMANDO);
+		createEReference(blocoEClass, BLOCO__EXECUTA);
 
 		callVariavelEClass = createEClass(CALL_VARIAVEL);
 		createEReference(callVariavelEClass, CALL_VARIAVEL__REPRESENTA);
@@ -792,9 +766,6 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		createEAttribute(procedimentoEClass, PROCEDIMENTO__IDENTIFICADOR);
 		createEReference(procedimentoEClass, PROCEDIMENTO__LISTAPARMETROS);
 
-		seqComandosEClass = createEClass(SEQ_COMANDOS);
-		createEReference(seqComandosEClass, SEQ_COMANDOS__COMANDO);
-
 		listaParmetrosEClass = createEClass(LISTA_PARMETROS);
 		createEReference(listaParmetrosEClass, LISTA_PARMETROS__VARIAVEL);
 	}
@@ -845,7 +816,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		initEClass(blocoEClass, Bloco.class, "Bloco", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBloco_Defvariavel(), this.getVariavel(), null, "defvariavel", null, 0, -1, Bloco.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBloco_Defprocedimento(), this.getProcedimento(), null, "defprocedimento", null, 0, -1, Bloco.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBloco_Seqcomando(), this.getSeqComandos(), null, "seqcomando", null, 0, 1, Bloco.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBloco_Executa(), this.getComando(), null, "executa", null, 0, -1, Bloco.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(callVariavelEClass, CallVariavel.class, "CallVariavel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCallVariavel_Representa(), this.getVariavel(), null, "representa", null, 1, 1, CallVariavel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -862,12 +833,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 
 		initEClass(desvioEClass, Desvio.class, "Desvio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDesvio_Se(), this.getExpressao(), null, "se", null, 1, 1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDesvio_Faca(), this.getSeqComandos(), null, "faca", null, 1, 1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDesvio_SeNao(), this.getSeqComandos(), null, "seNao", null, 0, 1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDesvio_Faca(), this.getComando(), null, "faca", null, 1, -1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDesvio_SeNao(), this.getComando(), null, "seNao", null, 0, -1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoop_Se(), this.getExpressao(), null, "se", null, 1, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoop_Faca(), this.getSeqComandos(), null, "faca", null, 1, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_Faca(), this.getComando(), null, "faca", null, 1, -1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressaoEClass, Expressao.class, "Expressao", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpressao_Prioridade(), ecorePackage.getEBigDecimal(), "Prioridade", null, 0, 1, Expressao.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -902,9 +873,6 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		initEReference(getProcedimento_Bloco(), this.getBloco(), null, "bloco", null, 1, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcedimento_Identificador(), ecorePackage.getEString(), "Identificador", null, 0, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcedimento_Listaparmetros(), this.getListaParmetros(), null, "listaparmetros", null, 1, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(seqComandosEClass, SeqComandos.class, "SeqComandos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSeqComandos_Comando(), this.getComando(), null, "comando", null, 1, -1, SeqComandos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(listaParmetrosEClass, ListaParmetros.class, "ListaParmetros", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getListaParmetros_Variavel(), this.getVariavel(), null, "variavel", null, 0, -1, ListaParmetros.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

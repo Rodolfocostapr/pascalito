@@ -3,25 +3,21 @@
 package pascalito.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import pascalito.Bloco;
+import pascalito.Comando;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
-import pascalito.SeqComandos;
 import pascalito.Variavel;
 
 /**
@@ -34,7 +30,7 @@ import pascalito.Variavel;
  * <ul>
  *   <li>{@link pascalito.impl.BlocoImpl#getDefvariavel <em>Defvariavel</em>}</li>
  *   <li>{@link pascalito.impl.BlocoImpl#getDefprocedimento <em>Defprocedimento</em>}</li>
- *   <li>{@link pascalito.impl.BlocoImpl#getSeqcomando <em>Seqcomando</em>}</li>
+ *   <li>{@link pascalito.impl.BlocoImpl#getExecuta <em>Executa</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,14 +57,14 @@ public class BlocoImpl extends MinimalEObjectImpl.Container implements Bloco {
 	protected EList<Procedimento> defprocedimento;
 
 	/**
-	 * The cached value of the '{@link #getSeqcomando() <em>Seqcomando</em>}' containment reference.
+	 * The cached value of the '{@link #getExecuta() <em>Executa</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeqcomando()
+	 * @see #getExecuta()
 	 * @generated
 	 * @ordered
 	 */
-	protected SeqComandos seqcomando;
+	protected EList<Comando> executa;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,42 +114,11 @@ public class BlocoImpl extends MinimalEObjectImpl.Container implements Bloco {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeqComandos getSeqcomando() {
-		return seqcomando;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSeqcomando(SeqComandos newSeqcomando, NotificationChain msgs) {
-		SeqComandos oldSeqcomando = seqcomando;
-		seqcomando = newSeqcomando;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.BLOCO__SEQCOMANDO, oldSeqcomando, newSeqcomando);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<Comando> getExecuta() {
+		if (executa == null) {
+			executa = new EObjectContainmentEList<Comando>(Comando.class, this, PascalitoPackage.BLOCO__EXECUTA);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSeqcomando(SeqComandos newSeqcomando) {
-		if (newSeqcomando != seqcomando) {
-			NotificationChain msgs = null;
-			if (seqcomando != null)
-				msgs = ((InternalEObject)seqcomando).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.BLOCO__SEQCOMANDO, null, msgs);
-			if (newSeqcomando != null)
-				msgs = ((InternalEObject)newSeqcomando).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.BLOCO__SEQCOMANDO, null, msgs);
-			msgs = basicSetSeqcomando(newSeqcomando, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.BLOCO__SEQCOMANDO, newSeqcomando, newSeqcomando));
+		return executa;
 	}
 
 	/**
@@ -168,8 +133,8 @@ public class BlocoImpl extends MinimalEObjectImpl.Container implements Bloco {
 				return ((InternalEList<?>)getDefvariavel()).basicRemove(otherEnd, msgs);
 			case PascalitoPackage.BLOCO__DEFPROCEDIMENTO:
 				return ((InternalEList<?>)getDefprocedimento()).basicRemove(otherEnd, msgs);
-			case PascalitoPackage.BLOCO__SEQCOMANDO:
-				return basicSetSeqcomando(null, msgs);
+			case PascalitoPackage.BLOCO__EXECUTA:
+				return ((InternalEList<?>)getExecuta()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -186,8 +151,8 @@ public class BlocoImpl extends MinimalEObjectImpl.Container implements Bloco {
 				return getDefvariavel();
 			case PascalitoPackage.BLOCO__DEFPROCEDIMENTO:
 				return getDefprocedimento();
-			case PascalitoPackage.BLOCO__SEQCOMANDO:
-				return getSeqcomando();
+			case PascalitoPackage.BLOCO__EXECUTA:
+				return getExecuta();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -209,8 +174,9 @@ public class BlocoImpl extends MinimalEObjectImpl.Container implements Bloco {
 				getDefprocedimento().clear();
 				getDefprocedimento().addAll((Collection<? extends Procedimento>)newValue);
 				return;
-			case PascalitoPackage.BLOCO__SEQCOMANDO:
-				setSeqcomando((SeqComandos)newValue);
+			case PascalitoPackage.BLOCO__EXECUTA:
+				getExecuta().clear();
+				getExecuta().addAll((Collection<? extends Comando>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -230,8 +196,8 @@ public class BlocoImpl extends MinimalEObjectImpl.Container implements Bloco {
 			case PascalitoPackage.BLOCO__DEFPROCEDIMENTO:
 				getDefprocedimento().clear();
 				return;
-			case PascalitoPackage.BLOCO__SEQCOMANDO:
-				setSeqcomando((SeqComandos)null);
+			case PascalitoPackage.BLOCO__EXECUTA:
+				getExecuta().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -249,8 +215,8 @@ public class BlocoImpl extends MinimalEObjectImpl.Container implements Bloco {
 				return defvariavel != null && !defvariavel.isEmpty();
 			case PascalitoPackage.BLOCO__DEFPROCEDIMENTO:
 				return defprocedimento != null && !defprocedimento.isEmpty();
-			case PascalitoPackage.BLOCO__SEQCOMANDO:
-				return seqcomando != null;
+			case PascalitoPackage.BLOCO__EXECUTA:
+				return executa != null && !executa.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

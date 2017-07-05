@@ -2,6 +2,8 @@
  */
 package pascalito;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -49,55 +51,35 @@ public interface Desvio extends Comando {
 	void setSe(Expressao value);
 
 	/**
-	 * Returns the value of the '<em><b>Faca</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Faca</b></em>' containment reference list.
+	 * The list contents are of type {@link pascalito.Comando}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Faca</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Faca</em>' containment reference.
-	 * @see #setFaca(SeqComandos)
+	 * @return the value of the '<em>Faca</em>' containment reference list.
 	 * @see pascalito.PascalitoPackage#getDesvio_Faca()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	SeqComandos getFaca();
+	EList<Comando> getFaca();
 
 	/**
-	 * Sets the value of the '{@link pascalito.Desvio#getFaca <em>Faca</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Faca</em>' containment reference.
-	 * @see #getFaca()
-	 * @generated
-	 */
-	void setFaca(SeqComandos value);
-
-	/**
-	 * Returns the value of the '<em><b>Se Nao</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Se Nao</b></em>' containment reference list.
+	 * The list contents are of type {@link pascalito.Comando}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Se Nao</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Se Nao</em>' containment reference.
-	 * @see #setSeNao(SeqComandos)
+	 * @return the value of the '<em>Se Nao</em>' containment reference list.
 	 * @see pascalito.PascalitoPackage#getDesvio_SeNao()
 	 * @model containment="true"
 	 * @generated
 	 */
-	SeqComandos getSeNao();
-
-	/**
-	 * Sets the value of the '{@link pascalito.Desvio#getSeNao <em>Se Nao</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Se Nao</em>' containment reference.
-	 * @see #getSeNao()
-	 * @generated
-	 */
-	void setSeNao(SeqComandos value);
+	EList<Comando> getSeNao();
 
 } // Desvio

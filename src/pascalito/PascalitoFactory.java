@@ -148,15 +148,6 @@ public interface PascalitoFactory extends EFactory {
 	Procedimento createProcedimento();
 
 	/**
-	 * Returns a new object of class '<em>Seq Comandos</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Seq Comandos</em>'.
-	 * @generated
-	 */
-	SeqComandos createSeqComandos();
-
-	/**
 	 * Returns a new object of class '<em>Lista Parmetros</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

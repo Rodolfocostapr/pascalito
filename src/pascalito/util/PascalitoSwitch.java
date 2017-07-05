@@ -21,7 +21,6 @@ import pascalito.Loop;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
 import pascalito.Programa;
-import pascalito.SeqComandos;
 import pascalito.Variavel;
 import pascalito.newRole15;
 
@@ -184,12 +183,6 @@ public class PascalitoSwitch<T> extends Switch<T> {
 			case PascalitoPackage.PROCEDIMENTO: {
 				Procedimento procedimento = (Procedimento)theEObject;
 				T result = caseProcedimento(procedimento);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PascalitoPackage.SEQ_COMANDOS: {
-				SeqComandos seqComandos = (SeqComandos)theEObject;
-				T result = caseSeqComandos(seqComandos);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -440,21 +433,6 @@ public class PascalitoSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProcedimento(Procedimento object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Seq Comandos</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Seq Comandos</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSeqComandos(SeqComandos object) {
 		return null;
 	}
 

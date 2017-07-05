@@ -2,18 +2,22 @@
  */
 package pascalito.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+import pascalito.Comando;
 import pascalito.Desvio;
 import pascalito.Expressao;
 import pascalito.PascalitoPackage;
-import pascalito.SeqComandos;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,24 +46,24 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 	protected Expressao se;
 
 	/**
-	 * The cached value of the '{@link #getFaca() <em>Faca</em>}' containment reference.
+	 * The cached value of the '{@link #getFaca() <em>Faca</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFaca()
 	 * @generated
 	 * @ordered
 	 */
-	protected SeqComandos faca;
+	protected EList<Comando> faca;
 
 	/**
-	 * The cached value of the '{@link #getSeNao() <em>Se Nao</em>}' containment reference.
+	 * The cached value of the '{@link #getSeNao() <em>Se Nao</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSeNao()
 	 * @generated
 	 * @ordered
 	 */
-	protected SeqComandos seNao;
+	protected EList<Comando> seNao;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,7 +132,10 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeqComandos getFaca() {
+	public EList<Comando> getFaca() {
+		if (faca == null) {
+			faca = new EObjectContainmentEList<Comando>(Comando.class, this, PascalitoPackage.DESVIO__FACA);
+		}
 		return faca;
 	}
 
@@ -137,76 +144,11 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFaca(SeqComandos newFaca, NotificationChain msgs) {
-		SeqComandos oldFaca = faca;
-		faca = newFaca;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.DESVIO__FACA, oldFaca, newFaca);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<Comando> getSeNao() {
+		if (seNao == null) {
+			seNao = new EObjectContainmentEList<Comando>(Comando.class, this, PascalitoPackage.DESVIO__SE_NAO);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFaca(SeqComandos newFaca) {
-		if (newFaca != faca) {
-			NotificationChain msgs = null;
-			if (faca != null)
-				msgs = ((InternalEObject)faca).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.DESVIO__FACA, null, msgs);
-			if (newFaca != null)
-				msgs = ((InternalEObject)newFaca).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.DESVIO__FACA, null, msgs);
-			msgs = basicSetFaca(newFaca, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.DESVIO__FACA, newFaca, newFaca));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SeqComandos getSeNao() {
 		return seNao;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSeNao(SeqComandos newSeNao, NotificationChain msgs) {
-		SeqComandos oldSeNao = seNao;
-		seNao = newSeNao;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.DESVIO__SE_NAO, oldSeNao, newSeNao);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSeNao(SeqComandos newSeNao) {
-		if (newSeNao != seNao) {
-			NotificationChain msgs = null;
-			if (seNao != null)
-				msgs = ((InternalEObject)seNao).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.DESVIO__SE_NAO, null, msgs);
-			if (newSeNao != null)
-				msgs = ((InternalEObject)newSeNao).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.DESVIO__SE_NAO, null, msgs);
-			msgs = basicSetSeNao(newSeNao, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.DESVIO__SE_NAO, newSeNao, newSeNao));
 	}
 
 	/**
@@ -220,9 +162,9 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 			case PascalitoPackage.DESVIO__SE:
 				return basicSetSe(null, msgs);
 			case PascalitoPackage.DESVIO__FACA:
-				return basicSetFaca(null, msgs);
+				return ((InternalEList<?>)getFaca()).basicRemove(otherEnd, msgs);
 			case PascalitoPackage.DESVIO__SE_NAO:
-				return basicSetSeNao(null, msgs);
+				return ((InternalEList<?>)getSeNao()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -250,6 +192,7 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -257,10 +200,12 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 				setSe((Expressao)newValue);
 				return;
 			case PascalitoPackage.DESVIO__FACA:
-				setFaca((SeqComandos)newValue);
+				getFaca().clear();
+				getFaca().addAll((Collection<? extends Comando>)newValue);
 				return;
 			case PascalitoPackage.DESVIO__SE_NAO:
-				setSeNao((SeqComandos)newValue);
+				getSeNao().clear();
+				getSeNao().addAll((Collection<? extends Comando>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -278,10 +223,10 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 				setSe((Expressao)null);
 				return;
 			case PascalitoPackage.DESVIO__FACA:
-				setFaca((SeqComandos)null);
+				getFaca().clear();
 				return;
 			case PascalitoPackage.DESVIO__SE_NAO:
-				setSeNao((SeqComandos)null);
+				getSeNao().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -298,9 +243,9 @@ public class DesvioImpl extends ComandoImpl implements Desvio {
 			case PascalitoPackage.DESVIO__SE:
 				return se != null;
 			case PascalitoPackage.DESVIO__FACA:
-				return faca != null;
+				return faca != null && !faca.isEmpty();
 			case PascalitoPackage.DESVIO__SE_NAO:
-				return seNao != null;
+				return seNao != null && !seNao.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

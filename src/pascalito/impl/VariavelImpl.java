@@ -20,7 +20,7 @@ import pascalito.Variavel;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pascalito.impl.VariavelImpl#getNome <em>Nome</em>}</li>
+ *   <li>{@link pascalito.impl.VariavelImpl#getName <em>Name</em>}</li>
  *   <li>{@link pascalito.impl.VariavelImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link pascalito.impl.VariavelImpl#getValor <em>Valor</em>}</li>
  * </ul>
@@ -29,24 +29,24 @@ import pascalito.Variavel;
  */
 public class VariavelImpl extends MinimalEObjectImpl.Container implements Variavel {
 	/**
-	 * The default value of the '{@link #getNome() <em>Nome</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNome()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOME_EDEFAULT = "";
+	protected static final String NAME_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getNome() <em>Nome</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNome()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nome = NOME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
@@ -112,8 +112,8 @@ public class VariavelImpl extends MinimalEObjectImpl.Container implements Variav
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -121,11 +121,11 @@ public class VariavelImpl extends MinimalEObjectImpl.Container implements Variav
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNome(String newNome) {
-		String oldNome = nome;
-		nome = newNome;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.VARIAVEL__NOME, oldNome, nome));
+			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.VARIAVEL__NAME, oldName, name));
 	}
 
 	/**
@@ -178,8 +178,8 @@ public class VariavelImpl extends MinimalEObjectImpl.Container implements Variav
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PascalitoPackage.VARIAVEL__NOME:
-				return getNome();
+			case PascalitoPackage.VARIAVEL__NAME:
+				return getName();
 			case PascalitoPackage.VARIAVEL__TIPO:
 				return getTipo();
 			case PascalitoPackage.VARIAVEL__VALOR:
@@ -196,8 +196,8 @@ public class VariavelImpl extends MinimalEObjectImpl.Container implements Variav
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PascalitoPackage.VARIAVEL__NOME:
-				setNome((String)newValue);
+			case PascalitoPackage.VARIAVEL__NAME:
+				setName((String)newValue);
 				return;
 			case PascalitoPackage.VARIAVEL__TIPO:
 				setTipo((String)newValue);
@@ -217,8 +217,8 @@ public class VariavelImpl extends MinimalEObjectImpl.Container implements Variav
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.VARIAVEL__NOME:
-				setNome(NOME_EDEFAULT);
+			case PascalitoPackage.VARIAVEL__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case PascalitoPackage.VARIAVEL__TIPO:
 				setTipo(TIPO_EDEFAULT);
@@ -238,8 +238,8 @@ public class VariavelImpl extends MinimalEObjectImpl.Container implements Variav
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.VARIAVEL__NOME:
-				return NOME_EDEFAULT == null ? nome != null : !NOME_EDEFAULT.equals(nome);
+			case PascalitoPackage.VARIAVEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PascalitoPackage.VARIAVEL__TIPO:
 				return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
 			case PascalitoPackage.VARIAVEL__VALOR:
@@ -258,8 +258,8 @@ public class VariavelImpl extends MinimalEObjectImpl.Container implements Variav
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Nome: ");
-		result.append(nome);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(", Tipo: ");
 		result.append(tipo);
 		result.append(", Valor: ");

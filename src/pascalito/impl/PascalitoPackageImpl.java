@@ -597,7 +597,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVariavel_Nome() {
+	public EAttribute getVariavel_Name() {
 		return (EAttribute)variavelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -757,7 +757,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		newRole15EClass = createEClass(NEW_ROLE15);
 
 		variavelEClass = createEClass(VARIAVEL);
-		createEAttribute(variavelEClass, VARIAVEL__NOME);
+		createEAttribute(variavelEClass, VARIAVEL__NAME);
 		createEAttribute(variavelEClass, VARIAVEL__TIPO);
 		createEAttribute(variavelEClass, VARIAVEL__VALOR);
 
@@ -865,7 +865,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		initEClass(newRole15EClass, newRole15.class, "newRole15", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(variavelEClass, Variavel.class, "Variavel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVariavel_Nome(), ecorePackage.getEString(), "Nome", "", 0, 1, Variavel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariavel_Name(), ecorePackage.getEString(), "name", "", 0, 1, Variavel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariavel_Tipo(), ecorePackage.getEString(), "Tipo", null, 0, 1, Variavel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariavel_Valor(), ecorePackage.getEString(), "Valor", null, 0, 1, Variavel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

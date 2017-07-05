@@ -59,7 +59,7 @@
     </genClasses>
     <genClasses ecoreClass="pascalito.ecore#//newRole15"/>
     <genClasses ecoreClass="pascalito.ecore#//Variavel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variavel/Nome"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variavel/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variavel/Tipo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variavel/Valor"/>
     </genClasses>

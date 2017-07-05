@@ -747,13 +747,13 @@ public interface PascalitoPackage extends EPackage {
 	int VARIAVEL = 14;
 
 	/**
-	 * The feature id for the '<em><b>Nome</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIAVEL__NOME = 0;
+	int VARIAVEL__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
@@ -1332,15 +1332,15 @@ public interface PascalitoPackage extends EPackage {
 	EClass getVariavel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Variavel#getNome <em>Nome</em>}'.
+	 * Returns the meta object for the attribute '{@link pascalito.Variavel#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nome</em>'.
-	 * @see pascalito.Variavel#getNome()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pascalito.Variavel#getName()
 	 * @see #getVariavel()
 	 * @generated
 	 */
-	EAttribute getVariavel_Nome();
+	EAttribute getVariavel_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link pascalito.Variavel#getTipo <em>Tipo</em>}'.
@@ -1818,12 +1818,12 @@ public interface PascalitoPackage extends EPackage {
 		EClass VARIAVEL = eINSTANCE.getVariavel();
 
 		/**
-		 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VARIAVEL__NOME = eINSTANCE.getVariavel_Nome();
+		EAttribute VARIAVEL__NAME = eINSTANCE.getVariavel_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.

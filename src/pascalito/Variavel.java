@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pascalito.Variavel#getNome <em>Nome</em>}</li>
+ *   <li>{@link pascalito.Variavel#getName <em>Name</em>}</li>
  *   <li>{@link pascalito.Variavel#getTipo <em>Tipo</em>}</li>
  *   <li>{@link pascalito.Variavel#getValor <em>Valor</em>}</li>
  * </ul>
@@ -24,31 +24,31 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Variavel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Nome</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nome</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nome</em>' attribute.
-	 * @see #setNome(String)
-	 * @see pascalito.PascalitoPackage#getVariavel_Nome()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pascalito.PascalitoPackage#getVariavel_Name()
 	 * @model default=""
 	 * @generated
 	 */
-	String getNome();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link pascalito.Variavel#getNome <em>Nome</em>}' attribute.
+	 * Sets the value of the '{@link pascalito.Variavel#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nome</em>' attribute.
-	 * @see #getNome()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setNome(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Tipo</b></em>' attribute.

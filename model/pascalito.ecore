@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pascalito" nsURI="http://www.example.org/pascalito" nsPrefix="pascalito">
+  <eClassifiers xsi:type="ecore:EClass" name="Programa">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Ident" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bloco" lowerBound="1" eType="#//Bloco"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bloco">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defvariavel" upperBound="-1"
+        eType="#//Variavel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defprocedimento" upperBound="-1"
+        eType="#//Procedimento" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seqcomando" eType="#//SeqComandos"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CallVariavel" eSuperTypes="#//Expressao">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="representa" lowerBound="1"
+        eType="#//Variavel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comando" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CallProcedimento" eSuperTypes="#//Comando">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definido" lowerBound="1"
+        eType="#//Procedimento"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
+        eType="#//Expressao" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atribuicao" eSuperTypes="#//Comando">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atribui" lowerBound="1"
+        eType="#//Variavel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atribuiResultado" lowerBound="1"
+        eType="#//Expressao" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Desvio" eSuperTypes="#//Comando">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="se" lowerBound="1" eType="#//Expressao"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" lowerBound="1" eType="#//SeqComandos"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seNao" eType="#//SeqComandos"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Comando">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="se" lowerBound="1" eType="#//Expressao"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" lowerBound="1" eType="#//SeqComandos"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expressao" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prioridade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Number" eSuperTypes="#//Expressao">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinLogica" eSuperTypes="#//Expressao">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoEsq" lowerBound="1"
+        eType="#//Expressao" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoDir" lowerBound="1"
+        eType="#//Expressao" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comutativa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBin" eSuperTypes="#//Expressao">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoDir" lowerBound="1"
+        eType="#//Expressao" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoEsq" lowerBound="1"
+        eType="#//Expressao" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comutativa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpNeg" eSuperTypes="#//Expressao">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nega" lowerBound="1" eType="#//Expressao"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="newRole15">
+    <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+      <details key="archetype" value="Role"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variavel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Procedimento">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bloco" lowerBound="1" eType="#//Bloco"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Identificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaparmetros" lowerBound="1"
+        eType="#//ListaParmetros" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SeqComandos">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comando" lowerBound="1"
+        upperBound="-1" eType="#//Comando" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListaParmetros">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variavel" upperBound="-1"
+        eType="#//Variavel" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

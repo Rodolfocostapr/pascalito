@@ -820,13 +820,13 @@ public interface PascalitoPackage extends EPackage {
 	int PROCEDIMENTO__IDENTIFICADOR = 1;
 
 	/**
-	 * The feature id for the '<em><b>Listaparmetros</b></em>' containment reference.
+	 * The feature id for the '<em><b>Parametro</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCEDIMENTO__LISTAPARMETROS = 2;
+	int PROCEDIMENTO__PARAMETRO = 2;
 
 	/**
 	 * The number of structural features of the '<em>Procedimento</em>' class.
@@ -845,44 +845,6 @@ public interface PascalitoPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROCEDIMENTO_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.ListaParmetrosImpl <em>Lista Parmetros</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ListaParmetrosImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getListaParmetros()
-	 * @generated
-	 */
-	int LISTA_PARMETROS = 16;
-
-	/**
-	 * The feature id for the '<em><b>Variavel</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_PARMETROS__VARIAVEL = 0;
-
-	/**
-	 * The number of structural features of the '<em>Lista Parmetros</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_PARMETROS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Lista Parmetros</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_PARMETROS_OPERATION_COUNT = 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.Programa <em>Programa</em>}'.
@@ -1397,36 +1359,15 @@ public interface PascalitoPackage extends EPackage {
 	EAttribute getProcedimento_Identificador();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Procedimento#getListaparmetros <em>Listaparmetros</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Procedimento#getParametro <em>Parametro</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Listaparmetros</em>'.
-	 * @see pascalito.Procedimento#getListaparmetros()
+	 * @return the meta object for the containment reference list '<em>Parametro</em>'.
+	 * @see pascalito.Procedimento#getParametro()
 	 * @see #getProcedimento()
 	 * @generated
 	 */
-	EReference getProcedimento_Listaparmetros();
-
-	/**
-	 * Returns the meta object for class '{@link pascalito.ListaParmetros <em>Lista Parmetros</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Lista Parmetros</em>'.
-	 * @see pascalito.ListaParmetros
-	 * @generated
-	 */
-	EClass getListaParmetros();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.ListaParmetros#getVariavel <em>Variavel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variavel</em>'.
-	 * @see pascalito.ListaParmetros#getVariavel()
-	 * @see #getListaParmetros()
-	 * @generated
-	 */
-	EReference getListaParmetros_Variavel();
+	EReference getProcedimento_Parametro();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1868,30 +1809,12 @@ public interface PascalitoPackage extends EPackage {
 		EAttribute PROCEDIMENTO__IDENTIFICADOR = eINSTANCE.getProcedimento_Identificador();
 
 		/**
-		 * The meta object literal for the '<em><b>Listaparmetros</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Parametro</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROCEDIMENTO__LISTAPARMETROS = eINSTANCE.getProcedimento_Listaparmetros();
-
-		/**
-		 * The meta object literal for the '{@link pascalito.impl.ListaParmetrosImpl <em>Lista Parmetros</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ListaParmetrosImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getListaParmetros()
-		 * @generated
-		 */
-		EClass LISTA_PARMETROS = eINSTANCE.getListaParmetros();
-
-		/**
-		 * The meta object literal for the '<em><b>Variavel</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LISTA_PARMETROS__VARIAVEL = eINSTANCE.getListaParmetros_Variavel();
+		EReference PROCEDIMENTO__PARAMETRO = eINSTANCE.getProcedimento_Parametro();
 
 	}
 

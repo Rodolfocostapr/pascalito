@@ -2,6 +2,7 @@
  */
 package pascalito;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link pascalito.Procedimento#getBloco <em>Bloco</em>}</li>
  *   <li>{@link pascalito.Procedimento#getIdentificador <em>Identificador</em>}</li>
- *   <li>{@link pascalito.Procedimento#getListaparmetros <em>Listaparmetros</em>}</li>
+ *   <li>{@link pascalito.Procedimento#getParametro <em>Parametro</em>}</li>
  * </ul>
  *
  * @see pascalito.PascalitoPackage#getProcedimento()
@@ -76,29 +77,19 @@ public interface Procedimento extends EObject {
 	void setIdentificador(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Listaparmetros</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Parametro</b></em>' containment reference list.
+	 * The list contents are of type {@link pascalito.Variavel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Listaparmetros</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Parametro</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Listaparmetros</em>' containment reference.
-	 * @see #setListaparmetros(ListaParmetros)
-	 * @see pascalito.PascalitoPackage#getProcedimento_Listaparmetros()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Parametro</em>' containment reference list.
+	 * @see pascalito.PascalitoPackage#getProcedimento_Parametro()
+	 * @model containment="true"
 	 * @generated
 	 */
-	ListaParmetros getListaparmetros();
-
-	/**
-	 * Sets the value of the '{@link pascalito.Procedimento#getListaparmetros <em>Listaparmetros</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Listaparmetros</em>' containment reference.
-	 * @see #getListaparmetros()
-	 * @generated
-	 */
-	void setListaparmetros(ListaParmetros value);
+	EList<Variavel> getParametro();
 
 } // Procedimento

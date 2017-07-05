@@ -2,18 +2,22 @@
  */
 package pascalito.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import pascalito.Bloco;
-import pascalito.ListaParmetros;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
+import pascalito.Variavel;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +29,7 @@ import pascalito.Procedimento;
  * <ul>
  *   <li>{@link pascalito.impl.ProcedimentoImpl#getBloco <em>Bloco</em>}</li>
  *   <li>{@link pascalito.impl.ProcedimentoImpl#getIdentificador <em>Identificador</em>}</li>
- *   <li>{@link pascalito.impl.ProcedimentoImpl#getListaparmetros <em>Listaparmetros</em>}</li>
+ *   <li>{@link pascalito.impl.ProcedimentoImpl#getParametro <em>Parametro</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,14 +66,14 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 	protected String identificador = IDENTIFICADOR_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getListaparmetros() <em>Listaparmetros</em>}' containment reference.
+	 * The cached value of the '{@link #getParametro() <em>Parametro</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getListaparmetros()
+	 * @see #getParametro()
 	 * @generated
 	 * @ordered
 	 */
-	protected ListaParmetros listaparmetros;
+	protected EList<Variavel> parametro;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,42 +163,11 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ListaParmetros getListaparmetros() {
-		return listaparmetros;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetListaparmetros(ListaParmetros newListaparmetros, NotificationChain msgs) {
-		ListaParmetros oldListaparmetros = listaparmetros;
-		listaparmetros = newListaparmetros;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS, oldListaparmetros, newListaparmetros);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<Variavel> getParametro() {
+		if (parametro == null) {
+			parametro = new EObjectContainmentEList<Variavel>(Variavel.class, this, PascalitoPackage.PROCEDIMENTO__PARAMETRO);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setListaparmetros(ListaParmetros newListaparmetros) {
-		if (newListaparmetros != listaparmetros) {
-			NotificationChain msgs = null;
-			if (listaparmetros != null)
-				msgs = ((InternalEObject)listaparmetros).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS, null, msgs);
-			if (newListaparmetros != null)
-				msgs = ((InternalEObject)newListaparmetros).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS, null, msgs);
-			msgs = basicSetListaparmetros(newListaparmetros, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS, newListaparmetros, newListaparmetros));
+		return parametro;
 	}
 
 	/**
@@ -207,8 +180,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 			case PascalitoPackage.PROCEDIMENTO__BLOCO:
 				return basicSetBloco(null, msgs);
-			case PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS:
-				return basicSetListaparmetros(null, msgs);
+			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
+				return ((InternalEList<?>)getParametro()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -225,8 +198,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 				return getBloco();
 			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
 				return getIdentificador();
-			case PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS:
-				return getListaparmetros();
+			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
+				return getParametro();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,8 +219,9 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
 				setIdentificador((String)newValue);
 				return;
-			case PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS:
-				setListaparmetros((ListaParmetros)newValue);
+			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
+				getParametro().clear();
+				getParametro().addAll((Collection<? extends Variavel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -267,8 +241,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
 				setIdentificador(IDENTIFICADOR_EDEFAULT);
 				return;
-			case PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS:
-				setListaparmetros((ListaParmetros)null);
+			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
+				getParametro().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -286,8 +260,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 				return bloco != null;
 			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
 				return IDENTIFICADOR_EDEFAULT == null ? identificador != null : !IDENTIFICADOR_EDEFAULT.equals(identificador);
-			case PascalitoPackage.PROCEDIMENTO__LISTAPARMETROS:
-				return listaparmetros != null;
+			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
+				return parametro != null && !parametro.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

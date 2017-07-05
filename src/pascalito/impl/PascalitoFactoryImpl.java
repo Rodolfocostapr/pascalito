@@ -17,7 +17,6 @@ import pascalito.Desvio;
 import pascalito.ExpBin;
 import pascalito.ExpBinLogica;
 import pascalito.ExpNeg;
-import pascalito.ListaParmetros;
 import pascalito.Loop;
 import pascalito.PascalitoFactory;
 import pascalito.PascalitoPackage;
@@ -84,7 +83,6 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 			case PascalitoPackage.NEW_ROLE15: return createnewRole15();
 			case PascalitoPackage.VARIAVEL: return createVariavel();
 			case PascalitoPackage.PROCEDIMENTO: return createProcedimento();
-			case PascalitoPackage.LISTA_PARMETROS: return createListaParmetros();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -228,16 +226,6 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	public Procedimento createProcedimento() {
 		ProcedimentoImpl procedimento = new ProcedimentoImpl();
 		return procedimento;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ListaParmetros createListaParmetros() {
-		ListaParmetrosImpl listaParmetros = new ListaParmetrosImpl();
-		return listaParmetros;
 	}
 
 	/**

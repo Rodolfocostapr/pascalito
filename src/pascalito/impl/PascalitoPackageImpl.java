@@ -18,7 +18,6 @@ import pascalito.ExpBin;
 import pascalito.ExpBinLogica;
 import pascalito.ExpNeg;
 import pascalito.Expressao;
-import pascalito.ListaParmetros;
 import pascalito.Loop;
 import pascalito.PascalitoFactory;
 import pascalito.PascalitoPackage;
@@ -145,13 +144,6 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * @generated
 	 */
 	private EClass procedimentoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass listaParmetrosEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -651,26 +643,8 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcedimento_Listaparmetros() {
+	public EReference getProcedimento_Parametro() {
 		return (EReference)procedimentoEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getListaParmetros() {
-		return listaParmetrosEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getListaParmetros_Variavel() {
-		return (EReference)listaParmetrosEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -764,10 +738,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		procedimentoEClass = createEClass(PROCEDIMENTO);
 		createEReference(procedimentoEClass, PROCEDIMENTO__BLOCO);
 		createEAttribute(procedimentoEClass, PROCEDIMENTO__IDENTIFICADOR);
-		createEReference(procedimentoEClass, PROCEDIMENTO__LISTAPARMETROS);
-
-		listaParmetrosEClass = createEClass(LISTA_PARMETROS);
-		createEReference(listaParmetrosEClass, LISTA_PARMETROS__VARIAVEL);
+		createEReference(procedimentoEClass, PROCEDIMENTO__PARAMETRO);
 	}
 
 	/**
@@ -872,10 +843,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		initEClass(procedimentoEClass, Procedimento.class, "Procedimento", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProcedimento_Bloco(), this.getBloco(), null, "bloco", null, 1, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcedimento_Identificador(), ecorePackage.getEString(), "Identificador", null, 0, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcedimento_Listaparmetros(), this.getListaParmetros(), null, "listaparmetros", null, 1, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(listaParmetrosEClass, ListaParmetros.class, "ListaParmetros", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getListaParmetros_Variavel(), this.getVariavel(), null, "variavel", null, 0, -1, ListaParmetros.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcedimento_Parametro(), this.getVariavel(), null, "parametro", null, 0, -1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

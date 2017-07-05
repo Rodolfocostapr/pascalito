@@ -66,10 +66,7 @@
     <genClasses ecoreClass="pascalito.ecore#//Procedimento">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/bloco"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Procedimento/Identificador"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/listaparmetros"/>
-    </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//ListaParmetros">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//ListaParmetros/variavel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/parametro"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

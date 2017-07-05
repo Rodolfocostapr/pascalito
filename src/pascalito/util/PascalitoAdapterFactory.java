@@ -18,7 +18,6 @@ import pascalito.ExpBin;
 import pascalito.ExpBinLogica;
 import pascalito.ExpNeg;
 import pascalito.Expressao;
-import pascalito.ListaParmetros;
 import pascalito.Loop;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
@@ -145,10 +144,6 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseProcedimento(Procedimento object) {
 				return createProcedimentoAdapter();
-			}
-			@Override
-			public Adapter caseListaParmetros(ListaParmetros object) {
-				return createListaParmetrosAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -391,20 +386,6 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProcedimentoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.ListaParmetros <em>Lista Parmetros</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pascalito.ListaParmetros
-	 * @generated
-	 */
-	public Adapter createListaParmetrosAdapter() {
 		return null;
 	}
 

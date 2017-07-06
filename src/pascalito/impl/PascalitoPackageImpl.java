@@ -678,6 +678,15 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCallProc_Parametro() {
+		return (EReference)callProcEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PascalitoFactory getPascalitoFactory() {
 		return (PascalitoFactory)getEFactoryInstance();
 	}
@@ -768,6 +777,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 
 		callProcEClass = createEClass(CALL_PROC);
 		createEReference(callProcEClass, CALL_PROC__REPRESENTA_PROC);
+		createEReference(callProcEClass, CALL_PROC__PARAMETRO);
 	}
 
 	/**
@@ -877,6 +887,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 
 		initEClass(callProcEClass, CallProc.class, "CallProc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCallProc_RepresentaProc(), this.getProcedimento(), null, "representaProc", null, 1, 1, CallProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCallProc_Parametro(), this.getExpressao(), null, "parametro", null, 0, -1, CallProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

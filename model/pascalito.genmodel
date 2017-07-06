@@ -70,6 +70,7 @@
     </genClasses>
     <genClasses ecoreClass="pascalito.ecore#//CallProc">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProc/representaProc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProc/parametro"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

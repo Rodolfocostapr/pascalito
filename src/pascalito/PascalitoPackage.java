@@ -875,13 +875,22 @@ public interface PascalitoPackage extends EPackage {
 	int CALL_PROC__REPRESENTA_PROC = EXPRESSAO_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Parametro</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC__PARAMETRO = EXPRESSAO_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Call Proc</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 1;
+	int CALL_PROC_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Call Proc</em>' class.
@@ -1437,6 +1446,17 @@ public interface PascalitoPackage extends EPackage {
 	EReference getCallProc_RepresentaProc();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link pascalito.CallProc#getParametro <em>Parametro</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parametro</em>'.
+	 * @see pascalito.CallProc#getParametro()
+	 * @see #getCallProc()
+	 * @generated
+	 */
+	EReference getCallProc_Parametro();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1900,6 +1920,14 @@ public interface PascalitoPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CALL_PROC__REPRESENTA_PROC = eINSTANCE.getCallProc_RepresentaProc();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametro</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL_PROC__PARAMETRO = eINSTANCE.getCallProc_Parametro();
 
 	}
 

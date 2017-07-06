@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link pascalito.Procedimento#getBloco <em>Bloco</em>}</li>
- *   <li>{@link pascalito.Procedimento#getIdentificador <em>Identificador</em>}</li>
+ *   <li>{@link pascalito.Procedimento#getName <em>Name</em>}</li>
  *   <li>{@link pascalito.Procedimento#getParametro <em>Parametro</em>}</li>
  * </ul>
  *
@@ -51,30 +51,30 @@ public interface Procedimento extends EObject {
 	void setBloco(Bloco value);
 
 	/**
-	 * Returns the value of the '<em><b>Identificador</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Identificador</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Identificador</em>' attribute.
-	 * @see #setIdentificador(String)
-	 * @see pascalito.PascalitoPackage#getProcedimento_Identificador()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pascalito.PascalitoPackage#getProcedimento_Name()
 	 * @model
 	 * @generated
 	 */
-	String getIdentificador();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link pascalito.Procedimento#getIdentificador <em>Identificador</em>}' attribute.
+	 * Sets the value of the '{@link pascalito.Procedimento#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Identificador</em>' attribute.
-	 * @see #getIdentificador()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setIdentificador(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Parametro</b></em>' containment reference list.

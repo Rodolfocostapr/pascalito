@@ -634,7 +634,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getProcedimento_Identificador() {
+	public EAttribute getProcedimento_Name() {
 		return (EAttribute)procedimentoEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -737,7 +737,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 
 		procedimentoEClass = createEClass(PROCEDIMENTO);
 		createEReference(procedimentoEClass, PROCEDIMENTO__BLOCO);
-		createEAttribute(procedimentoEClass, PROCEDIMENTO__IDENTIFICADOR);
+		createEAttribute(procedimentoEClass, PROCEDIMENTO__NAME);
 		createEReference(procedimentoEClass, PROCEDIMENTO__PARAMETRO);
 	}
 
@@ -804,12 +804,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 
 		initEClass(desvioEClass, Desvio.class, "Desvio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDesvio_Se(), this.getExpressao(), null, "se", null, 1, 1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDesvio_Faca(), this.getComando(), null, "faca", null, 1, -1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDesvio_Faca(), this.getComando(), null, "faca", null, 0, -1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDesvio_SeNao(), this.getComando(), null, "seNao", null, 0, -1, Desvio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoop_Se(), this.getExpressao(), null, "se", null, 1, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoop_Faca(), this.getComando(), null, "faca", null, 1, -1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_Faca(), this.getComando(), null, "faca", null, 0, -1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressaoEClass, Expressao.class, "Expressao", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExpressao_Prioridade(), ecorePackage.getEBigDecimal(), "Prioridade", null, 0, 1, Expressao.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -842,7 +842,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 
 		initEClass(procedimentoEClass, Procedimento.class, "Procedimento", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProcedimento_Bloco(), this.getBloco(), null, "bloco", null, 1, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcedimento_Identificador(), ecorePackage.getEString(), "Identificador", null, 0, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcedimento_Name(), ecorePackage.getEString(), "name", null, 0, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcedimento_Parametro(), this.getVariavel(), null, "parametro", null, 0, -1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

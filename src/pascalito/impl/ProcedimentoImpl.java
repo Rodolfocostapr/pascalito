@@ -28,7 +28,7 @@ import pascalito.Variavel;
  * </p>
  * <ul>
  *   <li>{@link pascalito.impl.ProcedimentoImpl#getBloco <em>Bloco</em>}</li>
- *   <li>{@link pascalito.impl.ProcedimentoImpl#getIdentificador <em>Identificador</em>}</li>
+ *   <li>{@link pascalito.impl.ProcedimentoImpl#getName <em>Name</em>}</li>
  *   <li>{@link pascalito.impl.ProcedimentoImpl#getParametro <em>Parametro</em>}</li>
  * </ul>
  *
@@ -46,24 +46,24 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 	protected Bloco bloco;
 
 	/**
-	 * The default value of the '{@link #getIdentificador() <em>Identificador</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdentificador()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String IDENTIFICADOR_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getIdentificador() <em>Identificador</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdentificador()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String identificador = IDENTIFICADOR_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getParametro() <em>Parametro</em>}' containment reference list.
@@ -142,8 +142,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIdentificador() {
-		return identificador;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -151,11 +151,11 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdentificador(String newIdentificador) {
-		String oldIdentificador = identificador;
-		identificador = newIdentificador;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR, oldIdentificador, identificador));
+			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.PROCEDIMENTO__NAME, oldName, name));
 	}
 
 	/**
@@ -196,8 +196,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 			case PascalitoPackage.PROCEDIMENTO__BLOCO:
 				return getBloco();
-			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
-				return getIdentificador();
+			case PascalitoPackage.PROCEDIMENTO__NAME:
+				return getName();
 			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
 				return getParametro();
 		}
@@ -216,8 +216,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 			case PascalitoPackage.PROCEDIMENTO__BLOCO:
 				setBloco((Bloco)newValue);
 				return;
-			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
-				setIdentificador((String)newValue);
+			case PascalitoPackage.PROCEDIMENTO__NAME:
+				setName((String)newValue);
 				return;
 			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
 				getParametro().clear();
@@ -238,8 +238,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 			case PascalitoPackage.PROCEDIMENTO__BLOCO:
 				setBloco((Bloco)null);
 				return;
-			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
-				setIdentificador(IDENTIFICADOR_EDEFAULT);
+			case PascalitoPackage.PROCEDIMENTO__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
 				getParametro().clear();
@@ -258,8 +258,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 			case PascalitoPackage.PROCEDIMENTO__BLOCO:
 				return bloco != null;
-			case PascalitoPackage.PROCEDIMENTO__IDENTIFICADOR:
-				return IDENTIFICADOR_EDEFAULT == null ? identificador != null : !IDENTIFICADOR_EDEFAULT.equals(identificador);
+			case PascalitoPackage.PROCEDIMENTO__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PascalitoPackage.PROCEDIMENTO__PARAMETRO:
 				return parametro != null && !parametro.isEmpty();
 		}
@@ -276,8 +276,8 @@ public class ProcedimentoImpl extends MinimalEObjectImpl.Container implements Pr
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Identificador: ");
-		result.append(identificador);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -34,16 +34,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="Desvio" eSuperTypes="#//Comando">
     <eStructuralFeatures xsi:type="ecore:EReference" name="se" lowerBound="1" eType="#//Expressao"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" lowerBound="1" upperBound="-1"
-        eType="#//Comando" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" upperBound="-1" eType="#//Comando"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="seNao" upperBound="-1"
         eType="#//Comando" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Comando">
     <eStructuralFeatures xsi:type="ecore:EReference" name="se" lowerBound="1" eType="#//Expressao"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" lowerBound="1" upperBound="-1"
-        eType="#//Comando" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" upperBound="-1" eType="#//Comando"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expressao" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prioridade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
@@ -86,7 +86,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Procedimento">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bloco" lowerBound="1" eType="#//Bloco"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Identificador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
         eType="#//Variavel" containment="true"/>
   </eClassifiers>

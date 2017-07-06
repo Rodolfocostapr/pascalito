@@ -60,7 +60,7 @@ public interface Loop extends Comando {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Faca</em>' containment reference list.
 	 * @see pascalito.PascalitoPackage#getLoop_Faca()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Comando> getFaca();

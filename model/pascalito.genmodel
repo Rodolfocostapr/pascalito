@@ -65,7 +65,7 @@
     </genClasses>
     <genClasses ecoreClass="pascalito.ecore#//Procedimento">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/bloco"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Procedimento/Identificador"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Procedimento/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/parametro"/>
     </genClasses>
   </genPackages>

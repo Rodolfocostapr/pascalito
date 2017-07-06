@@ -811,13 +811,13 @@ public interface PascalitoPackage extends EPackage {
 	int PROCEDIMENTO__BLOCO = 0;
 
 	/**
-	 * The feature id for the '<em><b>Identificador</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCEDIMENTO__IDENTIFICADOR = 1;
+	int PROCEDIMENTO__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Parametro</b></em>' containment reference list.
@@ -1348,15 +1348,15 @@ public interface PascalitoPackage extends EPackage {
 	EReference getProcedimento_Bloco();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Procedimento#getIdentificador <em>Identificador</em>}'.
+	 * Returns the meta object for the attribute '{@link pascalito.Procedimento#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Identificador</em>'.
-	 * @see pascalito.Procedimento#getIdentificador()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pascalito.Procedimento#getName()
 	 * @see #getProcedimento()
 	 * @generated
 	 */
-	EAttribute getProcedimento_Identificador();
+	EAttribute getProcedimento_Name();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link pascalito.Procedimento#getParametro <em>Parametro</em>}'.
@@ -1801,12 +1801,12 @@ public interface PascalitoPackage extends EPackage {
 		EReference PROCEDIMENTO__BLOCO = eINSTANCE.getProcedimento_Bloco();
 
 		/**
-		 * The meta object literal for the '<em><b>Identificador</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROCEDIMENTO__IDENTIFICADOR = eINSTANCE.getProcedimento_Identificador();
+		EAttribute PROCEDIMENTO__NAME = eINSTANCE.getProcedimento_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Parametro</b></em>' containment reference list feature.

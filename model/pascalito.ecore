@@ -90,4 +90,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
         eType="#//Variavel" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CallProc" eSuperTypes="#//Expressao">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="representaProc" lowerBound="1"
+        eType="#//Procedimento"/>
+  </eClassifiers>
 </ecore:EPackage>

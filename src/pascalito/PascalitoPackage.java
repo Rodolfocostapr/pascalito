@@ -847,6 +847,52 @@ public interface PascalitoPackage extends EPackage {
 	int PROCEDIMENTO_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link pascalito.impl.CallProcImpl <em>Call Proc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.CallProcImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getCallProc()
+	 * @generated
+	 */
+	int CALL_PROC = 16;
+
+	/**
+	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC__PRIORIDADE = EXPRESSAO__PRIORIDADE;
+
+	/**
+	 * The feature id for the '<em><b>Representa Proc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC__REPRESENTA_PROC = EXPRESSAO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Call Proc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Call Proc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link pascalito.Programa <em>Programa</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1370,6 +1416,27 @@ public interface PascalitoPackage extends EPackage {
 	EReference getProcedimento_Parametro();
 
 	/**
+	 * Returns the meta object for class '{@link pascalito.CallProc <em>Call Proc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Call Proc</em>'.
+	 * @see pascalito.CallProc
+	 * @generated
+	 */
+	EClass getCallProc();
+
+	/**
+	 * Returns the meta object for the reference '{@link pascalito.CallProc#getRepresentaProc <em>Representa Proc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Representa Proc</em>'.
+	 * @see pascalito.CallProc#getRepresentaProc()
+	 * @see #getCallProc()
+	 * @generated
+	 */
+	EReference getCallProc_RepresentaProc();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1815,6 +1882,24 @@ public interface PascalitoPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROCEDIMENTO__PARAMETRO = eINSTANCE.getProcedimento_Parametro();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.CallProcImpl <em>Call Proc</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.CallProcImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getCallProc()
+		 * @generated
+		 */
+		EClass CALL_PROC = eINSTANCE.getCallProc();
+
+		/**
+		 * The meta object literal for the '<em><b>Representa Proc</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL_PROC__REPRESENTA_PROC = eINSTANCE.getCallProc_RepresentaProc();
 
 	}
 

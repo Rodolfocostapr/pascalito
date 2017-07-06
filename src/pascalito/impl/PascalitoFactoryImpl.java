@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import pascalito.Atribuicao;
 import pascalito.Bloco;
+import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
 import pascalito.Desvio;
@@ -83,6 +84,7 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 			case PascalitoPackage.NEW_ROLE15: return createnewRole15();
 			case PascalitoPackage.VARIAVEL: return createVariavel();
 			case PascalitoPackage.PROCEDIMENTO: return createProcedimento();
+			case PascalitoPackage.CALL_PROC: return createCallProc();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -226,6 +228,16 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	public Procedimento createProcedimento() {
 		ProcedimentoImpl procedimento = new ProcedimentoImpl();
 		return procedimento;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CallProc createCallProc() {
+		CallProcImpl callProc = new CallProcImpl();
+		return callProc;
 	}
 
 	/**

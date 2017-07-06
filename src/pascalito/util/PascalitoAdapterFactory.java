@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import pascalito.Atribuicao;
 import pascalito.Bloco;
+import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
 import pascalito.Comando;
@@ -144,6 +145,10 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseProcedimento(Procedimento object) {
 				return createProcedimentoAdapter();
+			}
+			@Override
+			public Adapter caseCallProc(CallProc object) {
+				return createCallProcAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -386,6 +391,20 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProcedimentoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pascalito.CallProc <em>Call Proc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pascalito.CallProc
+	 * @generated
+	 */
+	public Adapter createCallProcAdapter() {
 		return null;
 	}
 

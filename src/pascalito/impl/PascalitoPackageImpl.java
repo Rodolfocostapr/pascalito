@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import pascalito.Atribuicao;
 import pascalito.Bloco;
+import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
 import pascalito.Comando;
@@ -144,6 +145,13 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * @generated
 	 */
 	private EClass procedimentoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass callProcEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -652,6 +660,24 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCallProc() {
+		return callProcEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCallProc_RepresentaProc() {
+		return (EReference)callProcEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PascalitoFactory getPascalitoFactory() {
 		return (PascalitoFactory)getEFactoryInstance();
 	}
@@ -739,6 +765,9 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		createEReference(procedimentoEClass, PROCEDIMENTO__BLOCO);
 		createEAttribute(procedimentoEClass, PROCEDIMENTO__NAME);
 		createEReference(procedimentoEClass, PROCEDIMENTO__PARAMETRO);
+
+		callProcEClass = createEClass(CALL_PROC);
+		createEReference(callProcEClass, CALL_PROC__REPRESENTA_PROC);
 	}
 
 	/**
@@ -778,6 +807,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		expBinLogicaEClass.getESuperTypes().add(this.getExpressao());
 		expBinEClass.getESuperTypes().add(this.getExpressao());
 		expNegEClass.getESuperTypes().add(this.getExpressao());
+		callProcEClass.getESuperTypes().add(this.getExpressao());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programaEClass, Programa.class, "Programa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -844,6 +874,9 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		initEReference(getProcedimento_Bloco(), this.getBloco(), null, "bloco", null, 1, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcedimento_Name(), ecorePackage.getEString(), "name", null, 0, 1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcedimento_Parametro(), this.getVariavel(), null, "parametro", null, 0, -1, Procedimento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(callProcEClass, CallProc.class, "CallProc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCallProc_RepresentaProc(), this.getProcedimento(), null, "representaProc", null, 1, 1, CallProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

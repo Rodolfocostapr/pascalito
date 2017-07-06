@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import pascalito.Atribuicao;
 import pascalito.Bloco;
+import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
 import pascalito.Comando;
@@ -182,6 +183,13 @@ public class PascalitoSwitch<T> extends Switch<T> {
 			case PascalitoPackage.PROCEDIMENTO: {
 				Procedimento procedimento = (Procedimento)theEObject;
 				T result = caseProcedimento(procedimento);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PascalitoPackage.CALL_PROC: {
+				CallProc callProc = (CallProc)theEObject;
+				T result = caseCallProc(callProc);
+				if (result == null) result = caseExpressao(callProc);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -426,6 +434,21 @@ public class PascalitoSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProcedimento(Procedimento object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Call Proc</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Call Proc</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCallProc(CallProc object) {
 		return null;
 	}
 

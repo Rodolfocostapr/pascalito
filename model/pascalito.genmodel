@@ -68,5 +68,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Procedimento/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/parametro"/>
     </genClasses>
+    <genClasses ecoreClass="pascalito.ecore#//CallProc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProc/representaProc"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

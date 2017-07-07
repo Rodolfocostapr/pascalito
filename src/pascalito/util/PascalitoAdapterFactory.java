@@ -14,12 +14,14 @@ import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
 import pascalito.Comando;
+import pascalito.Comutativa;
 import pascalito.Desvio;
-import pascalito.ExpBin;
 import pascalito.ExpBinLogica;
 import pascalito.ExpNeg;
 import pascalito.Expressao;
 import pascalito.Loop;
+import pascalito.N_Comutativa;
+import pascalito.NumberLiteral;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
 import pascalito.Programa;
@@ -119,16 +121,8 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 				return createExpressaoAdapter();
 			}
 			@Override
-			public Adapter caseNumber(pascalito.Number object) {
-				return createNumberAdapter();
-			}
-			@Override
 			public Adapter caseExpBinLogica(ExpBinLogica object) {
 				return createExpBinLogicaAdapter();
-			}
-			@Override
-			public Adapter caseExpBin(ExpBin object) {
-				return createExpBinAdapter();
 			}
 			@Override
 			public Adapter caseExpNeg(ExpNeg object) {
@@ -149,6 +143,18 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCallProc(CallProc object) {
 				return createCallProcAdapter();
+			}
+			@Override
+			public Adapter caseN_Comutativa(N_Comutativa object) {
+				return createN_ComutativaAdapter();
+			}
+			@Override
+			public Adapter caseComutativa(Comutativa object) {
+				return createComutativaAdapter();
+			}
+			@Override
+			public Adapter caseNumberLiteral(NumberLiteral object) {
+				return createNumberLiteralAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -297,20 +303,6 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Number <em>Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pascalito.Number
-	 * @generated
-	 */
-	public Adapter createNumberAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link pascalito.ExpBinLogica <em>Exp Bin Logica</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -321,20 +313,6 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExpBinLogicaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.ExpBin <em>Exp Bin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pascalito.ExpBin
-	 * @generated
-	 */
-	public Adapter createExpBinAdapter() {
 		return null;
 	}
 
@@ -405,6 +383,48 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCallProcAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pascalito.N_Comutativa <em>NComutativa</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pascalito.N_Comutativa
+	 * @generated
+	 */
+	public Adapter createN_ComutativaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pascalito.Comutativa <em>Comutativa</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pascalito.Comutativa
+	 * @generated
+	 */
+	public Adapter createComutativaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pascalito.NumberLiteral <em>Number Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pascalito.NumberLiteral
+	 * @generated
+	 */
+	public Adapter createNumberLiteralAdapter() {
 		return null;
 	}
 

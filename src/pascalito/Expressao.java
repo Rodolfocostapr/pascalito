@@ -2,8 +2,6 @@
  */
 package pascalito;
 
-import java.math.BigDecimal;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pascalito.Expressao#getPrioridade <em>Prioridade</em>}</li>
+ *   <li>{@link pascalito.Expressao#getLeft <em>Left</em>}</li>
+ *   <li>{@link pascalito.Expressao#getRight <em>Right</em>}</li>
  * </ul>
  *
  * @see pascalito.PascalitoPackage#getExpressao()
@@ -23,30 +22,57 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Expressao extends EObject {
+
 	/**
-	 * Returns the value of the '<em><b>Prioridade</b></em>' attribute.
+	 * Returns the value of the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prioridade</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Left</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prioridade</em>' attribute.
-	 * @see #setPrioridade(BigDecimal)
-	 * @see pascalito.PascalitoPackage#getExpressao_Prioridade()
-	 * @model
+	 * @return the value of the '<em>Left</em>' containment reference.
+	 * @see #setLeft(Expressao)
+	 * @see pascalito.PascalitoPackage#getExpressao_Left()
+	 * @model containment="true"
 	 * @generated
 	 */
-	BigDecimal getPrioridade();
+	Expressao getLeft();
 
 	/**
-	 * Sets the value of the '{@link pascalito.Expressao#getPrioridade <em>Prioridade</em>}' attribute.
+	 * Sets the value of the '{@link pascalito.Expressao#getLeft <em>Left</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prioridade</em>' attribute.
-	 * @see #getPrioridade()
+	 * @param value the new value of the '<em>Left</em>' containment reference.
+	 * @see #getLeft()
 	 * @generated
 	 */
-	void setPrioridade(BigDecimal value);
+	void setLeft(Expressao value);
+
+	/**
+	 * Returns the value of the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Right</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Right</em>' containment reference.
+	 * @see #setRight(Expressao)
+	 * @see pascalito.PascalitoPackage#getExpressao_Right()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Expressao getRight();
+
+	/**
+	 * Sets the value of the '{@link pascalito.Expressao#getRight <em>Right</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Right</em>' containment reference.
+	 * @see #getRight()
+	 * @generated
+	 */
+	void setRight(Expressao value);
 
 } // Expressao

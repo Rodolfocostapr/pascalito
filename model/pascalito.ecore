@@ -46,29 +46,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expressao" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prioridade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expressao"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Expressao"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Number" eSuperTypes="#//Expressao">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpBinLogica" eSuperTypes="#//Expressao">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoEsq" lowerBound="1"
-        eType="#//Expressao" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoDir" lowerBound="1"
-        eType="#//Expressao" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comutativa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpBin" eSuperTypes="#//Expressao">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoDir" lowerBound="1"
-        eType="#//Expressao" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operandoEsq" lowerBound="1"
-        eType="#//Expressao" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comutativa" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinLogica" eSuperTypes="#//Expressao"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExpNeg" eSuperTypes="#//Expressao">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nega" lowerBound="1" eType="#//Expressao"
         containment="true"/>
   </eClassifiers>
@@ -96,4 +80,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
         eType="#//Expressao" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="N_Comutativa" eSuperTypes="#//Expressao"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Comutativa" eSuperTypes="#//Expressao"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NumberLiteral" eSuperTypes="#//Expressao"/>
 </ecore:EPackage>

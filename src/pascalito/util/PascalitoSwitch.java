@@ -12,12 +12,14 @@ import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
 import pascalito.Comando;
+import pascalito.Comutativa;
 import pascalito.Desvio;
-import pascalito.ExpBin;
 import pascalito.ExpBinLogica;
 import pascalito.ExpNeg;
 import pascalito.Expressao;
 import pascalito.Loop;
+import pascalito.N_Comutativa;
+import pascalito.NumberLiteral;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
 import pascalito.Programa;
@@ -140,24 +142,10 @@ public class PascalitoSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PascalitoPackage.NUMBER: {
-				pascalito.Number number = (pascalito.Number)theEObject;
-				T result = caseNumber(number);
-				if (result == null) result = caseExpressao(number);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PascalitoPackage.EXP_BIN_LOGICA: {
 				ExpBinLogica expBinLogica = (ExpBinLogica)theEObject;
 				T result = caseExpBinLogica(expBinLogica);
 				if (result == null) result = caseExpressao(expBinLogica);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PascalitoPackage.EXP_BIN: {
-				ExpBin expBin = (ExpBin)theEObject;
-				T result = caseExpBin(expBin);
-				if (result == null) result = caseExpressao(expBin);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -190,6 +178,27 @@ public class PascalitoSwitch<T> extends Switch<T> {
 				CallProc callProc = (CallProc)theEObject;
 				T result = caseCallProc(callProc);
 				if (result == null) result = caseExpressao(callProc);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PascalitoPackage.NCOMUTATIVA: {
+				N_Comutativa n_Comutativa = (N_Comutativa)theEObject;
+				T result = caseN_Comutativa(n_Comutativa);
+				if (result == null) result = caseExpressao(n_Comutativa);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PascalitoPackage.COMUTATIVA: {
+				Comutativa comutativa = (Comutativa)theEObject;
+				T result = caseComutativa(comutativa);
+				if (result == null) result = caseExpressao(comutativa);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PascalitoPackage.NUMBER_LITERAL: {
+				NumberLiteral numberLiteral = (NumberLiteral)theEObject;
+				T result = caseNumberLiteral(numberLiteral);
+				if (result == null) result = caseExpressao(numberLiteral);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -333,21 +342,6 @@ public class PascalitoSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Number</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Number</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNumber(pascalito.Number object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Exp Bin Logica</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -359,21 +353,6 @@ public class PascalitoSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExpBinLogica(ExpBinLogica object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Exp Bin</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Exp Bin</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExpBin(ExpBin object) {
 		return null;
 	}
 
@@ -449,6 +428,51 @@ public class PascalitoSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCallProc(CallProc object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>NComutativa</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>NComutativa</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseN_Comutativa(N_Comutativa object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Comutativa</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Comutativa</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComutativa(Comutativa object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Number Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Number Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNumberLiteral(NumberLiteral object) {
 		return null;
 	}
 

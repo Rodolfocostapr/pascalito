@@ -85,15 +85,6 @@ public interface PascalitoFactory extends EFactory {
 	Loop createLoop();
 
 	/**
-	 * Returns a new object of class '<em>Number</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Number</em>'.
-	 * @generated
-	 */
-	Number createNumber();
-
-	/**
 	 * Returns a new object of class '<em>Exp Bin Logica</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,15 +92,6 @@ public interface PascalitoFactory extends EFactory {
 	 * @generated
 	 */
 	ExpBinLogica createExpBinLogica();
-
-	/**
-	 * Returns a new object of class '<em>Exp Bin</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Exp Bin</em>'.
-	 * @generated
-	 */
-	ExpBin createExpBin();
 
 	/**
 	 * Returns a new object of class '<em>Exp Neg</em>'.
@@ -155,6 +137,33 @@ public interface PascalitoFactory extends EFactory {
 	 * @generated
 	 */
 	CallProc createCallProc();
+
+	/**
+	 * Returns a new object of class '<em>NComutativa</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>NComutativa</em>'.
+	 * @generated
+	 */
+	N_Comutativa createN_Comutativa();
+
+	/**
+	 * Returns a new object of class '<em>Comutativa</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comutativa</em>'.
+	 * @generated
+	 */
+	Comutativa createComutativa();
+
+	/**
+	 * Returns a new object of class '<em>Number Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Number Literal</em>'.
+	 * @generated
+	 */
+	NumberLiteral createNumberLiteral();
 
 	/**
 	 * Returns the package supported by this factory.

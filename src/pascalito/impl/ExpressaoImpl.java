@@ -2,12 +2,10 @@
  */
 package pascalito.impl;
 
-import java.math.BigDecimal;
-
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -22,31 +20,31 @@ import pascalito.PascalitoPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pascalito.impl.ExpressaoImpl#getPrioridade <em>Prioridade</em>}</li>
+ *   <li>{@link pascalito.impl.ExpressaoImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link pascalito.impl.ExpressaoImpl#getRight <em>Right</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ExpressaoImpl extends MinimalEObjectImpl.Container implements Expressao {
 	/**
-	 * The default value of the '{@link #getPrioridade() <em>Prioridade</em>}' attribute.
+	 * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrioridade()
+	 * @see #getLeft()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BigDecimal PRIORIDADE_EDEFAULT = null;
-
+	protected Expressao left;
 	/**
-	 * The cached value of the '{@link #getPrioridade() <em>Prioridade</em>}' attribute.
+	 * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrioridade()
+	 * @see #getRight()
 	 * @generated
 	 * @ordered
 	 */
-	protected BigDecimal prioridade = PRIORIDADE_EDEFAULT;
+	protected Expressao right;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,8 +70,8 @@ public abstract class ExpressaoImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigDecimal getPrioridade() {
-		return prioridade;
+	public Expressao getLeft() {
+		return left;
 	}
 
 	/**
@@ -81,11 +79,92 @@ public abstract class ExpressaoImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrioridade(BigDecimal newPrioridade) {
-		BigDecimal oldPrioridade = prioridade;
-		prioridade = newPrioridade;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXPRESSAO__PRIORIDADE, oldPrioridade, prioridade));
+	public NotificationChain basicSetLeft(Expressao newLeft, NotificationChain msgs) {
+		Expressao oldLeft = left;
+		left = newLeft;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXPRESSAO__LEFT, oldLeft, newLeft);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLeft(Expressao newLeft) {
+		if (newLeft != left) {
+			NotificationChain msgs = null;
+			if (left != null)
+				msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXPRESSAO__LEFT, null, msgs);
+			if (newLeft != null)
+				msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXPRESSAO__LEFT, null, msgs);
+			msgs = basicSetLeft(newLeft, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXPRESSAO__LEFT, newLeft, newLeft));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expressao getRight() {
+		return right;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRight(Expressao newRight, NotificationChain msgs) {
+		Expressao oldRight = right;
+		right = newRight;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXPRESSAO__RIGHT, oldRight, newRight);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRight(Expressao newRight) {
+		if (newRight != right) {
+			NotificationChain msgs = null;
+			if (right != null)
+				msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXPRESSAO__RIGHT, null, msgs);
+			if (newRight != null)
+				msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXPRESSAO__RIGHT, null, msgs);
+			msgs = basicSetRight(newRight, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXPRESSAO__RIGHT, newRight, newRight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PascalitoPackage.EXPRESSAO__LEFT:
+				return basicSetLeft(null, msgs);
+			case PascalitoPackage.EXPRESSAO__RIGHT:
+				return basicSetRight(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -96,8 +175,10 @@ public abstract class ExpressaoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PascalitoPackage.EXPRESSAO__PRIORIDADE:
-				return getPrioridade();
+			case PascalitoPackage.EXPRESSAO__LEFT:
+				return getLeft();
+			case PascalitoPackage.EXPRESSAO__RIGHT:
+				return getRight();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,8 +191,11 @@ public abstract class ExpressaoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PascalitoPackage.EXPRESSAO__PRIORIDADE:
-				setPrioridade((BigDecimal)newValue);
+			case PascalitoPackage.EXPRESSAO__LEFT:
+				setLeft((Expressao)newValue);
+				return;
+			case PascalitoPackage.EXPRESSAO__RIGHT:
+				setRight((Expressao)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,8 +209,11 @@ public abstract class ExpressaoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.EXPRESSAO__PRIORIDADE:
-				setPrioridade(PRIORIDADE_EDEFAULT);
+			case PascalitoPackage.EXPRESSAO__LEFT:
+				setLeft((Expressao)null);
+				return;
+			case PascalitoPackage.EXPRESSAO__RIGHT:
+				setRight((Expressao)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -140,26 +227,12 @@ public abstract class ExpressaoImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.EXPRESSAO__PRIORIDADE:
-				return PRIORIDADE_EDEFAULT == null ? prioridade != null : !PRIORIDADE_EDEFAULT.equals(prioridade);
+			case PascalitoPackage.EXPRESSAO__LEFT:
+				return left != null;
+			case PascalitoPackage.EXPRESSAO__RIGHT:
+				return right != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Prioridade: ");
-		result.append(prioridade);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ExpressaoImpl

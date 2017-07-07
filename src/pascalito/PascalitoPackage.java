@@ -168,13 +168,22 @@ public interface PascalitoPackage extends EPackage {
 	int EXPRESSAO = 8;
 
 	/**
-	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSAO__PRIORIDADE = 0;
+	int EXPRESSAO__LEFT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSAO__RIGHT = 1;
 
 	/**
 	 * The number of structural features of the '<em>Expressao</em>' class.
@@ -183,7 +192,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSAO_FEATURE_COUNT = 1;
+	int EXPRESSAO_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Expressao</em>' class.
@@ -205,13 +214,22 @@ public interface PascalitoPackage extends EPackage {
 	int CALL_VARIAVEL = 2;
 
 	/**
-	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_VARIAVEL__PRIORIDADE = EXPRESSAO__PRIORIDADE;
+	int CALL_VARIAVEL__LEFT = EXPRESSAO__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_VARIAVEL__RIGHT = EXPRESSAO__RIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Representa</b></em>' reference.
@@ -462,52 +480,6 @@ public interface PascalitoPackage extends EPackage {
 	int LOOP_OPERATION_COUNT = COMANDO_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.NumberImpl <em>Number</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.NumberImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getNumber()
-	 * @generated
-	 */
-	int NUMBER = 9;
-
-	/**
-	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUMBER__PRIORIDADE = EXPRESSAO__PRIORIDADE;
-
-	/**
-	 * The feature id for the '<em><b>Valor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUMBER__VALOR = EXPRESSAO_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Number</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUMBER_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Number</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NUMBER_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link pascalito.impl.ExpBinLogicaImpl <em>Exp Bin Logica</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,52 +487,75 @@ public interface PascalitoPackage extends EPackage {
 	 * @see pascalito.impl.PascalitoPackageImpl#getExpBinLogica()
 	 * @generated
 	 */
-	int EXP_BIN_LOGICA = 10;
+	int EXP_BIN_LOGICA = 9;
 
 	/**
-	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_BIN_LOGICA__PRIORIDADE = EXPRESSAO__PRIORIDADE;
+	int EXP_BIN_LOGICA__LEFT = EXPRESSAO__LEFT;
 
 	/**
-	 * The feature id for the '<em><b>Operador</b></em>' attribute.
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_BIN_LOGICA__OPERADOR = EXPRESSAO_FEATURE_COUNT + 0;
+	int EXP_BIN_LOGICA__RIGHT = EXPRESSAO__RIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Operando Esq</b></em>' containment reference.
+	 * The meta object id for the '{@link pascalito.impl.ExpNegImpl <em>Exp Neg</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.ExpNegImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getExpNeg()
 	 * @generated
-	 * @ordered
 	 */
-	int EXP_BIN_LOGICA__OPERANDO_ESQ = EXPRESSAO_FEATURE_COUNT + 1;
+	int EXP_NEG = 10;
 
 	/**
-	 * The feature id for the '<em><b>Operando Dir</b></em>' containment reference.
+	 * The meta object id for the '{@link pascalito.impl.newRole15Impl <em>new Role15</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.newRole15Impl
+	 * @see pascalito.impl.PascalitoPackageImpl#getnewRole15()
 	 * @generated
-	 * @ordered
 	 */
-	int EXP_BIN_LOGICA__OPERANDO_DIR = EXPRESSAO_FEATURE_COUNT + 2;
+	int NEW_ROLE15 = 11;
 
 	/**
-	 * The feature id for the '<em><b>Comutativa</b></em>' attribute.
+	 * The meta object id for the '{@link pascalito.impl.VariavelImpl <em>Variavel</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.VariavelImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getVariavel()
 	 * @generated
-	 * @ordered
 	 */
-	int EXP_BIN_LOGICA__COMUTATIVA = EXPRESSAO_FEATURE_COUNT + 3;
+	int VARIAVEL = 12;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.ProcedimentoImpl <em>Procedimento</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.ProcedimentoImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getProcedimento()
+	 * @generated
+	 */
+	int PROCEDIMENTO = 13;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.CallProcImpl <em>Call Proc</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.CallProcImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getCallProc()
+	 * @generated
+	 */
+	int CALL_PROC = 14;
 
 	/**
 	 * The number of structural features of the '<em>Exp Bin Logica</em>' class.
@@ -569,7 +564,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_BIN_LOGICA_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 4;
+	int EXP_BIN_LOGICA_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Exp Bin Logica</em>' class.
@@ -581,105 +576,22 @@ public interface PascalitoPackage extends EPackage {
 	int EXP_BIN_LOGICA_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.ExpBinImpl <em>Exp Bin</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ExpBinImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getExpBin()
-	 * @generated
-	 */
-	int EXP_BIN = 11;
-
-	/**
-	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_BIN__PRIORIDADE = EXPRESSAO__PRIORIDADE;
+	int EXP_NEG__LEFT = EXPRESSAO__LEFT;
 
 	/**
-	 * The feature id for the '<em><b>Operador</b></em>' attribute.
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_BIN__OPERADOR = EXPRESSAO_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Operando Dir</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_BIN__OPERANDO_DIR = EXPRESSAO_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Operando Esq</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_BIN__OPERANDO_ESQ = EXPRESSAO_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Comutativa</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_BIN__COMUTATIVA = EXPRESSAO_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Exp Bin</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_BIN_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Exp Bin</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_BIN_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.ExpNegImpl <em>Exp Neg</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ExpNegImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getExpNeg()
-	 * @generated
-	 */
-	int EXP_NEG = 12;
-
-	/**
-	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_NEG__PRIORIDADE = EXPRESSAO__PRIORIDADE;
-
-	/**
-	 * The feature id for the '<em><b>Operador</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_NEG__OPERADOR = EXPRESSAO_FEATURE_COUNT + 0;
+	int EXP_NEG__RIGHT = EXPRESSAO__RIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Nega</b></em>' containment reference.
@@ -688,7 +600,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_NEG__NEGA = EXPRESSAO_FEATURE_COUNT + 1;
+	int EXP_NEG__NEGA = EXPRESSAO_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Exp Neg</em>' class.
@@ -697,7 +609,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_NEG_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 2;
+	int EXP_NEG_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Exp Neg</em>' class.
@@ -707,16 +619,6 @@ public interface PascalitoPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXP_NEG_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.newRole15Impl <em>new Role15</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.newRole15Impl
-	 * @see pascalito.impl.PascalitoPackageImpl#getnewRole15()
-	 * @generated
-	 */
-	int NEW_ROLE15 = 13;
 
 	/**
 	 * The number of structural features of the '<em>new Role15</em>' class.
@@ -735,16 +637,6 @@ public interface PascalitoPackage extends EPackage {
 	 * @ordered
 	 */
 	int NEW_ROLE15_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.VariavelImpl <em>Variavel</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.VariavelImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getVariavel()
-	 * @generated
-	 */
-	int VARIAVEL = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -792,16 +684,6 @@ public interface PascalitoPackage extends EPackage {
 	int VARIAVEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.ProcedimentoImpl <em>Procedimento</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ProcedimentoImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getProcedimento()
-	 * @generated
-	 */
-	int PROCEDIMENTO = 15;
-
-	/**
 	 * The feature id for the '<em><b>Bloco</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -847,23 +729,22 @@ public interface PascalitoPackage extends EPackage {
 	int PROCEDIMENTO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.CallProcImpl <em>Call Proc</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.CallProcImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getCallProc()
-	 * @generated
-	 */
-	int CALL_PROC = 16;
-
-	/**
-	 * The feature id for the '<em><b>Prioridade</b></em>' attribute.
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC__PRIORIDADE = EXPRESSAO__PRIORIDADE;
+	int CALL_PROC__LEFT = EXPRESSAO__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC__RIGHT = EXPRESSAO__RIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Representa Proc</b></em>' reference.
@@ -900,6 +781,144 @@ public interface PascalitoPackage extends EPackage {
 	 * @ordered
 	 */
 	int CALL_PROC_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.N_ComutativaImpl <em>NComutativa</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.N_ComutativaImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getN_Comutativa()
+	 * @generated
+	 */
+	int NCOMUTATIVA = 15;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NCOMUTATIVA__LEFT = EXPRESSAO__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NCOMUTATIVA__RIGHT = EXPRESSAO__RIGHT;
+
+	/**
+	 * The number of structural features of the '<em>NComutativa</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NCOMUTATIVA_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>NComutativa</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NCOMUTATIVA_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.ComutativaImpl <em>Comutativa</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.ComutativaImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getComutativa()
+	 * @generated
+	 */
+	int COMUTATIVA = 16;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMUTATIVA__LEFT = EXPRESSAO__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMUTATIVA__RIGHT = EXPRESSAO__RIGHT;
+
+	/**
+	 * The number of structural features of the '<em>Comutativa</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMUTATIVA_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Comutativa</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMUTATIVA_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.NumberLiteralImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getNumberLiteral()
+	 * @generated
+	 */
+	int NUMBER_LITERAL = 17;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_LITERAL__LEFT = EXPRESSAO__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_LITERAL__RIGHT = EXPRESSAO__RIGHT;
+
+	/**
+	 * The number of structural features of the '<em>Number Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_LITERAL_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Number Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMBER_LITERAL_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.Programa <em>Programa</em>}'.
@@ -1157,36 +1176,26 @@ public interface PascalitoPackage extends EPackage {
 	EClass getExpressao();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Expressao#getPrioridade <em>Prioridade</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.Expressao#getLeft <em>Left</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Prioridade</em>'.
-	 * @see pascalito.Expressao#getPrioridade()
+	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @see pascalito.Expressao#getLeft()
 	 * @see #getExpressao()
 	 * @generated
 	 */
-	EAttribute getExpressao_Prioridade();
+	EReference getExpressao_Left();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Number <em>Number</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.Expressao#getRight <em>Right</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Number</em>'.
-	 * @see pascalito.Number
+	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @see pascalito.Expressao#getRight()
+	 * @see #getExpressao()
 	 * @generated
 	 */
-	EClass getNumber();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Number#getValor <em>Valor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Valor</em>'.
-	 * @see pascalito.Number#getValor()
-	 * @see #getNumber()
-	 * @generated
-	 */
-	EAttribute getNumber_Valor();
+	EReference getExpressao_Right();
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.ExpBinLogica <em>Exp Bin Logica</em>}'.
@@ -1199,104 +1208,6 @@ public interface PascalitoPackage extends EPackage {
 	EClass getExpBinLogica();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.ExpBinLogica#getOperador <em>Operador</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Operador</em>'.
-	 * @see pascalito.ExpBinLogica#getOperador()
-	 * @see #getExpBinLogica()
-	 * @generated
-	 */
-	EAttribute getExpBinLogica_Operador();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.ExpBinLogica#getOperandoEsq <em>Operando Esq</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Operando Esq</em>'.
-	 * @see pascalito.ExpBinLogica#getOperandoEsq()
-	 * @see #getExpBinLogica()
-	 * @generated
-	 */
-	EReference getExpBinLogica_OperandoEsq();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.ExpBinLogica#getOperandoDir <em>Operando Dir</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Operando Dir</em>'.
-	 * @see pascalito.ExpBinLogica#getOperandoDir()
-	 * @see #getExpBinLogica()
-	 * @generated
-	 */
-	EReference getExpBinLogica_OperandoDir();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pascalito.ExpBinLogica#isComutativa <em>Comutativa</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comutativa</em>'.
-	 * @see pascalito.ExpBinLogica#isComutativa()
-	 * @see #getExpBinLogica()
-	 * @generated
-	 */
-	EAttribute getExpBinLogica_Comutativa();
-
-	/**
-	 * Returns the meta object for class '{@link pascalito.ExpBin <em>Exp Bin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Exp Bin</em>'.
-	 * @see pascalito.ExpBin
-	 * @generated
-	 */
-	EClass getExpBin();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pascalito.ExpBin#getOperador <em>Operador</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Operador</em>'.
-	 * @see pascalito.ExpBin#getOperador()
-	 * @see #getExpBin()
-	 * @generated
-	 */
-	EAttribute getExpBin_Operador();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.ExpBin#getOperandoDir <em>Operando Dir</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Operando Dir</em>'.
-	 * @see pascalito.ExpBin#getOperandoDir()
-	 * @see #getExpBin()
-	 * @generated
-	 */
-	EReference getExpBin_OperandoDir();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.ExpBin#getOperandoEsq <em>Operando Esq</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Operando Esq</em>'.
-	 * @see pascalito.ExpBin#getOperandoEsq()
-	 * @see #getExpBin()
-	 * @generated
-	 */
-	EReference getExpBin_OperandoEsq();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pascalito.ExpBin#isComutativa <em>Comutativa</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comutativa</em>'.
-	 * @see pascalito.ExpBin#isComutativa()
-	 * @see #getExpBin()
-	 * @generated
-	 */
-	EAttribute getExpBin_Comutativa();
-
-	/**
 	 * Returns the meta object for class '{@link pascalito.ExpNeg <em>Exp Neg</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1305,17 +1216,6 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getExpNeg();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pascalito.ExpNeg#getOperador <em>Operador</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Operador</em>'.
-	 * @see pascalito.ExpNeg#getOperador()
-	 * @see #getExpNeg()
-	 * @generated
-	 */
-	EAttribute getExpNeg_Operador();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link pascalito.ExpNeg#getNega <em>Nega</em>}'.
@@ -1455,6 +1355,36 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCallProc_Parametro();
+
+	/**
+	 * Returns the meta object for class '{@link pascalito.N_Comutativa <em>NComutativa</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>NComutativa</em>'.
+	 * @see pascalito.N_Comutativa
+	 * @generated
+	 */
+	EClass getN_Comutativa();
+
+	/**
+	 * Returns the meta object for class '{@link pascalito.Comutativa <em>Comutativa</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Comutativa</em>'.
+	 * @see pascalito.Comutativa
+	 * @generated
+	 */
+	EClass getComutativa();
+
+	/**
+	 * Returns the meta object for class '{@link pascalito.NumberLiteral <em>Number Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Number Literal</em>'.
+	 * @see pascalito.NumberLiteral
+	 * @generated
+	 */
+	EClass getNumberLiteral();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1690,30 +1620,20 @@ public interface PascalitoPackage extends EPackage {
 		EClass EXPRESSAO = eINSTANCE.getExpressao();
 
 		/**
-		 * The meta object literal for the '<em><b>Prioridade</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXPRESSAO__PRIORIDADE = eINSTANCE.getExpressao_Prioridade();
+		EReference EXPRESSAO__LEFT = eINSTANCE.getExpressao_Left();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.NumberImpl <em>Number</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.NumberImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getNumber()
-		 * @generated
-		 */
-		EClass NUMBER = eINSTANCE.getNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NUMBER__VALOR = eINSTANCE.getNumber_Valor();
+		EReference EXPRESSAO__RIGHT = eINSTANCE.getExpressao_Right();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.ExpBinLogicaImpl <em>Exp Bin Logica</em>}' class.
@@ -1726,80 +1646,6 @@ public interface PascalitoPackage extends EPackage {
 		EClass EXP_BIN_LOGICA = eINSTANCE.getExpBinLogica();
 
 		/**
-		 * The meta object literal for the '<em><b>Operador</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXP_BIN_LOGICA__OPERADOR = eINSTANCE.getExpBinLogica_Operador();
-
-		/**
-		 * The meta object literal for the '<em><b>Operando Esq</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXP_BIN_LOGICA__OPERANDO_ESQ = eINSTANCE.getExpBinLogica_OperandoEsq();
-
-		/**
-		 * The meta object literal for the '<em><b>Operando Dir</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXP_BIN_LOGICA__OPERANDO_DIR = eINSTANCE.getExpBinLogica_OperandoDir();
-
-		/**
-		 * The meta object literal for the '<em><b>Comutativa</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXP_BIN_LOGICA__COMUTATIVA = eINSTANCE.getExpBinLogica_Comutativa();
-
-		/**
-		 * The meta object literal for the '{@link pascalito.impl.ExpBinImpl <em>Exp Bin</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ExpBinImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getExpBin()
-		 * @generated
-		 */
-		EClass EXP_BIN = eINSTANCE.getExpBin();
-
-		/**
-		 * The meta object literal for the '<em><b>Operador</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXP_BIN__OPERADOR = eINSTANCE.getExpBin_Operador();
-
-		/**
-		 * The meta object literal for the '<em><b>Operando Dir</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXP_BIN__OPERANDO_DIR = eINSTANCE.getExpBin_OperandoDir();
-
-		/**
-		 * The meta object literal for the '<em><b>Operando Esq</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXP_BIN__OPERANDO_ESQ = eINSTANCE.getExpBin_OperandoEsq();
-
-		/**
-		 * The meta object literal for the '<em><b>Comutativa</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXP_BIN__COMUTATIVA = eINSTANCE.getExpBin_Comutativa();
-
-		/**
 		 * The meta object literal for the '{@link pascalito.impl.ExpNegImpl <em>Exp Neg</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1808,14 +1654,6 @@ public interface PascalitoPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EXP_NEG = eINSTANCE.getExpNeg();
-
-		/**
-		 * The meta object literal for the '<em><b>Operador</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXP_NEG__OPERADOR = eINSTANCE.getExpNeg_Operador();
 
 		/**
 		 * The meta object literal for the '<em><b>Nega</b></em>' containment reference feature.
@@ -1928,6 +1766,36 @@ public interface PascalitoPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CALL_PROC__PARAMETRO = eINSTANCE.getCallProc_Parametro();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.N_ComutativaImpl <em>NComutativa</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.N_ComutativaImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getN_Comutativa()
+		 * @generated
+		 */
+		EClass NCOMUTATIVA = eINSTANCE.getN_Comutativa();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.ComutativaImpl <em>Comutativa</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.ComutativaImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getComutativa()
+		 * @generated
+		 */
+		EClass COMUTATIVA = eINSTANCE.getComutativa();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.NumberLiteralImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getNumberLiteral()
+		 * @generated
+		 */
+		EClass NUMBER_LITERAL = eINSTANCE.getNumberLiteral();
 
 	}
 

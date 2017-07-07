@@ -14,11 +14,13 @@ import pascalito.Bloco;
 import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
+import pascalito.Comutativa;
 import pascalito.Desvio;
-import pascalito.ExpBin;
 import pascalito.ExpBinLogica;
 import pascalito.ExpNeg;
 import pascalito.Loop;
+import pascalito.N_Comutativa;
+import pascalito.NumberLiteral;
 import pascalito.PascalitoFactory;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
@@ -77,14 +79,15 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 			case PascalitoPackage.ATRIBUICAO: return createAtribuicao();
 			case PascalitoPackage.DESVIO: return createDesvio();
 			case PascalitoPackage.LOOP: return createLoop();
-			case PascalitoPackage.NUMBER: return createNumber();
 			case PascalitoPackage.EXP_BIN_LOGICA: return createExpBinLogica();
-			case PascalitoPackage.EXP_BIN: return createExpBin();
 			case PascalitoPackage.EXP_NEG: return createExpNeg();
 			case PascalitoPackage.NEW_ROLE15: return createnewRole15();
 			case PascalitoPackage.VARIAVEL: return createVariavel();
 			case PascalitoPackage.PROCEDIMENTO: return createProcedimento();
 			case PascalitoPackage.CALL_PROC: return createCallProc();
+			case PascalitoPackage.NCOMUTATIVA: return createN_Comutativa();
+			case PascalitoPackage.COMUTATIVA: return createComutativa();
+			case PascalitoPackage.NUMBER_LITERAL: return createNumberLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -165,29 +168,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public pascalito.Number createNumber() {
-		NumberImpl number = new NumberImpl();
-		return number;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ExpBinLogica createExpBinLogica() {
 		ExpBinLogicaImpl expBinLogica = new ExpBinLogicaImpl();
 		return expBinLogica;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExpBin createExpBin() {
-		ExpBinImpl expBin = new ExpBinImpl();
-		return expBin;
 	}
 
 	/**
@@ -238,6 +221,36 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	public CallProc createCallProc() {
 		CallProcImpl callProc = new CallProcImpl();
 		return callProc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public N_Comutativa createN_Comutativa() {
+		N_ComutativaImpl n_Comutativa = new N_ComutativaImpl();
+		return n_Comutativa;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comutativa createComutativa() {
+		ComutativaImpl comutativa = new ComutativaImpl();
+		return comutativa;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NumberLiteral createNumberLiteral() {
+		NumberLiteralImpl numberLiteral = new NumberLiteralImpl();
+		return numberLiteral;
 	}
 
 	/**

@@ -3,23 +3,24 @@
 package pascalito.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import pascalito.ExpBinLogica;
+
+import pascalito.N_Comutativa;
 import pascalito.PascalitoPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Exp Bin Logica</b></em>'.
+ * An implementation of the model object '<em><b>NComutativa</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ExpBinLogicaImpl extends ExpressaoImpl implements ExpBinLogica {
+public class N_ComutativaImpl extends ExpressaoImpl implements N_Comutativa {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExpBinLogicaImpl() {
+	protected N_ComutativaImpl() {
 		super();
 	}
 
@@ -30,7 +31,7 @@ public class ExpBinLogicaImpl extends ExpressaoImpl implements ExpBinLogica {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PascalitoPackage.Literals.EXP_BIN_LOGICA;
+		return PascalitoPackage.Literals.NCOMUTATIVA;
 	}
 
-} //ExpBinLogicaImpl
+} //N_ComutativaImpl

@@ -12,7 +12,6 @@ package pascalito;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pascalito.ExpNeg#getOperador <em>Operador</em>}</li>
  *   <li>{@link pascalito.ExpNeg#getNega <em>Nega</em>}</li>
  * </ul>
  *
@@ -21,32 +20,6 @@ package pascalito;
  * @generated
  */
 public interface ExpNeg extends Expressao {
-	/**
-	 * Returns the value of the '<em><b>Operador</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Operador</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operador</em>' attribute.
-	 * @see #setOperador(String)
-	 * @see pascalito.PascalitoPackage#getExpNeg_Operador()
-	 * @model
-	 * @generated
-	 */
-	String getOperador();
-
-	/**
-	 * Sets the value of the '{@link pascalito.ExpNeg#getOperador <em>Operador</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Operador</em>' attribute.
-	 * @see #getOperador()
-	 * @generated
-	 */
-	void setOperador(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Nega</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -14,12 +14,14 @@ import pascalito.CallProc;
 import pascalito.CallProcedimento;
 import pascalito.CallVariavel;
 import pascalito.Comando;
+import pascalito.Comutativa;
 import pascalito.Desvio;
-import pascalito.ExpBin;
 import pascalito.ExpBinLogica;
 import pascalito.ExpNeg;
 import pascalito.Expressao;
 import pascalito.Loop;
+import pascalito.N_Comutativa;
+import pascalito.NumberLiteral;
 import pascalito.PascalitoFactory;
 import pascalito.PascalitoPackage;
 import pascalito.Procedimento;
@@ -102,21 +104,7 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass numberEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass expBinLogicaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass expBinEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,6 +140,27 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * @generated
 	 */
 	private EClass callProcEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass n_ComutativaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass comutativaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass numberLiteralEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -435,8 +444,8 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpressao_Prioridade() {
-		return (EAttribute)expressaoEClass.getEStructuralFeatures().get(0);
+	public EReference getExpressao_Left() {
+		return (EReference)expressaoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -444,17 +453,8 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNumber() {
-		return numberEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getNumber_Valor() {
-		return (EAttribute)numberEClass.getEStructuralFeatures().get(0);
+	public EReference getExpressao_Right() {
+		return (EReference)expressaoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -471,87 +471,6 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpBinLogica_Operador() {
-		return (EAttribute)expBinLogicaEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpBinLogica_OperandoEsq() {
-		return (EReference)expBinLogicaEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpBinLogica_OperandoDir() {
-		return (EReference)expBinLogicaEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExpBinLogica_Comutativa() {
-		return (EAttribute)expBinLogicaEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getExpBin() {
-		return expBinEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExpBin_Operador() {
-		return (EAttribute)expBinEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpBin_OperandoDir() {
-		return (EReference)expBinEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpBin_OperandoEsq() {
-		return (EReference)expBinEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExpBin_Comutativa() {
-		return (EAttribute)expBinEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getExpNeg() {
 		return expNegEClass;
 	}
@@ -561,17 +480,8 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpNeg_Operador() {
-		return (EAttribute)expNegEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getExpNeg_Nega() {
-		return (EReference)expNegEClass.getEStructuralFeatures().get(1);
+		return (EReference)expNegEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -687,6 +597,33 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getN_Comutativa() {
+		return n_ComutativaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComutativa() {
+		return comutativaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNumberLiteral() {
+		return numberLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PascalitoFactory getPascalitoFactory() {
 		return (PascalitoFactory)getEFactoryInstance();
 	}
@@ -742,25 +679,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		createEReference(loopEClass, LOOP__FACA);
 
 		expressaoEClass = createEClass(EXPRESSAO);
-		createEAttribute(expressaoEClass, EXPRESSAO__PRIORIDADE);
-
-		numberEClass = createEClass(NUMBER);
-		createEAttribute(numberEClass, NUMBER__VALOR);
+		createEReference(expressaoEClass, EXPRESSAO__LEFT);
+		createEReference(expressaoEClass, EXPRESSAO__RIGHT);
 
 		expBinLogicaEClass = createEClass(EXP_BIN_LOGICA);
-		createEAttribute(expBinLogicaEClass, EXP_BIN_LOGICA__OPERADOR);
-		createEReference(expBinLogicaEClass, EXP_BIN_LOGICA__OPERANDO_ESQ);
-		createEReference(expBinLogicaEClass, EXP_BIN_LOGICA__OPERANDO_DIR);
-		createEAttribute(expBinLogicaEClass, EXP_BIN_LOGICA__COMUTATIVA);
-
-		expBinEClass = createEClass(EXP_BIN);
-		createEAttribute(expBinEClass, EXP_BIN__OPERADOR);
-		createEReference(expBinEClass, EXP_BIN__OPERANDO_DIR);
-		createEReference(expBinEClass, EXP_BIN__OPERANDO_ESQ);
-		createEAttribute(expBinEClass, EXP_BIN__COMUTATIVA);
 
 		expNegEClass = createEClass(EXP_NEG);
-		createEAttribute(expNegEClass, EXP_NEG__OPERADOR);
 		createEReference(expNegEClass, EXP_NEG__NEGA);
 
 		newRole15EClass = createEClass(NEW_ROLE15);
@@ -778,6 +702,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		callProcEClass = createEClass(CALL_PROC);
 		createEReference(callProcEClass, CALL_PROC__REPRESENTA_PROC);
 		createEReference(callProcEClass, CALL_PROC__PARAMETRO);
+
+		n_ComutativaEClass = createEClass(NCOMUTATIVA);
+
+		comutativaEClass = createEClass(COMUTATIVA);
+
+		numberLiteralEClass = createEClass(NUMBER_LITERAL);
 	}
 
 	/**
@@ -813,11 +743,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		atribuicaoEClass.getESuperTypes().add(this.getComando());
 		desvioEClass.getESuperTypes().add(this.getComando());
 		loopEClass.getESuperTypes().add(this.getComando());
-		numberEClass.getESuperTypes().add(this.getExpressao());
 		expBinLogicaEClass.getESuperTypes().add(this.getExpressao());
-		expBinEClass.getESuperTypes().add(this.getExpressao());
 		expNegEClass.getESuperTypes().add(this.getExpressao());
 		callProcEClass.getESuperTypes().add(this.getExpressao());
+		n_ComutativaEClass.getESuperTypes().add(this.getExpressao());
+		comutativaEClass.getESuperTypes().add(this.getExpressao());
+		numberLiteralEClass.getESuperTypes().add(this.getExpressao());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programaEClass, Programa.class, "Programa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -852,25 +783,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		initEReference(getLoop_Faca(), this.getComando(), null, "faca", null, 0, -1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressaoEClass, Expressao.class, "Expressao", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpressao_Prioridade(), ecorePackage.getEBigDecimal(), "Prioridade", null, 0, 1, Expressao.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(numberEClass, pascalito.Number.class, "Number", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNumber_Valor(), ecorePackage.getEInt(), "Valor", null, 0, 1, pascalito.Number.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpressao_Left(), this.getExpressao(), null, "left", null, 0, 1, Expressao.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExpressao_Right(), this.getExpressao(), null, "right", null, 0, 1, Expressao.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expBinLogicaEClass, ExpBinLogica.class, "ExpBinLogica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpBinLogica_Operador(), ecorePackage.getEString(), "Operador", null, 0, 1, ExpBinLogica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpBinLogica_OperandoEsq(), this.getExpressao(), null, "operandoEsq", null, 1, 1, ExpBinLogica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpBinLogica_OperandoDir(), this.getExpressao(), null, "operandoDir", null, 1, 1, ExpBinLogica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExpBinLogica_Comutativa(), ecorePackage.getEBoolean(), "Comutativa", null, 0, 1, ExpBinLogica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(expBinEClass, ExpBin.class, "ExpBin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpBin_Operador(), ecorePackage.getEString(), "Operador", null, 0, 1, ExpBin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpBin_OperandoDir(), this.getExpressao(), null, "operandoDir", null, 1, 1, ExpBin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getExpBin_OperandoEsq(), this.getExpressao(), null, "operandoEsq", null, 1, 1, ExpBin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExpBin_Comutativa(), ecorePackage.getEBoolean(), "Comutativa", null, 0, 1, ExpBin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expNegEClass, ExpNeg.class, "ExpNeg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpNeg_Operador(), ecorePackage.getEString(), "Operador", null, 0, 1, ExpNeg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getExpNeg_Nega(), this.getExpressao(), null, "nega", null, 1, 1, ExpNeg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(newRole15EClass, newRole15.class, "newRole15", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -888,6 +806,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		initEClass(callProcEClass, CallProc.class, "CallProc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCallProc_RepresentaProc(), this.getProcedimento(), null, "representaProc", null, 1, 1, CallProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCallProc_Parametro(), this.getExpressao(), null, "parametro", null, 0, -1, CallProc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(n_ComutativaEClass, N_Comutativa.class, "N_Comutativa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(comutativaEClass, Comutativa.class, "Comutativa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(numberLiteralEClass, NumberLiteral.class, "NumberLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -22,33 +22,12 @@ import pascalito.PascalitoPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pascalito.impl.ExpNegImpl#getOperador <em>Operador</em>}</li>
  *   <li>{@link pascalito.impl.ExpNegImpl#getNega <em>Nega</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
-	/**
-	 * The default value of the '{@link #getOperador() <em>Operador</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperador()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String OPERADOR_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getOperador() <em>Operador</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperador()
-	 * @generated
-	 * @ordered
-	 */
-	protected String operador = OPERADOR_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getNega() <em>Nega</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -76,27 +55,6 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	protected EClass eStaticClass() {
 		return PascalitoPackage.Literals.EXP_NEG;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getOperador() {
-		return operador;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOperador(String newOperador) {
-		String oldOperador = operador;
-		operador = newOperador;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXP_NEG__OPERADOR, oldOperador, operador));
 	}
 
 	/**
@@ -164,8 +122,6 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__OPERADOR:
-				return getOperador();
 			case PascalitoPackage.EXP_NEG__NEGA:
 				return getNega();
 		}
@@ -180,9 +136,6 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__OPERADOR:
-				setOperador((String)newValue);
-				return;
 			case PascalitoPackage.EXP_NEG__NEGA:
 				setNega((Expressao)newValue);
 				return;
@@ -198,9 +151,6 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__OPERADOR:
-				setOperador(OPERADOR_EDEFAULT);
-				return;
 			case PascalitoPackage.EXP_NEG__NEGA:
 				setNega((Expressao)null);
 				return;
@@ -216,28 +166,10 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__OPERADOR:
-				return OPERADOR_EDEFAULT == null ? operador != null : !OPERADOR_EDEFAULT.equals(operador);
 			case PascalitoPackage.EXP_NEG__NEGA:
 				return nega != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Operador: ");
-		result.append(operador);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ExpNegImpl

@@ -18,7 +18,8 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see pascalito.PascalitoPackage#getCallProcedimento()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='numeroParametros'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot numeroParametros='self.definido.parametro->size() = parametro->size()'"
  * @generated
  */
 public interface CallProcedimento extends Comando {

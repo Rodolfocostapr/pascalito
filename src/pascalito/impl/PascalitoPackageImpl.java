@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import pascalito.Atribuicao;
 import pascalito.Bloco;
@@ -28,6 +29,7 @@ import pascalito.Procedimento;
 import pascalito.Programa;
 import pascalito.Variavel;
 import pascalito.newRole15;
+import pascalito.util.PascalitoValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -213,6 +215,15 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 
 		// Initialize created meta-data
 		thePascalitoPackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(thePascalitoPackage, 
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return PascalitoValidator.INSTANCE;
+				 }
+			 });
 
 		// Mark meta-data to indicate it can't be changed
 		thePascalitoPackage.freeze();
@@ -817,8 +828,52 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		createResource(eNS_URI);
 
 		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
 		// http://www.obeo.fr/dsl/dnc/archetype
 		createArchetypeAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });	
+		addAnnotation
+		  (callProcedimentoEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "numeroParametros"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (callProcedimentoEClass, 
+		   source, 
+		   new String[] {
+			 "numeroParametros", "self.definido.parametro->size() = parametro->size()"
+		   });
 	}
 
 	/**

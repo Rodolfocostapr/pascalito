@@ -298,7 +298,46 @@ public class PascalitoValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCallProc(CallProc callProc, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(callProc, diagnostics, context);
+		if (!validate_NoCircularContainment(callProc, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCallProc_numeroParametros(callProc, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the numeroParametros constraint of '<em>Call Proc</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String CALL_PROC__NUMERO_PARAMETROS__EEXPRESSION = "self.representaProc.parametro->size() = parametro->size()";
+
+	/**
+	 * Validates the numeroParametros constraint of '<em>Call Proc</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCallProc_numeroParametros(CallProc callProc, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(PascalitoPackage.Literals.CALL_PROC,
+				 callProc,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "numeroParametros",
+				 CALL_PROC__NUMERO_PARAMETROS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

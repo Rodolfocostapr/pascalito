@@ -857,6 +857,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		   source, 
 		   new String[] {
 			 "constraints", "numeroParametros"
+		   });	
+		addAnnotation
+		  (callProcEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "numeroParametros"
 		   });
 	}
 
@@ -873,6 +879,12 @@ public class PascalitoPackageImpl extends EPackageImpl implements PascalitoPacka
 		   source, 
 		   new String[] {
 			 "numeroParametros", "self.definido.parametro->size() = parametro->size()"
+		   });	
+		addAnnotation
+		  (callProcEClass, 
+		   source, 
+		   new String[] {
+			 "numeroParametros", "self.representaProc.parametro->size() = parametro->size()"
 		   });
 	}
 

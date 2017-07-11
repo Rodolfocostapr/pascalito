@@ -19,7 +19,8 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see pascalito.PascalitoPackage#getCallProc()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='numeroParametros'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot numeroParametros='self.representaProc.parametro->size() = parametro->size()'"
  * @generated
  */
 public interface CallProc extends Expressao {

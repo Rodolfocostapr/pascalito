@@ -22,58 +22,31 @@ public interface PascalitoFactory extends EFactory {
 	PascalitoFactory eINSTANCE = pascalito.impl.PascalitoFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Programa</em>'.
+	 * Returns a new object of class '<em>Program</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Programa</em>'.
+	 * @return a new object of class '<em>Program</em>'.
 	 * @generated
 	 */
-	Programa createPrograma();
+	Program createProgram();
 
 	/**
-	 * Returns a new object of class '<em>Bloco</em>'.
+	 * Returns a new object of class '<em>Block</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bloco</em>'.
+	 * @return a new object of class '<em>Block</em>'.
 	 * @generated
 	 */
-	Bloco createBloco();
+	Block createBlock();
 
 	/**
-	 * Returns a new object of class '<em>Call Variavel</em>'.
+	 * Returns a new object of class '<em>Call Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Call Variavel</em>'.
+	 * @return a new object of class '<em>Call Variable</em>'.
 	 * @generated
 	 */
-	CallVariavel createCallVariavel();
-
-	/**
-	 * Returns a new object of class '<em>Call Procedimento</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Call Procedimento</em>'.
-	 * @generated
-	 */
-	CallProcedimento createCallProcedimento();
-
-	/**
-	 * Returns a new object of class '<em>Atribuicao</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Atribuicao</em>'.
-	 * @generated
-	 */
-	Atribuicao createAtribuicao();
-
-	/**
-	 * Returns a new object of class '<em>Desvio</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Desvio</em>'.
-	 * @generated
-	 */
-	Desvio createDesvio();
+	CallVariable createCallVariable();
 
 	/**
 	 * Returns a new object of class '<em>Loop</em>'.
@@ -85,13 +58,13 @@ public interface PascalitoFactory extends EFactory {
 	Loop createLoop();
 
 	/**
-	 * Returns a new object of class '<em>Exp Bin Logica</em>'.
+	 * Returns a new object of class '<em>Exp Bin Logical</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Exp Bin Logica</em>'.
+	 * @return a new object of class '<em>Exp Bin Logical</em>'.
 	 * @generated
 	 */
-	ExpBinLogica createExpBinLogica();
+	ExpBinLogical createExpBinLogical();
 
 	/**
 	 * Returns a new object of class '<em>Exp Neg</em>'.
@@ -112,22 +85,49 @@ public interface PascalitoFactory extends EFactory {
 	newRole15 createnewRole15();
 
 	/**
-	 * Returns a new object of class '<em>Variavel</em>'.
+	 * Returns a new object of class '<em>Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Variavel</em>'.
+	 * @return a new object of class '<em>Variable</em>'.
 	 * @generated
 	 */
-	Variavel createVariavel();
+	Variable createVariable();
 
 	/**
-	 * Returns a new object of class '<em>Procedimento</em>'.
+	 * Returns a new object of class '<em>Procedure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Procedimento</em>'.
+	 * @return a new object of class '<em>Procedure</em>'.
 	 * @generated
 	 */
-	Procedimento createProcedimento();
+	Procedure createProcedure();
+
+	/**
+	 * Returns a new object of class '<em>Call Proc Exp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Call Proc Exp</em>'.
+	 * @generated
+	 */
+	CallProcExp createCallProcExp();
+
+	/**
+	 * Returns a new object of class '<em>Exp Bin Nv1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exp Bin Nv1</em>'.
+	 * @generated
+	 */
+	ExpBinNv1 createExpBinNv1();
+
+	/**
+	 * Returns a new object of class '<em>Exp Bin Nv0</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exp Bin Nv0</em>'.
+	 * @generated
+	 */
+	ExpBinNv0 createExpBinNv0();
 
 	/**
 	 * Returns a new object of class '<em>Call Proc</em>'.
@@ -139,22 +139,22 @@ public interface PascalitoFactory extends EFactory {
 	CallProc createCallProc();
 
 	/**
-	 * Returns a new object of class '<em>NComutativa</em>'.
+	 * Returns a new object of class '<em>Atribuition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>NComutativa</em>'.
+	 * @return a new object of class '<em>Atribuition</em>'.
 	 * @generated
 	 */
-	N_Comutativa createN_Comutativa();
+	Atribuition createAtribuition();
 
 	/**
-	 * Returns a new object of class '<em>Comutativa</em>'.
+	 * Returns a new object of class '<em>If</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Comutativa</em>'.
+	 * @return a new object of class '<em>If</em>'.
 	 * @generated
 	 */
-	Comutativa createComutativa();
+	If createIf();
 
 	/**
 	 * Returns a new object of class '<em>Number Literal</em>'.

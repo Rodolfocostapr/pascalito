@@ -12,38 +12,38 @@ package pascalito;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pascalito.ExpNeg#getNega <em>Nega</em>}</li>
+ *   <li>{@link pascalito.ExpNeg#getNegate <em>Negate</em>}</li>
  * </ul>
  *
  * @see pascalito.PascalitoPackage#getExpNeg()
  * @model
  * @generated
  */
-public interface ExpNeg extends Expressao {
+public interface ExpNeg extends Expression {
 	/**
-	 * Returns the value of the '<em><b>Nega</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Negate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nega</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Negate</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nega</em>' containment reference.
-	 * @see #setNega(Expressao)
-	 * @see pascalito.PascalitoPackage#getExpNeg_Nega()
+	 * @return the value of the '<em>Negate</em>' containment reference.
+	 * @see #setNegate(Expression)
+	 * @see pascalito.PascalitoPackage#getExpNeg_Negate()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Expressao getNega();
+	Expression getNegate();
 
 	/**
-	 * Sets the value of the '{@link pascalito.ExpNeg#getNega <em>Nega</em>}' containment reference.
+	 * Sets the value of the '{@link pascalito.ExpNeg#getNegate <em>Negate</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nega</em>' containment reference.
-	 * @see #getNega()
+	 * @param value the new value of the '<em>Negate</em>' containment reference.
+	 * @see #getNegate()
 	 * @generated
 	 */
-	void setNega(Expressao value);
+	void setNegate(Expression value);
 
 } // ExpNeg

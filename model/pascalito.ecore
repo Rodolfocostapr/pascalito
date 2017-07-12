@@ -6,98 +6,95 @@
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Programa">
+  <eClassifiers xsi:type="ecore:EClass" name="Program">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Ident" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bloco" lowerBound="1" eType="#//Bloco"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" eType="#//Block"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bloco">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defvariavel" upperBound="-1"
-        eType="#//Variavel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defprocedimento" upperBound="-1"
-        eType="#//Procedimento" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executa" upperBound="-1"
-        eType="#//Comando" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Block">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defVariable" upperBound="-1"
+        eType="#//Variable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defprocedure" upperBound="-1"
+        eType="#//Procedure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="execute" upperBound="-1"
+        eType="#//Command" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CallVariavel" eSuperTypes="#//Expressao">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="representa" lowerBound="1"
-        eType="#//Variavel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CallVariable" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="represent" lowerBound="1"
+        eType="#//Variable"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Comando" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CallProcedimento" eSuperTypes="#//Comando">
+  <eClassifiers xsi:type="ecore:EClass" name="Command" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CallProc" eSuperTypes="#//Command">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="numeroParametros"/>
+      <details key="constraints" value="number_of_parameters"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="numeroParametros" value="self.definido.parametro->size() = parametro->size()"/>
+      <details key="number_of_parameters" value="self.defined.parameter->size() = parameter->size()"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="definido" lowerBound="1"
-        eType="#//Procedimento"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
-        eType="#//Expressao" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defined" lowerBound="1"
+        eType="#//Procedure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atribuicao" eSuperTypes="#//Comando">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atribui" lowerBound="1"
-        eType="#//Variavel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Atribuition" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sets" lowerBound="1" eType="#//Variable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atribuiResultado" lowerBound="1"
-        eType="#//Expressao" containment="true"/>
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Desvio" eSuperTypes="#//Comando">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="se" lowerBound="1" eType="#//Expressao"
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifExp" lowerBound="1" eType="#//Expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" upperBound="-1" eType="#//Comando"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="do" upperBound="-1" eType="#//Command"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="seNao" upperBound="-1"
-        eType="#//Comando" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseCmd" upperBound="-1"
+        eType="#//Command" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Comando">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="se" lowerBound="1" eType="#//Expressao"
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="while" lowerBound="1" eType="#//Expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="faca" upperBound="-1" eType="#//Comando"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expressao" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expressao"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Expressao"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="do" upperBound="-1" eType="#//Command"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpBinLogica" eSuperTypes="#//Expressao"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpNeg" eSuperTypes="#//Expressao">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nega" lowerBound="1" eType="#//Expressao"
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expression"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinLogical" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpNeg" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="negate" lowerBound="1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="newRole15">
     <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
       <details key="archetype" value="Role"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variavel">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Procedimento">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bloco" lowerBound="1" eType="#//Bloco"
+  <eClassifiers xsi:type="ecore:EClass" name="Procedure">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" eType="#//Block"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
-        eType="#//Variavel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+        eType="#//Variable" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CallProc" eSuperTypes="#//Expressao">
+  <eClassifiers xsi:type="ecore:EClass" name="CallProcExp" eSuperTypes="#//Expression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="numeroParametros"/>
+      <details key="constraints" value="number_of_parameters"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="numeroParametros" value="self.representaProc.parametro->size() = parametro->size()"/>
+      <details key="number_of_parameters" value="self.represent.parameter->size() = parameter->size()"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="representaProc" lowerBound="1"
-        eType="#//Procedimento"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" upperBound="-1"
-        eType="#//Expressao" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="represent" lowerBound="1"
+        eType="#//Procedure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="N_Comutativa" eSuperTypes="#//Expressao"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Comutativa" eSuperTypes="#//Expressao"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NumberLiteral" eSuperTypes="#//Expressao"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinNv1" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpBinNv0" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NumberLiteral" eSuperTypes="#//Expression"/>
 </ecore:EPackage>

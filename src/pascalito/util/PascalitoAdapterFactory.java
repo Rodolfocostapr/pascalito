@@ -8,25 +8,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-import pascalito.Atribuicao;
-import pascalito.Bloco;
-import pascalito.CallProc;
-import pascalito.CallProcedimento;
-import pascalito.CallVariavel;
-import pascalito.Comando;
-import pascalito.Comutativa;
-import pascalito.Desvio;
-import pascalito.ExpBinLogica;
-import pascalito.ExpNeg;
-import pascalito.Expressao;
-import pascalito.Loop;
-import pascalito.N_Comutativa;
-import pascalito.NumberLiteral;
-import pascalito.PascalitoPackage;
-import pascalito.Procedimento;
-import pascalito.Programa;
-import pascalito.Variavel;
-import pascalito.newRole15;
+import pascalito.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,44 +67,44 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	protected PascalitoSwitch<Adapter> modelSwitch =
 		new PascalitoSwitch<Adapter>() {
 			@Override
-			public Adapter casePrograma(Programa object) {
-				return createProgramaAdapter();
+			public Adapter caseProgram(Program object) {
+				return createProgramAdapter();
 			}
 			@Override
-			public Adapter caseBloco(Bloco object) {
-				return createBlocoAdapter();
+			public Adapter caseBlock(Block object) {
+				return createBlockAdapter();
 			}
 			@Override
-			public Adapter caseCallVariavel(CallVariavel object) {
-				return createCallVariavelAdapter();
+			public Adapter caseCallVariable(CallVariable object) {
+				return createCallVariableAdapter();
 			}
 			@Override
-			public Adapter caseComando(Comando object) {
-				return createComandoAdapter();
+			public Adapter caseCommand(Command object) {
+				return createCommandAdapter();
 			}
 			@Override
-			public Adapter caseCallProcedimento(CallProcedimento object) {
-				return createCallProcedimentoAdapter();
+			public Adapter caseCallProc(CallProc object) {
+				return createCallProcAdapter();
 			}
 			@Override
-			public Adapter caseAtribuicao(Atribuicao object) {
-				return createAtribuicaoAdapter();
+			public Adapter caseAtribuition(Atribuition object) {
+				return createAtribuitionAdapter();
 			}
 			@Override
-			public Adapter caseDesvio(Desvio object) {
-				return createDesvioAdapter();
+			public Adapter caseIf(If object) {
+				return createIfAdapter();
 			}
 			@Override
 			public Adapter caseLoop(Loop object) {
 				return createLoopAdapter();
 			}
 			@Override
-			public Adapter caseExpressao(Expressao object) {
-				return createExpressaoAdapter();
+			public Adapter caseExpression(Expression object) {
+				return createExpressionAdapter();
 			}
 			@Override
-			public Adapter caseExpBinLogica(ExpBinLogica object) {
-				return createExpBinLogicaAdapter();
+			public Adapter caseExpBinLogical(ExpBinLogical object) {
+				return createExpBinLogicalAdapter();
 			}
 			@Override
 			public Adapter caseExpNeg(ExpNeg object) {
@@ -133,24 +115,24 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 				return createnewRole15Adapter();
 			}
 			@Override
-			public Adapter caseVariavel(Variavel object) {
-				return createVariavelAdapter();
+			public Adapter caseVariable(Variable object) {
+				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseProcedimento(Procedimento object) {
-				return createProcedimentoAdapter();
+			public Adapter caseProcedure(Procedure object) {
+				return createProcedureAdapter();
 			}
 			@Override
-			public Adapter caseCallProc(CallProc object) {
-				return createCallProcAdapter();
+			public Adapter caseCallProcExp(CallProcExp object) {
+				return createCallProcExpAdapter();
 			}
 			@Override
-			public Adapter caseN_Comutativa(N_Comutativa object) {
-				return createN_ComutativaAdapter();
+			public Adapter caseExpBinNv1(ExpBinNv1 object) {
+				return createExpBinNv1Adapter();
 			}
 			@Override
-			public Adapter caseComutativa(Comutativa object) {
-				return createComutativaAdapter();
+			public Adapter caseExpBinNv0(ExpBinNv0 object) {
+				return createExpBinNv0Adapter();
 			}
 			@Override
 			public Adapter caseNumberLiteral(NumberLiteral object) {
@@ -177,100 +159,58 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Programa <em>Programa</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.Programa
+	 * @see pascalito.Program
 	 * @generated
 	 */
-	public Adapter createProgramaAdapter() {
+	public Adapter createProgramAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Bloco <em>Bloco</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.Block <em>Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.Bloco
+	 * @see pascalito.Block
 	 * @generated
 	 */
-	public Adapter createBlocoAdapter() {
+	public Adapter createBlockAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.CallVariavel <em>Call Variavel</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.CallVariable <em>Call Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.CallVariavel
+	 * @see pascalito.CallVariable
 	 * @generated
 	 */
-	public Adapter createCallVariavelAdapter() {
+	public Adapter createCallVariableAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Comando <em>Comando</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.Command <em>Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.Comando
+	 * @see pascalito.Command
 	 * @generated
 	 */
-	public Adapter createComandoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.CallProcedimento <em>Call Procedimento</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pascalito.CallProcedimento
-	 * @generated
-	 */
-	public Adapter createCallProcedimentoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Atribuicao <em>Atribuicao</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pascalito.Atribuicao
-	 * @generated
-	 */
-	public Adapter createAtribuicaoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Desvio <em>Desvio</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pascalito.Desvio
-	 * @generated
-	 */
-	public Adapter createDesvioAdapter() {
+	public Adapter createCommandAdapter() {
 		return null;
 	}
 
@@ -289,30 +229,30 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Expressao <em>Expressao</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.Expression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.Expressao
+	 * @see pascalito.Expression
 	 * @generated
 	 */
-	public Adapter createExpressaoAdapter() {
+	public Adapter createExpressionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.ExpBinLogica <em>Exp Bin Logica</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.ExpBinLogical <em>Exp Bin Logical</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.ExpBinLogica
+	 * @see pascalito.ExpBinLogical
 	 * @generated
 	 */
-	public Adapter createExpBinLogicaAdapter() {
+	public Adapter createExpBinLogicalAdapter() {
 		return null;
 	}
 
@@ -345,30 +285,72 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Variavel <em>Variavel</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.Variavel
+	 * @see pascalito.Variable
 	 * @generated
 	 */
-	public Adapter createVariavelAdapter() {
+	public Adapter createVariableAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Procedimento <em>Procedimento</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.Procedure <em>Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.Procedimento
+	 * @see pascalito.Procedure
 	 * @generated
 	 */
-	public Adapter createProcedimentoAdapter() {
+	public Adapter createProcedureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pascalito.CallProcExp <em>Call Proc Exp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pascalito.CallProcExp
+	 * @generated
+	 */
+	public Adapter createCallProcExpAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pascalito.ExpBinNv1 <em>Exp Bin Nv1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pascalito.ExpBinNv1
+	 * @generated
+	 */
+	public Adapter createExpBinNv1Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pascalito.ExpBinNv0 <em>Exp Bin Nv0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pascalito.ExpBinNv0
+	 * @generated
+	 */
+	public Adapter createExpBinNv0Adapter() {
 		return null;
 	}
 
@@ -387,30 +369,30 @@ public class PascalitoAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.N_Comutativa <em>NComutativa</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.Atribuition <em>Atribuition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.N_Comutativa
+	 * @see pascalito.Atribuition
 	 * @generated
 	 */
-	public Adapter createN_ComutativaAdapter() {
+	public Adapter createAtribuitionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pascalito.Comutativa <em>Comutativa</em>}'.
+	 * Creates a new adapter for an object of class '{@link pascalito.If <em>If</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pascalito.Comutativa
+	 * @see pascalito.If
 	 * @generated
 	 */
-	public Adapter createComutativaAdapter() {
+	public Adapter createIfAdapter() {
 		return null;
 	}
 

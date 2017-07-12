@@ -86,40 +86,40 @@ public class PascalitoValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
-			case PascalitoPackage.PROGRAMA:
-				return validatePrograma((Programa)value, diagnostics, context);
-			case PascalitoPackage.BLOCO:
-				return validateBloco((Bloco)value, diagnostics, context);
-			case PascalitoPackage.CALL_VARIAVEL:
-				return validateCallVariavel((CallVariavel)value, diagnostics, context);
-			case PascalitoPackage.COMANDO:
-				return validateComando((Comando)value, diagnostics, context);
-			case PascalitoPackage.CALL_PROCEDIMENTO:
-				return validateCallProcedimento((CallProcedimento)value, diagnostics, context);
-			case PascalitoPackage.ATRIBUICAO:
-				return validateAtribuicao((Atribuicao)value, diagnostics, context);
-			case PascalitoPackage.DESVIO:
-				return validateDesvio((Desvio)value, diagnostics, context);
+			case PascalitoPackage.PROGRAM:
+				return validateProgram((Program)value, diagnostics, context);
+			case PascalitoPackage.BLOCK:
+				return validateBlock((Block)value, diagnostics, context);
+			case PascalitoPackage.CALL_VARIABLE:
+				return validateCallVariable((CallVariable)value, diagnostics, context);
+			case PascalitoPackage.COMMAND:
+				return validateCommand((Command)value, diagnostics, context);
+			case PascalitoPackage.CALL_PROC:
+				return validateCallProc((CallProc)value, diagnostics, context);
+			case PascalitoPackage.ATRIBUITION:
+				return validateAtribuition((Atribuition)value, diagnostics, context);
+			case PascalitoPackage.IF:
+				return validateIf((If)value, diagnostics, context);
 			case PascalitoPackage.LOOP:
 				return validateLoop((Loop)value, diagnostics, context);
-			case PascalitoPackage.EXPRESSAO:
-				return validateExpressao((Expressao)value, diagnostics, context);
-			case PascalitoPackage.EXP_BIN_LOGICA:
-				return validateExpBinLogica((ExpBinLogica)value, diagnostics, context);
+			case PascalitoPackage.EXPRESSION:
+				return validateExpression((Expression)value, diagnostics, context);
+			case PascalitoPackage.EXP_BIN_LOGICAL:
+				return validateExpBinLogical((ExpBinLogical)value, diagnostics, context);
 			case PascalitoPackage.EXP_NEG:
 				return validateExpNeg((ExpNeg)value, diagnostics, context);
 			case PascalitoPackage.NEW_ROLE15:
 				return validatenewRole15((newRole15)value, diagnostics, context);
-			case PascalitoPackage.VARIAVEL:
-				return validateVariavel((Variavel)value, diagnostics, context);
-			case PascalitoPackage.PROCEDIMENTO:
-				return validateProcedimento((Procedimento)value, diagnostics, context);
-			case PascalitoPackage.CALL_PROC:
-				return validateCallProc((CallProc)value, diagnostics, context);
-			case PascalitoPackage.NCOMUTATIVA:
-				return validateN_Comutativa((N_Comutativa)value, diagnostics, context);
-			case PascalitoPackage.COMUTATIVA:
-				return validateComutativa((Comutativa)value, diagnostics, context);
+			case PascalitoPackage.VARIABLE:
+				return validateVariable((Variable)value, diagnostics, context);
+			case PascalitoPackage.PROCEDURE:
+				return validateProcedure((Procedure)value, diagnostics, context);
+			case PascalitoPackage.CALL_PROC_EXP:
+				return validateCallProcExp((CallProcExp)value, diagnostics, context);
+			case PascalitoPackage.EXP_BIN_NV1:
+				return validateExpBinNv1((ExpBinNv1)value, diagnostics, context);
+			case PascalitoPackage.EXP_BIN_NV0:
+				return validateExpBinNv0((ExpBinNv0)value, diagnostics, context);
 			case PascalitoPackage.NUMBER_LITERAL:
 				return validateNumberLiteral((NumberLiteral)value, diagnostics, context);
 			default:
@@ -132,8 +132,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePrograma(Programa programa, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(programa, diagnostics, context);
+	public boolean validateProgram(Program program, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(program, diagnostics, context);
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateBloco(Bloco bloco, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(bloco, diagnostics, context);
+	public boolean validateBlock(Block block, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(block, diagnostics, context);
 	}
 
 	/**
@@ -150,8 +150,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCallVariavel(CallVariavel callVariavel, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(callVariavel, diagnostics, context);
+	public boolean validateCallVariable(CallVariable callVariable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(callVariable, diagnostics, context);
 	}
 
 	/**
@@ -159,74 +159,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateComando(Comando comando, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(comando, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateCallProcedimento(CallProcedimento callProcedimento, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(callProcedimento, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(callProcedimento, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCallProcedimento_numeroParametros(callProcedimento, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the numeroParametros constraint of '<em>Call Procedimento</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String CALL_PROCEDIMENTO__NUMERO_PARAMETROS__EEXPRESSION = "self.definido.parametro->size() = parametro->size()";
-
-	/**
-	 * Validates the numeroParametros constraint of '<em>Call Procedimento</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateCallProcedimento_numeroParametros(CallProcedimento callProcedimento, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return
-			validate
-				(PascalitoPackage.Literals.CALL_PROCEDIMENTO,
-				 callProcedimento,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "numeroParametros",
-				 CALL_PROCEDIMENTO__NUMERO_PARAMETROS__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAtribuicao(Atribuicao atribuicao, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(atribuicao, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDesvio(Desvio desvio, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(desvio, diagnostics, context);
+	public boolean validateCommand(Command command, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(command, diagnostics, context);
 	}
 
 	/**
@@ -243,8 +177,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateExpressao(Expressao expressao, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(expressao, diagnostics, context);
+	public boolean validateExpression(Expression expression, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(expression, diagnostics, context);
 	}
 
 	/**
@@ -252,8 +186,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateExpBinLogica(ExpBinLogica expBinLogica, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(expBinLogica, diagnostics, context);
+	public boolean validateExpBinLogical(ExpBinLogical expBinLogical, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(expBinLogical, diagnostics, context);
 	}
 
 	/**
@@ -279,8 +213,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateVariavel(Variavel variavel, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(variavel, diagnostics, context);
+	public boolean validateVariable(Variable variable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(variable, diagnostics, context);
 	}
 
 	/**
@@ -288,8 +222,74 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateProcedimento(Procedimento procedimento, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(procedimento, diagnostics, context);
+	public boolean validateProcedure(Procedure procedure, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(procedure, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCallProcExp(CallProcExp callProcExp, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(callProcExp, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(callProcExp, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCallProcExp_number_of_parameters(callProcExp, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the number_of_parameters constraint of '<em>Call Proc Exp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String CALL_PROC_EXP__NUMBER_OF_PARAMETERS__EEXPRESSION = "self.represent.parameter->size() = parameter->size()";
+
+	/**
+	 * Validates the number_of_parameters constraint of '<em>Call Proc Exp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCallProcExp_number_of_parameters(CallProcExp callProcExp, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(PascalitoPackage.Literals.CALL_PROC_EXP,
+				 callProcExp,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "number_of_parameters",
+				 CALL_PROC_EXP__NUMBER_OF_PARAMETERS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateExpBinNv1(ExpBinNv1 expBinNv1, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(expBinNv1, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateExpBinNv0(ExpBinNv0 expBinNv0, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(expBinNv0, diagnostics, context);
 	}
 
 	/**
@@ -307,25 +307,25 @@ public class PascalitoValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(callProc, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(callProc, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(callProc, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCallProc_numeroParametros(callProc, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCallProc_number_of_parameters(callProc, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the numeroParametros constraint of '<em>Call Proc</em>'.
+	 * The cached validation expression for the number_of_parameters constraint of '<em>Call Proc</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CALL_PROC__NUMERO_PARAMETROS__EEXPRESSION = "self.representaProc.parametro->size() = parametro->size()";
+	protected static final String CALL_PROC__NUMBER_OF_PARAMETERS__EEXPRESSION = "self.defined.parameter->size() = parameter->size()";
 
 	/**
-	 * Validates the numeroParametros constraint of '<em>Call Proc</em>'.
+	 * Validates the number_of_parameters constraint of '<em>Call Proc</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCallProc_numeroParametros(CallProc callProc, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCallProc_number_of_parameters(CallProc callProc, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
 				(PascalitoPackage.Literals.CALL_PROC,
@@ -333,8 +333,8 @@ public class PascalitoValidator extends EObjectValidator {
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "numeroParametros",
-				 CALL_PROC__NUMERO_PARAMETROS__EEXPRESSION,
+				 "number_of_parameters",
+				 CALL_PROC__NUMBER_OF_PARAMETERS__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -345,8 +345,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateN_Comutativa(N_Comutativa n_Comutativa, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(n_Comutativa, diagnostics, context);
+	public boolean validateAtribuition(Atribuition atribuition, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(atribuition, diagnostics, context);
 	}
 
 	/**
@@ -354,8 +354,8 @@ public class PascalitoValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateComutativa(Comutativa comutativa, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(comutativa, diagnostics, context);
+	public boolean validateIf(If if_, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(if_, diagnostics, context);
 	}
 
 	/**

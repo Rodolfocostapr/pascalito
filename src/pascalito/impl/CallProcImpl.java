@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import pascalito.CallProc;
-import pascalito.Expressao;
+import pascalito.Expression;
 import pascalito.PascalitoPackage;
-import pascalito.Procedimento;
+import pascalito.Procedure;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,31 +27,31 @@ import pascalito.Procedimento;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pascalito.impl.CallProcImpl#getRepresentaProc <em>Representa Proc</em>}</li>
- *   <li>{@link pascalito.impl.CallProcImpl#getParametro <em>Parametro</em>}</li>
+ *   <li>{@link pascalito.impl.CallProcImpl#getDefined <em>Defined</em>}</li>
+ *   <li>{@link pascalito.impl.CallProcImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CallProcImpl extends ExpressaoImpl implements CallProc {
+public class CallProcImpl extends CommandImpl implements CallProc {
 	/**
-	 * The cached value of the '{@link #getRepresentaProc() <em>Representa Proc</em>}' reference.
+	 * The cached value of the '{@link #getDefined() <em>Defined</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRepresentaProc()
+	 * @see #getDefined()
 	 * @generated
 	 * @ordered
 	 */
-	protected Procedimento representaProc;
+	protected Procedure defined;
 	/**
-	 * The cached value of the '{@link #getParametro() <em>Parametro</em>}' containment reference list.
+	 * The cached value of the '{@link #getParameter() <em>Parameter</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParametro()
+	 * @see #getParameter()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Expressao> parametro;
+	protected EList<Expression> parameter;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,16 +76,16 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Procedimento getRepresentaProc() {
-		if (representaProc != null && representaProc.eIsProxy()) {
-			InternalEObject oldRepresentaProc = (InternalEObject)representaProc;
-			representaProc = (Procedimento)eResolveProxy(oldRepresentaProc);
-			if (representaProc != oldRepresentaProc) {
+	public Procedure getDefined() {
+		if (defined != null && defined.eIsProxy()) {
+			InternalEObject oldDefined = (InternalEObject)defined;
+			defined = (Procedure)eResolveProxy(oldDefined);
+			if (defined != oldDefined) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PascalitoPackage.CALL_PROC__REPRESENTA_PROC, oldRepresentaProc, representaProc));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PascalitoPackage.CALL_PROC__DEFINED, oldDefined, defined));
 			}
 		}
-		return representaProc;
+		return defined;
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Procedimento basicGetRepresentaProc() {
-		return representaProc;
+	public Procedure basicGetDefined() {
+		return defined;
 	}
 
 	/**
@@ -102,11 +102,11 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRepresentaProc(Procedimento newRepresentaProc) {
-		Procedimento oldRepresentaProc = representaProc;
-		representaProc = newRepresentaProc;
+	public void setDefined(Procedure newDefined) {
+		Procedure oldDefined = defined;
+		defined = newDefined;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.CALL_PROC__REPRESENTA_PROC, oldRepresentaProc, representaProc));
+			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.CALL_PROC__DEFINED, oldDefined, defined));
 	}
 
 	/**
@@ -114,11 +114,11 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Expressao> getParametro() {
-		if (parametro == null) {
-			parametro = new EObjectContainmentEList<Expressao>(Expressao.class, this, PascalitoPackage.CALL_PROC__PARAMETRO);
+	public EList<Expression> getParameter() {
+		if (parameter == null) {
+			parameter = new EObjectContainmentEList<Expression>(Expression.class, this, PascalitoPackage.CALL_PROC__PARAMETER);
 		}
-		return parametro;
+		return parameter;
 	}
 
 	/**
@@ -129,8 +129,8 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PascalitoPackage.CALL_PROC__PARAMETRO:
-				return ((InternalEList<?>)getParametro()).basicRemove(otherEnd, msgs);
+			case PascalitoPackage.CALL_PROC__PARAMETER:
+				return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,11 +143,11 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PascalitoPackage.CALL_PROC__REPRESENTA_PROC:
-				if (resolve) return getRepresentaProc();
-				return basicGetRepresentaProc();
-			case PascalitoPackage.CALL_PROC__PARAMETRO:
-				return getParametro();
+			case PascalitoPackage.CALL_PROC__DEFINED:
+				if (resolve) return getDefined();
+				return basicGetDefined();
+			case PascalitoPackage.CALL_PROC__PARAMETER:
+				return getParameter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,12 +161,12 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PascalitoPackage.CALL_PROC__REPRESENTA_PROC:
-				setRepresentaProc((Procedimento)newValue);
+			case PascalitoPackage.CALL_PROC__DEFINED:
+				setDefined((Procedure)newValue);
 				return;
-			case PascalitoPackage.CALL_PROC__PARAMETRO:
-				getParametro().clear();
-				getParametro().addAll((Collection<? extends Expressao>)newValue);
+			case PascalitoPackage.CALL_PROC__PARAMETER:
+				getParameter().clear();
+				getParameter().addAll((Collection<? extends Expression>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,11 +180,11 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.CALL_PROC__REPRESENTA_PROC:
-				setRepresentaProc((Procedimento)null);
+			case PascalitoPackage.CALL_PROC__DEFINED:
+				setDefined((Procedure)null);
 				return;
-			case PascalitoPackage.CALL_PROC__PARAMETRO:
-				getParametro().clear();
+			case PascalitoPackage.CALL_PROC__PARAMETER:
+				getParameter().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -198,10 +198,10 @@ public class CallProcImpl extends ExpressaoImpl implements CallProc {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.CALL_PROC__REPRESENTA_PROC:
-				return representaProc != null;
-			case PascalitoPackage.CALL_PROC__PARAMETRO:
-				return parametro != null && !parametro.isEmpty();
+			case PascalitoPackage.CALL_PROC__DEFINED:
+				return defined != null;
+			case PascalitoPackage.CALL_PROC__PARAMETER:
+				return parameter != null && !parameter.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

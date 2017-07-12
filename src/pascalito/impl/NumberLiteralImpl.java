@@ -13,7 +13,7 @@ import pascalito.PascalitoPackage;
  *
  * @generated
  */
-public class NumberLiteralImpl extends ExpressaoImpl implements NumberLiteral {
+public class NumberLiteralImpl extends ExpressionImpl implements NumberLiteral {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

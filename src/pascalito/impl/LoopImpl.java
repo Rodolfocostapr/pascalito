@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import pascalito.Comando;
-import pascalito.Expressao;
+import pascalito.Command;
+import pascalito.Expression;
 import pascalito.Loop;
 import pascalito.PascalitoPackage;
 
@@ -27,32 +27,32 @@ import pascalito.PascalitoPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pascalito.impl.LoopImpl#getSe <em>Se</em>}</li>
- *   <li>{@link pascalito.impl.LoopImpl#getFaca <em>Faca</em>}</li>
+ *   <li>{@link pascalito.impl.LoopImpl#getWhile <em>While</em>}</li>
+ *   <li>{@link pascalito.impl.LoopImpl#getDo <em>Do</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LoopImpl extends ComandoImpl implements Loop {
+public class LoopImpl extends CommandImpl implements Loop {
 	/**
-	 * The cached value of the '{@link #getSe() <em>Se</em>}' containment reference.
+	 * The cached value of the '{@link #getWhile() <em>While</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSe()
+	 * @see #getWhile()
 	 * @generated
 	 * @ordered
 	 */
-	protected Expressao se;
+	protected Expression while_;
 
 	/**
-	 * The cached value of the '{@link #getFaca() <em>Faca</em>}' containment reference list.
+	 * The cached value of the '{@link #getDo() <em>Do</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFaca()
+	 * @see #getDo()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Comando> faca;
+	protected EList<Command> do_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,8 +78,8 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expressao getSe() {
-		return se;
+	public Expression getWhile() {
+		return while_;
 	}
 
 	/**
@@ -87,11 +87,11 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSe(Expressao newSe, NotificationChain msgs) {
-		Expressao oldSe = se;
-		se = newSe;
+	public NotificationChain basicSetWhile(Expression newWhile, NotificationChain msgs) {
+		Expression oldWhile = while_;
+		while_ = newWhile;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.LOOP__SE, oldSe, newSe);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.LOOP__WHILE, oldWhile, newWhile);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -102,18 +102,18 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSe(Expressao newSe) {
-		if (newSe != se) {
+	public void setWhile(Expression newWhile) {
+		if (newWhile != while_) {
 			NotificationChain msgs = null;
-			if (se != null)
-				msgs = ((InternalEObject)se).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.LOOP__SE, null, msgs);
-			if (newSe != null)
-				msgs = ((InternalEObject)newSe).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.LOOP__SE, null, msgs);
-			msgs = basicSetSe(newSe, msgs);
+			if (while_ != null)
+				msgs = ((InternalEObject)while_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.LOOP__WHILE, null, msgs);
+			if (newWhile != null)
+				msgs = ((InternalEObject)newWhile).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.LOOP__WHILE, null, msgs);
+			msgs = basicSetWhile(newWhile, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.LOOP__SE, newSe, newSe));
+			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.LOOP__WHILE, newWhile, newWhile));
 	}
 
 	/**
@@ -121,11 +121,11 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Comando> getFaca() {
-		if (faca == null) {
-			faca = new EObjectContainmentEList<Comando>(Comando.class, this, PascalitoPackage.LOOP__FACA);
+	public EList<Command> getDo() {
+		if (do_ == null) {
+			do_ = new EObjectContainmentEList<Command>(Command.class, this, PascalitoPackage.LOOP__DO);
 		}
-		return faca;
+		return do_;
 	}
 
 	/**
@@ -136,10 +136,10 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PascalitoPackage.LOOP__SE:
-				return basicSetSe(null, msgs);
-			case PascalitoPackage.LOOP__FACA:
-				return ((InternalEList<?>)getFaca()).basicRemove(otherEnd, msgs);
+			case PascalitoPackage.LOOP__WHILE:
+				return basicSetWhile(null, msgs);
+			case PascalitoPackage.LOOP__DO:
+				return ((InternalEList<?>)getDo()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -152,10 +152,10 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PascalitoPackage.LOOP__SE:
-				return getSe();
-			case PascalitoPackage.LOOP__FACA:
-				return getFaca();
+			case PascalitoPackage.LOOP__WHILE:
+				return getWhile();
+			case PascalitoPackage.LOOP__DO:
+				return getDo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,12 +169,12 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PascalitoPackage.LOOP__SE:
-				setSe((Expressao)newValue);
+			case PascalitoPackage.LOOP__WHILE:
+				setWhile((Expression)newValue);
 				return;
-			case PascalitoPackage.LOOP__FACA:
-				getFaca().clear();
-				getFaca().addAll((Collection<? extends Comando>)newValue);
+			case PascalitoPackage.LOOP__DO:
+				getDo().clear();
+				getDo().addAll((Collection<? extends Command>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,11 +188,11 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.LOOP__SE:
-				setSe((Expressao)null);
+			case PascalitoPackage.LOOP__WHILE:
+				setWhile((Expression)null);
 				return;
-			case PascalitoPackage.LOOP__FACA:
-				getFaca().clear();
+			case PascalitoPackage.LOOP__DO:
+				getDo().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -206,10 +206,10 @@ public class LoopImpl extends ComandoImpl implements Loop {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.LOOP__SE:
-				return se != null;
-			case PascalitoPackage.LOOP__FACA:
-				return faca != null && !faca.isEmpty();
+			case PascalitoPackage.LOOP__WHILE:
+				return while_ != null;
+			case PascalitoPackage.LOOP__DO:
+				return do_ != null && !do_.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

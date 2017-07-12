@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import pascalito.ExpNeg;
-import pascalito.Expressao;
+import pascalito.Expression;
 import pascalito.PascalitoPackage;
 
 /**
@@ -22,22 +22,21 @@ import pascalito.PascalitoPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pascalito.impl.ExpNegImpl#getNega <em>Nega</em>}</li>
+ *   <li>{@link pascalito.impl.ExpNegImpl#getNegate <em>Negate</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
+public class ExpNegImpl extends ExpressionImpl implements ExpNeg {
 	/**
-	 * The cached value of the '{@link #getNega() <em>Nega</em>}' containment reference.
+	 * The cached value of the '{@link #getNegate() <em>Negate</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNega()
+	 * @see #getNegate()
 	 * @generated
 	 * @ordered
 	 */
-	protected Expressao nega;
-
+	protected Expression negate;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,8 +61,8 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expressao getNega() {
-		return nega;
+	public Expression getNegate() {
+		return negate;
 	}
 
 	/**
@@ -71,11 +70,11 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNega(Expressao newNega, NotificationChain msgs) {
-		Expressao oldNega = nega;
-		nega = newNega;
+	public NotificationChain basicSetNegate(Expression newNegate, NotificationChain msgs) {
+		Expression oldNegate = negate;
+		negate = newNegate;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXP_NEG__NEGA, oldNega, newNega);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXP_NEG__NEGATE, oldNegate, newNegate);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -86,18 +85,18 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNega(Expressao newNega) {
-		if (newNega != nega) {
+	public void setNegate(Expression newNegate) {
+		if (newNegate != negate) {
 			NotificationChain msgs = null;
-			if (nega != null)
-				msgs = ((InternalEObject)nega).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXP_NEG__NEGA, null, msgs);
-			if (newNega != null)
-				msgs = ((InternalEObject)newNega).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXP_NEG__NEGA, null, msgs);
-			msgs = basicSetNega(newNega, msgs);
+			if (negate != null)
+				msgs = ((InternalEObject)negate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXP_NEG__NEGATE, null, msgs);
+			if (newNegate != null)
+				msgs = ((InternalEObject)newNegate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalitoPackage.EXP_NEG__NEGATE, null, msgs);
+			msgs = basicSetNegate(newNegate, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXP_NEG__NEGA, newNega, newNega));
+			eNotify(new ENotificationImpl(this, Notification.SET, PascalitoPackage.EXP_NEG__NEGATE, newNegate, newNegate));
 	}
 
 	/**
@@ -108,8 +107,8 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__NEGA:
-				return basicSetNega(null, msgs);
+			case PascalitoPackage.EXP_NEG__NEGATE:
+				return basicSetNegate(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -122,8 +121,8 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__NEGA:
-				return getNega();
+			case PascalitoPackage.EXP_NEG__NEGATE:
+				return getNegate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -136,8 +135,8 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__NEGA:
-				setNega((Expressao)newValue);
+			case PascalitoPackage.EXP_NEG__NEGATE:
+				setNegate((Expression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -151,8 +150,8 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__NEGA:
-				setNega((Expressao)null);
+			case PascalitoPackage.EXP_NEG__NEGATE:
+				setNegate((Expression)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -166,8 +165,8 @@ public class ExpNegImpl extends ExpressaoImpl implements ExpNeg {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PascalitoPackage.EXP_NEG__NEGA:
-				return nega != null;
+			case PascalitoPackage.EXP_NEG__NEGATE:
+				return negate != null;
 		}
 		return super.eIsSet(featureID);
 	}

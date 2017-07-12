@@ -9,24 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import pascalito.Atribuicao;
-import pascalito.Bloco;
-import pascalito.CallProc;
-import pascalito.CallProcedimento;
-import pascalito.CallVariavel;
-import pascalito.Comutativa;
-import pascalito.Desvio;
-import pascalito.ExpBinLogica;
-import pascalito.ExpNeg;
-import pascalito.Loop;
-import pascalito.N_Comutativa;
-import pascalito.NumberLiteral;
-import pascalito.PascalitoFactory;
-import pascalito.PascalitoPackage;
-import pascalito.Procedimento;
-import pascalito.Programa;
-import pascalito.Variavel;
-import pascalito.newRole15;
+import pascalito.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,21 +55,21 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case PascalitoPackage.PROGRAMA: return createPrograma();
-			case PascalitoPackage.BLOCO: return createBloco();
-			case PascalitoPackage.CALL_VARIAVEL: return createCallVariavel();
-			case PascalitoPackage.CALL_PROCEDIMENTO: return createCallProcedimento();
-			case PascalitoPackage.ATRIBUICAO: return createAtribuicao();
-			case PascalitoPackage.DESVIO: return createDesvio();
+			case PascalitoPackage.PROGRAM: return createProgram();
+			case PascalitoPackage.BLOCK: return createBlock();
+			case PascalitoPackage.CALL_VARIABLE: return createCallVariable();
+			case PascalitoPackage.CALL_PROC: return createCallProc();
+			case PascalitoPackage.ATRIBUITION: return createAtribuition();
+			case PascalitoPackage.IF: return createIf();
 			case PascalitoPackage.LOOP: return createLoop();
-			case PascalitoPackage.EXP_BIN_LOGICA: return createExpBinLogica();
+			case PascalitoPackage.EXP_BIN_LOGICAL: return createExpBinLogical();
 			case PascalitoPackage.EXP_NEG: return createExpNeg();
 			case PascalitoPackage.NEW_ROLE15: return createnewRole15();
-			case PascalitoPackage.VARIAVEL: return createVariavel();
-			case PascalitoPackage.PROCEDIMENTO: return createProcedimento();
-			case PascalitoPackage.CALL_PROC: return createCallProc();
-			case PascalitoPackage.NCOMUTATIVA: return createN_Comutativa();
-			case PascalitoPackage.COMUTATIVA: return createComutativa();
+			case PascalitoPackage.VARIABLE: return createVariable();
+			case PascalitoPackage.PROCEDURE: return createProcedure();
+			case PascalitoPackage.CALL_PROC_EXP: return createCallProcExp();
+			case PascalitoPackage.EXP_BIN_NV1: return createExpBinNv1();
+			case PascalitoPackage.EXP_BIN_NV0: return createExpBinNv0();
 			case PascalitoPackage.NUMBER_LITERAL: return createNumberLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -98,9 +81,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Programa createPrograma() {
-		ProgramaImpl programa = new ProgramaImpl();
-		return programa;
+	public Program createProgram() {
+		ProgramImpl program = new ProgramImpl();
+		return program;
 	}
 
 	/**
@@ -108,9 +91,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bloco createBloco() {
-		BlocoImpl bloco = new BlocoImpl();
-		return bloco;
+	public Block createBlock() {
+		BlockImpl block = new BlockImpl();
+		return block;
 	}
 
 	/**
@@ -118,39 +101,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CallVariavel createCallVariavel() {
-		CallVariavelImpl callVariavel = new CallVariavelImpl();
-		return callVariavel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CallProcedimento createCallProcedimento() {
-		CallProcedimentoImpl callProcedimento = new CallProcedimentoImpl();
-		return callProcedimento;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Atribuicao createAtribuicao() {
-		AtribuicaoImpl atribuicao = new AtribuicaoImpl();
-		return atribuicao;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Desvio createDesvio() {
-		DesvioImpl desvio = new DesvioImpl();
-		return desvio;
+	public CallVariable createCallVariable() {
+		CallVariableImpl callVariable = new CallVariableImpl();
+		return callVariable;
 	}
 
 	/**
@@ -168,9 +121,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExpBinLogica createExpBinLogica() {
-		ExpBinLogicaImpl expBinLogica = new ExpBinLogicaImpl();
-		return expBinLogica;
+	public ExpBinLogical createExpBinLogical() {
+		ExpBinLogicalImpl expBinLogical = new ExpBinLogicalImpl();
+		return expBinLogical;
 	}
 
 	/**
@@ -198,9 +151,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Variavel createVariavel() {
-		VariavelImpl variavel = new VariavelImpl();
-		return variavel;
+	public Variable createVariable() {
+		VariableImpl variable = new VariableImpl();
+		return variable;
 	}
 
 	/**
@@ -208,9 +161,39 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Procedimento createProcedimento() {
-		ProcedimentoImpl procedimento = new ProcedimentoImpl();
-		return procedimento;
+	public Procedure createProcedure() {
+		ProcedureImpl procedure = new ProcedureImpl();
+		return procedure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CallProcExp createCallProcExp() {
+		CallProcExpImpl callProcExp = new CallProcExpImpl();
+		return callProcExp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExpBinNv1 createExpBinNv1() {
+		ExpBinNv1Impl expBinNv1 = new ExpBinNv1Impl();
+		return expBinNv1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExpBinNv0 createExpBinNv0() {
+		ExpBinNv0Impl expBinNv0 = new ExpBinNv0Impl();
+		return expBinNv0;
 	}
 
 	/**
@@ -228,9 +211,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public N_Comutativa createN_Comutativa() {
-		N_ComutativaImpl n_Comutativa = new N_ComutativaImpl();
-		return n_Comutativa;
+	public Atribuition createAtribuition() {
+		AtribuitionImpl atribuition = new AtribuitionImpl();
+		return atribuition;
 	}
 
 	/**
@@ -238,9 +221,9 @@ public class PascalitoFactoryImpl extends EFactoryImpl implements PascalitoFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Comutativa createComutativa() {
-		ComutativaImpl comutativa = new ComutativaImpl();
-		return comutativa;
+	public If createIf() {
+		IfImpl if_ = new IfImpl();
+		return if_;
 	}
 
 	/**

@@ -5,61 +5,59 @@
     complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>pascalito.ecore</foreignModel>
   <genPackages prefix="Pascalito" disposableProviderFactory="true" ecorePackage="pascalito.ecore#/">
-    <genClasses ecoreClass="pascalito.ecore#//Programa">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Programa/Ident"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Programa/bloco"/>
+    <genClasses ecoreClass="pascalito.ecore#//Program">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Program/Ident"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Program/block"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//Bloco">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Bloco/defvariavel"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Bloco/defprocedimento"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Bloco/executa"/>
+    <genClasses ecoreClass="pascalito.ecore#//Block">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Block/defVariable"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Block/defprocedure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Block/execute"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//CallVariavel">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallVariavel/representa"/>
+    <genClasses ecoreClass="pascalito.ecore#//CallVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallVariable/represent"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//Comando"/>
-    <genClasses ecoreClass="pascalito.ecore#//CallProcedimento">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProcedimento/definido"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProcedimento/parametro"/>
+    <genClasses ecoreClass="pascalito.ecore#//Command"/>
+    <genClasses ecoreClass="pascalito.ecore#//CallProc">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProc/defined"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProc/parameter"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//Atribuicao">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Atribuicao/atribui"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Atribuicao/atribuiResultado"/>
+    <genClasses ecoreClass="pascalito.ecore#//Atribuition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Atribuition/sets"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Atribuition/atribuiResultado"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//Desvio">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Desvio/se"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Desvio/faca"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Desvio/seNao"/>
+    <genClasses ecoreClass="pascalito.ecore#//If">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//If/ifExp"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//If/do"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//If/elseCmd"/>
     </genClasses>
     <genClasses ecoreClass="pascalito.ecore#//Loop">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Loop/se"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Loop/faca"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Loop/while"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Loop/do"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//Expressao">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Expressao/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Expressao/right"/>
+    <genClasses ecoreClass="pascalito.ecore#//Expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Expression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Expression/right"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//ExpBinLogica"/>
+    <genClasses ecoreClass="pascalito.ecore#//ExpBinLogical"/>
     <genClasses ecoreClass="pascalito.ecore#//ExpNeg">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//ExpNeg/nega"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//ExpNeg/negate"/>
     </genClasses>
     <genClasses ecoreClass="pascalito.ecore#//newRole15"/>
-    <genClasses ecoreClass="pascalito.ecore#//Variavel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variavel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variavel/Tipo"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variavel/Valor"/>
+    <genClasses ecoreClass="pascalito.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Variable/name"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//Procedimento">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/bloco"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Procedimento/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedimento/parametro"/>
+    <genClasses ecoreClass="pascalito.ecore#//Procedure">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedure/block"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pascalito.ecore#//Procedure/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//Procedure/parameter"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//CallProc">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProc/representaProc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProc/parametro"/>
+    <genClasses ecoreClass="pascalito.ecore#//CallProcExp">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProcExp/represent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pascalito.ecore#//CallProcExp/parameter"/>
     </genClasses>
-    <genClasses ecoreClass="pascalito.ecore#//N_Comutativa"/>
-    <genClasses ecoreClass="pascalito.ecore#//Comutativa"/>
+    <genClasses ecoreClass="pascalito.ecore#//ExpBinNv1"/>
+    <genClasses ecoreClass="pascalito.ecore#//ExpBinNv0"/>
     <genClasses ecoreClass="pascalito.ecore#//NumberLiteral"/>
   </genPackages>
 </genmodel:GenModel>

@@ -12,5 +12,5 @@ package pascalito;
  * @model
  * @generated
  */
-public interface NumberLiteral extends Expressao {
+public interface NumberLiteral extends Expression {
 } // NumberLiteral

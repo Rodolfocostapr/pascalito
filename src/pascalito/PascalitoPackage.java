@@ -58,14 +58,14 @@ public interface PascalitoPackage extends EPackage {
 	PascalitoPackage eINSTANCE = pascalito.impl.PascalitoPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.ProgramaImpl <em>Programa</em>}' class.
+	 * The meta object id for the '{@link pascalito.impl.ProgramImpl <em>Program</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ProgramaImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getPrograma()
+	 * @see pascalito.impl.ProgramImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getProgram()
 	 * @generated
 	 */
-	int PROGRAMA = 0;
+	int PROGRAM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Ident</b></em>' attribute.
@@ -74,99 +74,99 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMA__IDENT = 0;
+	int PROGRAM__IDENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Bloco</b></em>' containment reference.
+	 * The feature id for the '<em><b>Block</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMA__BLOCO = 1;
+	int PROGRAM__BLOCK = 1;
 
 	/**
-	 * The number of structural features of the '<em>Programa</em>' class.
+	 * The number of structural features of the '<em>Program</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMA_FEATURE_COUNT = 2;
+	int PROGRAM_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Programa</em>' class.
+	 * The number of operations of the '<em>Program</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAMA_OPERATION_COUNT = 0;
+	int PROGRAM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.BlocoImpl <em>Bloco</em>}' class.
+	 * The meta object id for the '{@link pascalito.impl.BlockImpl <em>Block</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.BlocoImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getBloco()
+	 * @see pascalito.impl.BlockImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getBlock()
 	 * @generated
 	 */
-	int BLOCO = 1;
+	int BLOCK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Defvariavel</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BLOCO__DEFVARIAVEL = 0;
-
-	/**
-	 * The feature id for the '<em><b>Defprocedimento</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Def Variable</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCO__DEFPROCEDIMENTO = 1;
+	int BLOCK__DEF_VARIABLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Executa</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Defprocedure</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCO__EXECUTA = 2;
+	int BLOCK__DEFPROCEDURE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Bloco</em>' class.
+	 * The feature id for the '<em><b>Execute</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCO_FEATURE_COUNT = 3;
+	int BLOCK__EXECUTE = 2;
 
 	/**
-	 * The number of operations of the '<em>Bloco</em>' class.
+	 * The number of structural features of the '<em>Block</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BLOCO_OPERATION_COUNT = 0;
+	int BLOCK_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.ExpressaoImpl <em>Expressao</em>}' class.
+	 * The number of operations of the '<em>Block</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ExpressaoImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getExpressao()
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.ExpressionImpl <em>Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.ExpressionImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getExpression()
 	 * @generated
 	 */
-	int EXPRESSAO = 8;
+	int EXPRESSION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -175,7 +175,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSAO__LEFT = 0;
+	int EXPRESSION__LEFT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -184,35 +184,35 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSAO__RIGHT = 1;
+	int EXPRESSION__RIGHT = 1;
 
 	/**
-	 * The number of structural features of the '<em>Expressao</em>' class.
+	 * The number of structural features of the '<em>Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSAO_FEATURE_COUNT = 2;
+	int EXPRESSION_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Expressao</em>' class.
+	 * The number of operations of the '<em>Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSAO_OPERATION_COUNT = 0;
+	int EXPRESSION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.CallVariavelImpl <em>Call Variavel</em>}' class.
+	 * The meta object id for the '{@link pascalito.impl.CallVariableImpl <em>Call Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.CallVariavelImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getCallVariavel()
+	 * @see pascalito.impl.CallVariableImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getCallVariable()
 	 * @generated
 	 */
-	int CALL_VARIAVEL = 2;
+	int CALL_VARIABLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -221,7 +221,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_VARIAVEL__LEFT = EXPRESSAO__LEFT;
+	int CALL_VARIABLE__LEFT = EXPRESSION__LEFT;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -230,209 +230,62 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_VARIAVEL__RIGHT = EXPRESSAO__RIGHT;
+	int CALL_VARIABLE__RIGHT = EXPRESSION__RIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Representa</b></em>' reference.
+	 * The feature id for the '<em><b>Represent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_VARIAVEL__REPRESENTA = EXPRESSAO_FEATURE_COUNT + 0;
+	int CALL_VARIABLE__REPRESENT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Call Variavel</em>' class.
+	 * The number of structural features of the '<em>Call Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_VARIAVEL_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 1;
+	int CALL_VARIABLE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Call Variavel</em>' class.
+	 * The number of operations of the '<em>Call Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_VARIAVEL_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+	int CALL_VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.ComandoImpl <em>Comando</em>}' class.
+	 * The meta object id for the '{@link pascalito.impl.CommandImpl <em>Command</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ComandoImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getComando()
+	 * @see pascalito.impl.CommandImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getCommand()
 	 * @generated
 	 */
-	int COMANDO = 3;
+	int COMMAND = 3;
 
 	/**
-	 * The number of structural features of the '<em>Comando</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMANDO_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Comando</em>' class.
+	 * The number of structural features of the '<em>Command</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMANDO_OPERATION_COUNT = 0;
+	int COMMAND_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.CallProcedimentoImpl <em>Call Procedimento</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.CallProcedimentoImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getCallProcedimento()
-	 * @generated
-	 */
-	int CALL_PROCEDIMENTO = 4;
-
-	/**
-	 * The feature id for the '<em><b>Definido</b></em>' reference.
+	 * The number of operations of the '<em>Command</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROCEDIMENTO__DEFINIDO = COMANDO_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parametro</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_PROCEDIMENTO__PARAMETRO = COMANDO_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Call Procedimento</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_PROCEDIMENTO_FEATURE_COUNT = COMANDO_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Call Procedimento</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_PROCEDIMENTO_OPERATION_COUNT = COMANDO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.AtribuicaoImpl <em>Atribuicao</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.AtribuicaoImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getAtribuicao()
-	 * @generated
-	 */
-	int ATRIBUICAO = 5;
-
-	/**
-	 * The feature id for the '<em><b>Atribui</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUICAO__ATRIBUI = COMANDO_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Atribui Resultado</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUICAO__ATRIBUI_RESULTADO = COMANDO_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Atribuicao</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUICAO_FEATURE_COUNT = COMANDO_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Atribuicao</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUICAO_OPERATION_COUNT = COMANDO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.DesvioImpl <em>Desvio</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.DesvioImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getDesvio()
-	 * @generated
-	 */
-	int DESVIO = 6;
-
-	/**
-	 * The feature id for the '<em><b>Se</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESVIO__SE = COMANDO_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Faca</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESVIO__FACA = COMANDO_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Se Nao</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESVIO__SE_NAO = COMANDO_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Desvio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESVIO_FEATURE_COUNT = COMANDO_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Desvio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESVIO_OPERATION_COUNT = COMANDO_OPERATION_COUNT + 0;
+	int COMMAND_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link pascalito.impl.LoopImpl <em>Loop</em>}' class.
@@ -445,68 +298,14 @@ public interface PascalitoPackage extends EPackage {
 	int LOOP = 7;
 
 	/**
-	 * The feature id for the '<em><b>Se</b></em>' containment reference.
+	 * The meta object id for the '{@link pascalito.impl.ExpBinLogicalImpl <em>Exp Bin Logical</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP__SE = COMANDO_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Faca</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP__FACA = COMANDO_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Loop</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_FEATURE_COUNT = COMANDO_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Loop</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOOP_OPERATION_COUNT = COMANDO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.ExpBinLogicaImpl <em>Exp Bin Logica</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ExpBinLogicaImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getExpBinLogica()
+	 * @see pascalito.impl.ExpBinLogicalImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getExpBinLogical()
 	 * @generated
 	 */
-	int EXP_BIN_LOGICA = 9;
-
-	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_BIN_LOGICA__LEFT = EXPRESSAO__LEFT;
-
-	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXP_BIN_LOGICA__RIGHT = EXPRESSAO__RIGHT;
+	int EXP_BIN_LOGICAL = 9;
 
 	/**
 	 * The meta object id for the '{@link pascalito.impl.ExpNegImpl <em>Exp Neg</em>}' class.
@@ -529,26 +328,6 @@ public interface PascalitoPackage extends EPackage {
 	int NEW_ROLE15 = 11;
 
 	/**
-	 * The meta object id for the '{@link pascalito.impl.VariavelImpl <em>Variavel</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.VariavelImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getVariavel()
-	 * @generated
-	 */
-	int VARIAVEL = 12;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.ProcedimentoImpl <em>Procedimento</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ProcedimentoImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getProcedimento()
-	 * @generated
-	 */
-	int PROCEDIMENTO = 13;
-
-	/**
 	 * The meta object id for the '{@link pascalito.impl.CallProcImpl <em>Call Proc</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -556,25 +335,230 @@ public interface PascalitoPackage extends EPackage {
 	 * @see pascalito.impl.PascalitoPackageImpl#getCallProc()
 	 * @generated
 	 */
-	int CALL_PROC = 14;
+	int CALL_PROC = 4;
 
 	/**
-	 * The number of structural features of the '<em>Exp Bin Logica</em>' class.
+	 * The feature id for the '<em><b>Defined</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_BIN_LOGICA_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
+	int CALL_PROC__DEFINED = COMMAND_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Exp Bin Logica</em>' class.
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_BIN_LOGICA_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+	int CALL_PROC__PARAMETER = COMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.VariableImpl <em>Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.VariableImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getVariable()
+	 * @generated
+	 */
+	int VARIABLE = 12;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.ProcedureImpl <em>Procedure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.ProcedureImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getProcedure()
+	 * @generated
+	 */
+	int PROCEDURE = 13;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.CallProcExpImpl <em>Call Proc Exp</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.CallProcExpImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getCallProcExp()
+	 * @generated
+	 */
+	int CALL_PROC_EXP = 14;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.ExpBinNv1Impl <em>Exp Bin Nv1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.ExpBinNv1Impl
+	 * @see pascalito.impl.PascalitoPackageImpl#getExpBinNv1()
+	 * @generated
+	 */
+	int EXP_BIN_NV1 = 15;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.ExpBinNv0Impl <em>Exp Bin Nv0</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.ExpBinNv0Impl
+	 * @see pascalito.impl.PascalitoPackageImpl#getExpBinNv0()
+	 * @generated
+	 */
+	int EXP_BIN_NV0 = 16;
+
+	/**
+	 * The number of structural features of the '<em>Call Proc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Call Proc</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_PROC_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.AtribuitionImpl <em>Atribuition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.AtribuitionImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getAtribuition()
+	 * @generated
+	 */
+	int ATRIBUITION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Sets</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUITION__SETS = COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Atribui Resultado</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUITION__ATRIBUI_RESULTADO = COMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Atribuition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUITION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Atribuition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUITION_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pascalito.impl.IfImpl <em>If</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pascalito.impl.IfImpl
+	 * @see pascalito.impl.PascalitoPackageImpl#getIf()
+	 * @generated
+	 */
+	int IF = 6;
+
+	/**
+	 * The feature id for the '<em><b>If Exp</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__IF_EXP = COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Do</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__DO = COMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Else Cmd</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF__ELSE_CMD = COMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>If</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>If</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IF_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>While</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__WHILE = COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Do</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__DO = COMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -583,7 +567,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_NEG__LEFT = EXPRESSAO__LEFT;
+	int EXP_BIN_LOGICAL__LEFT = EXPRESSION__LEFT;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -592,16 +576,52 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_NEG__RIGHT = EXPRESSAO__RIGHT;
+	int EXP_BIN_LOGICAL__RIGHT = EXPRESSION__RIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Nega</b></em>' containment reference.
+	 * The number of structural features of the '<em>Exp Bin Logical</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_NEG__NEGA = EXPRESSAO_FEATURE_COUNT + 0;
+	int EXP_BIN_LOGICAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Exp Bin Logical</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXP_BIN_LOGICAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXP_NEG__LEFT = EXPRESSION__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXP_NEG__RIGHT = EXPRESSION__RIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Negate</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXP_NEG__NEGATE = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Exp Neg</em>' class.
@@ -610,7 +630,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_NEG_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 1;
+	int EXP_NEG_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Exp Neg</em>' class.
@@ -619,7 +639,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXP_NEG_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+	int EXP_NEG_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>new Role15</em>' class.
@@ -646,52 +666,34 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIAVEL__NAME = 0;
+	int VARIABLE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
+	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIAVEL__TIPO = 1;
+	int VARIABLE_FEATURE_COUNT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Valor</b></em>' attribute.
+	 * The number of operations of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIAVEL__VALOR = 2;
+	int VARIABLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Variavel</em>' class.
+	 * The feature id for the '<em><b>Block</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIAVEL_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Variavel</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIAVEL_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Bloco</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCEDIMENTO__BLOCO = 0;
+	int PROCEDURE__BLOCK = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -700,34 +702,34 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCEDIMENTO__NAME = 1;
+	int PROCEDURE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Parametro</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCEDIMENTO__PARAMETRO = 2;
+	int PROCEDURE__PARAMETER = 2;
 
 	/**
-	 * The number of structural features of the '<em>Procedimento</em>' class.
+	 * The number of structural features of the '<em>Procedure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCEDIMENTO_FEATURE_COUNT = 3;
+	int PROCEDURE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Procedimento</em>' class.
+	 * The number of operations of the '<em>Procedure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCEDIMENTO_OPERATION_COUNT = 0;
+	int PROCEDURE_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -736,7 +738,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC__LEFT = EXPRESSAO__LEFT;
+	int CALL_PROC_EXP__LEFT = EXPRESSION__LEFT;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -745,53 +747,43 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC__RIGHT = EXPRESSAO__RIGHT;
+	int CALL_PROC_EXP__RIGHT = EXPRESSION__RIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Representa Proc</b></em>' reference.
+	 * The feature id for the '<em><b>Represent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC__REPRESENTA_PROC = EXPRESSAO_FEATURE_COUNT + 0;
+	int CALL_PROC_EXP__REPRESENT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Parametro</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC__PARAMETRO = EXPRESSAO_FEATURE_COUNT + 1;
+	int CALL_PROC_EXP__PARAMETER = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Call Proc</em>' class.
+	 * The number of structural features of the '<em>Call Proc Exp</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 2;
+	int CALL_PROC_EXP_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Call Proc</em>' class.
+	 * The number of operations of the '<em>Call Proc Exp</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_PROC_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.N_ComutativaImpl <em>NComutativa</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.N_ComutativaImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getN_Comutativa()
-	 * @generated
-	 */
-	int NCOMUTATIVA = 15;
+	int CALL_PROC_EXP_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -800,7 +792,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NCOMUTATIVA__LEFT = EXPRESSAO__LEFT;
+	int EXP_BIN_NV1__LEFT = EXPRESSION__LEFT;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -809,35 +801,25 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NCOMUTATIVA__RIGHT = EXPRESSAO__RIGHT;
+	int EXP_BIN_NV1__RIGHT = EXPRESSION__RIGHT;
 
 	/**
-	 * The number of structural features of the '<em>NComutativa</em>' class.
+	 * The number of structural features of the '<em>Exp Bin Nv1</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NCOMUTATIVA_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
+	int EXP_BIN_NV1_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>NComutativa</em>' class.
+	 * The number of operations of the '<em>Exp Bin Nv1</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NCOMUTATIVA_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link pascalito.impl.ComutativaImpl <em>Comutativa</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pascalito.impl.ComutativaImpl
-	 * @see pascalito.impl.PascalitoPackageImpl#getComutativa()
-	 * @generated
-	 */
-	int COMUTATIVA = 16;
+	int EXP_BIN_NV1_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -846,7 +828,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMUTATIVA__LEFT = EXPRESSAO__LEFT;
+	int EXP_BIN_NV0__LEFT = EXPRESSION__LEFT;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -855,25 +837,25 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMUTATIVA__RIGHT = EXPRESSAO__RIGHT;
+	int EXP_BIN_NV0__RIGHT = EXPRESSION__RIGHT;
 
 	/**
-	 * The number of structural features of the '<em>Comutativa</em>' class.
+	 * The number of structural features of the '<em>Exp Bin Nv0</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMUTATIVA_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
+	int EXP_BIN_NV0_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Comutativa</em>' class.
+	 * The number of operations of the '<em>Exp Bin Nv0</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMUTATIVA_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+	int EXP_BIN_NV0_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link pascalito.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
@@ -892,7 +874,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMBER_LITERAL__LEFT = EXPRESSAO__LEFT;
+	int NUMBER_LITERAL__LEFT = EXPRESSION__LEFT;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -901,7 +883,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMBER_LITERAL__RIGHT = EXPRESSAO__RIGHT;
+	int NUMBER_LITERAL__RIGHT = EXPRESSION__RIGHT;
 
 	/**
 	 * The number of structural features of the '<em>Number Literal</em>' class.
@@ -910,7 +892,7 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMBER_LITERAL_FEATURE_COUNT = EXPRESSAO_FEATURE_COUNT + 0;
+	int NUMBER_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Number Literal</em>' class.
@@ -919,220 +901,113 @@ public interface PascalitoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMBER_LITERAL_OPERATION_COUNT = EXPRESSAO_OPERATION_COUNT + 0;
+	int NUMBER_LITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Programa <em>Programa</em>}'.
+	 * Returns the meta object for class '{@link pascalito.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Programa</em>'.
-	 * @see pascalito.Programa
+	 * @return the meta object for class '<em>Program</em>'.
+	 * @see pascalito.Program
 	 * @generated
 	 */
-	EClass getPrograma();
+	EClass getProgram();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Programa#getIdent <em>Ident</em>}'.
+	 * Returns the meta object for the attribute '{@link pascalito.Program#getIdent <em>Ident</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ident</em>'.
-	 * @see pascalito.Programa#getIdent()
-	 * @see #getPrograma()
+	 * @see pascalito.Program#getIdent()
+	 * @see #getProgram()
 	 * @generated
 	 */
-	EAttribute getPrograma_Ident();
+	EAttribute getProgram_Ident();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Programa#getBloco <em>Bloco</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.Program#getBlock <em>Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Bloco</em>'.
-	 * @see pascalito.Programa#getBloco()
-	 * @see #getPrograma()
+	 * @return the meta object for the containment reference '<em>Block</em>'.
+	 * @see pascalito.Program#getBlock()
+	 * @see #getProgram()
 	 * @generated
 	 */
-	EReference getPrograma_Bloco();
+	EReference getProgram_Block();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Bloco <em>Bloco</em>}'.
+	 * Returns the meta object for class '{@link pascalito.Block <em>Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Bloco</em>'.
-	 * @see pascalito.Bloco
+	 * @return the meta object for class '<em>Block</em>'.
+	 * @see pascalito.Block
 	 * @generated
 	 */
-	EClass getBloco();
+	EClass getBlock();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.Bloco#getDefvariavel <em>Defvariavel</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Block#getDefVariable <em>Def Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Defvariavel</em>'.
-	 * @see pascalito.Bloco#getDefvariavel()
-	 * @see #getBloco()
+	 * @return the meta object for the containment reference list '<em>Def Variable</em>'.
+	 * @see pascalito.Block#getDefVariable()
+	 * @see #getBlock()
 	 * @generated
 	 */
-	EReference getBloco_Defvariavel();
+	EReference getBlock_DefVariable();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.Bloco#getDefprocedimento <em>Defprocedimento</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Block#getDefprocedure <em>Defprocedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Defprocedimento</em>'.
-	 * @see pascalito.Bloco#getDefprocedimento()
-	 * @see #getBloco()
+	 * @return the meta object for the containment reference list '<em>Defprocedure</em>'.
+	 * @see pascalito.Block#getDefprocedure()
+	 * @see #getBlock()
 	 * @generated
 	 */
-	EReference getBloco_Defprocedimento();
+	EReference getBlock_Defprocedure();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.Bloco#getExecuta <em>Executa</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Block#getExecute <em>Execute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Executa</em>'.
-	 * @see pascalito.Bloco#getExecuta()
-	 * @see #getBloco()
+	 * @return the meta object for the containment reference list '<em>Execute</em>'.
+	 * @see pascalito.Block#getExecute()
+	 * @see #getBlock()
 	 * @generated
 	 */
-	EReference getBloco_Executa();
+	EReference getBlock_Execute();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.CallVariavel <em>Call Variavel</em>}'.
+	 * Returns the meta object for class '{@link pascalito.CallVariable <em>Call Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Call Variavel</em>'.
-	 * @see pascalito.CallVariavel
+	 * @return the meta object for class '<em>Call Variable</em>'.
+	 * @see pascalito.CallVariable
 	 * @generated
 	 */
-	EClass getCallVariavel();
+	EClass getCallVariable();
 
 	/**
-	 * Returns the meta object for the reference '{@link pascalito.CallVariavel#getRepresenta <em>Representa</em>}'.
+	 * Returns the meta object for the reference '{@link pascalito.CallVariable#getRepresent <em>Represent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Representa</em>'.
-	 * @see pascalito.CallVariavel#getRepresenta()
-	 * @see #getCallVariavel()
+	 * @return the meta object for the reference '<em>Represent</em>'.
+	 * @see pascalito.CallVariable#getRepresent()
+	 * @see #getCallVariable()
 	 * @generated
 	 */
-	EReference getCallVariavel_Representa();
+	EReference getCallVariable_Represent();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Comando <em>Comando</em>}'.
+	 * Returns the meta object for class '{@link pascalito.Command <em>Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Comando</em>'.
-	 * @see pascalito.Comando
+	 * @return the meta object for class '<em>Command</em>'.
+	 * @see pascalito.Command
 	 * @generated
 	 */
-	EClass getComando();
-
-	/**
-	 * Returns the meta object for class '{@link pascalito.CallProcedimento <em>Call Procedimento</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Call Procedimento</em>'.
-	 * @see pascalito.CallProcedimento
-	 * @generated
-	 */
-	EClass getCallProcedimento();
-
-	/**
-	 * Returns the meta object for the reference '{@link pascalito.CallProcedimento#getDefinido <em>Definido</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Definido</em>'.
-	 * @see pascalito.CallProcedimento#getDefinido()
-	 * @see #getCallProcedimento()
-	 * @generated
-	 */
-	EReference getCallProcedimento_Definido();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.CallProcedimento#getParametro <em>Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parametro</em>'.
-	 * @see pascalito.CallProcedimento#getParametro()
-	 * @see #getCallProcedimento()
-	 * @generated
-	 */
-	EReference getCallProcedimento_Parametro();
-
-	/**
-	 * Returns the meta object for class '{@link pascalito.Atribuicao <em>Atribuicao</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Atribuicao</em>'.
-	 * @see pascalito.Atribuicao
-	 * @generated
-	 */
-	EClass getAtribuicao();
-
-	/**
-	 * Returns the meta object for the reference '{@link pascalito.Atribuicao#getAtribui <em>Atribui</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Atribui</em>'.
-	 * @see pascalito.Atribuicao#getAtribui()
-	 * @see #getAtribuicao()
-	 * @generated
-	 */
-	EReference getAtribuicao_Atribui();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Atribuicao#getAtribuiResultado <em>Atribui Resultado</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Atribui Resultado</em>'.
-	 * @see pascalito.Atribuicao#getAtribuiResultado()
-	 * @see #getAtribuicao()
-	 * @generated
-	 */
-	EReference getAtribuicao_AtribuiResultado();
-
-	/**
-	 * Returns the meta object for class '{@link pascalito.Desvio <em>Desvio</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Desvio</em>'.
-	 * @see pascalito.Desvio
-	 * @generated
-	 */
-	EClass getDesvio();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Desvio#getSe <em>Se</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Se</em>'.
-	 * @see pascalito.Desvio#getSe()
-	 * @see #getDesvio()
-	 * @generated
-	 */
-	EReference getDesvio_Se();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.Desvio#getFaca <em>Faca</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Faca</em>'.
-	 * @see pascalito.Desvio#getFaca()
-	 * @see #getDesvio()
-	 * @generated
-	 */
-	EReference getDesvio_Faca();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.Desvio#getSeNao <em>Se Nao</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Se Nao</em>'.
-	 * @see pascalito.Desvio#getSeNao()
-	 * @see #getDesvio()
-	 * @generated
-	 */
-	EReference getDesvio_SeNao();
+	EClass getCommand();
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.Loop <em>Loop</em>}'.
@@ -1145,68 +1020,68 @@ public interface PascalitoPackage extends EPackage {
 	EClass getLoop();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Loop#getSe <em>Se</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.Loop#getWhile <em>While</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Se</em>'.
-	 * @see pascalito.Loop#getSe()
+	 * @return the meta object for the containment reference '<em>While</em>'.
+	 * @see pascalito.Loop#getWhile()
 	 * @see #getLoop()
 	 * @generated
 	 */
-	EReference getLoop_Se();
+	EReference getLoop_While();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.Loop#getFaca <em>Faca</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Loop#getDo <em>Do</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Faca</em>'.
-	 * @see pascalito.Loop#getFaca()
+	 * @return the meta object for the containment reference list '<em>Do</em>'.
+	 * @see pascalito.Loop#getDo()
 	 * @see #getLoop()
 	 * @generated
 	 */
-	EReference getLoop_Faca();
+	EReference getLoop_Do();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Expressao <em>Expressao</em>}'.
+	 * Returns the meta object for class '{@link pascalito.Expression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expressao</em>'.
-	 * @see pascalito.Expressao
+	 * @return the meta object for class '<em>Expression</em>'.
+	 * @see pascalito.Expression
 	 * @generated
 	 */
-	EClass getExpressao();
+	EClass getExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Expressao#getLeft <em>Left</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.Expression#getLeft <em>Left</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Left</em>'.
-	 * @see pascalito.Expressao#getLeft()
-	 * @see #getExpressao()
+	 * @see pascalito.Expression#getLeft()
+	 * @see #getExpression()
 	 * @generated
 	 */
-	EReference getExpressao_Left();
+	EReference getExpression_Left();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Expressao#getRight <em>Right</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.Expression#getRight <em>Right</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Right</em>'.
-	 * @see pascalito.Expressao#getRight()
-	 * @see #getExpressao()
+	 * @see pascalito.Expression#getRight()
+	 * @see #getExpression()
 	 * @generated
 	 */
-	EReference getExpressao_Right();
+	EReference getExpression_Right();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.ExpBinLogica <em>Exp Bin Logica</em>}'.
+	 * Returns the meta object for class '{@link pascalito.ExpBinLogical <em>Exp Bin Logical</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Exp Bin Logica</em>'.
-	 * @see pascalito.ExpBinLogica
+	 * @return the meta object for class '<em>Exp Bin Logical</em>'.
+	 * @see pascalito.ExpBinLogical
 	 * @generated
 	 */
-	EClass getExpBinLogica();
+	EClass getExpBinLogical();
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.ExpNeg <em>Exp Neg</em>}'.
@@ -1219,15 +1094,15 @@ public interface PascalitoPackage extends EPackage {
 	EClass getExpNeg();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.ExpNeg#getNega <em>Nega</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.ExpNeg#getNegate <em>Negate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Nega</em>'.
-	 * @see pascalito.ExpNeg#getNega()
+	 * @return the meta object for the containment reference '<em>Negate</em>'.
+	 * @see pascalito.ExpNeg#getNegate()
 	 * @see #getExpNeg()
 	 * @generated
 	 */
-	EReference getExpNeg_Nega();
+	EReference getExpNeg_Negate();
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.newRole15 <em>new Role15</em>}'.
@@ -1240,90 +1115,120 @@ public interface PascalitoPackage extends EPackage {
 	EClass getnewRole15();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Variavel <em>Variavel</em>}'.
+	 * Returns the meta object for class '{@link pascalito.Variable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Variavel</em>'.
-	 * @see pascalito.Variavel
+	 * @return the meta object for class '<em>Variable</em>'.
+	 * @see pascalito.Variable
 	 * @generated
 	 */
-	EClass getVariavel();
+	EClass getVariable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Variavel#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link pascalito.Variable#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see pascalito.Variavel#getName()
-	 * @see #getVariavel()
+	 * @see pascalito.Variable#getName()
+	 * @see #getVariable()
 	 * @generated
 	 */
-	EAttribute getVariavel_Name();
+	EAttribute getVariable_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Variavel#getTipo <em>Tipo</em>}'.
+	 * Returns the meta object for class '{@link pascalito.Procedure <em>Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo</em>'.
-	 * @see pascalito.Variavel#getTipo()
-	 * @see #getVariavel()
+	 * @return the meta object for class '<em>Procedure</em>'.
+	 * @see pascalito.Procedure
 	 * @generated
 	 */
-	EAttribute getVariavel_Tipo();
+	EClass getProcedure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Variavel#getValor <em>Valor</em>}'.
+	 * Returns the meta object for the containment reference '{@link pascalito.Procedure#getBlock <em>Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Valor</em>'.
-	 * @see pascalito.Variavel#getValor()
-	 * @see #getVariavel()
+	 * @return the meta object for the containment reference '<em>Block</em>'.
+	 * @see pascalito.Procedure#getBlock()
+	 * @see #getProcedure()
 	 * @generated
 	 */
-	EAttribute getVariavel_Valor();
+	EReference getProcedure_Block();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Procedimento <em>Procedimento</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Procedimento</em>'.
-	 * @see pascalito.Procedimento
-	 * @generated
-	 */
-	EClass getProcedimento();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pascalito.Procedimento#getBloco <em>Bloco</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Bloco</em>'.
-	 * @see pascalito.Procedimento#getBloco()
-	 * @see #getProcedimento()
-	 * @generated
-	 */
-	EReference getProcedimento_Bloco();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pascalito.Procedimento#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link pascalito.Procedure#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see pascalito.Procedimento#getName()
-	 * @see #getProcedimento()
+	 * @see pascalito.Procedure#getName()
+	 * @see #getProcedure()
 	 * @generated
 	 */
-	EAttribute getProcedimento_Name();
+	EAttribute getProcedure_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.Procedimento#getParametro <em>Parametro</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.Procedure#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parametro</em>'.
-	 * @see pascalito.Procedimento#getParametro()
-	 * @see #getProcedimento()
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see pascalito.Procedure#getParameter()
+	 * @see #getProcedure()
 	 * @generated
 	 */
-	EReference getProcedimento_Parametro();
+	EReference getProcedure_Parameter();
+
+	/**
+	 * Returns the meta object for class '{@link pascalito.CallProcExp <em>Call Proc Exp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Call Proc Exp</em>'.
+	 * @see pascalito.CallProcExp
+	 * @generated
+	 */
+	EClass getCallProcExp();
+
+	/**
+	 * Returns the meta object for the reference '{@link pascalito.CallProcExp#getRepresent <em>Represent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Represent</em>'.
+	 * @see pascalito.CallProcExp#getRepresent()
+	 * @see #getCallProcExp()
+	 * @generated
+	 */
+	EReference getCallProcExp_Represent();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pascalito.CallProcExp#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see pascalito.CallProcExp#getParameter()
+	 * @see #getCallProcExp()
+	 * @generated
+	 */
+	EReference getCallProcExp_Parameter();
+
+	/**
+	 * Returns the meta object for class '{@link pascalito.ExpBinNv1 <em>Exp Bin Nv1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exp Bin Nv1</em>'.
+	 * @see pascalito.ExpBinNv1
+	 * @generated
+	 */
+	EClass getExpBinNv1();
+
+	/**
+	 * Returns the meta object for class '{@link pascalito.ExpBinNv0 <em>Exp Bin Nv0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exp Bin Nv0</em>'.
+	 * @see pascalito.ExpBinNv0
+	 * @generated
+	 */
+	EClass getExpBinNv0();
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.CallProc <em>Call Proc</em>}'.
@@ -1336,46 +1241,101 @@ public interface PascalitoPackage extends EPackage {
 	EClass getCallProc();
 
 	/**
-	 * Returns the meta object for the reference '{@link pascalito.CallProc#getRepresentaProc <em>Representa Proc</em>}'.
+	 * Returns the meta object for the reference '{@link pascalito.CallProc#getDefined <em>Defined</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Representa Proc</em>'.
-	 * @see pascalito.CallProc#getRepresentaProc()
+	 * @return the meta object for the reference '<em>Defined</em>'.
+	 * @see pascalito.CallProc#getDefined()
 	 * @see #getCallProc()
 	 * @generated
 	 */
-	EReference getCallProc_RepresentaProc();
+	EReference getCallProc_Defined();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pascalito.CallProc#getParametro <em>Parametro</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pascalito.CallProc#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parametro</em>'.
-	 * @see pascalito.CallProc#getParametro()
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see pascalito.CallProc#getParameter()
 	 * @see #getCallProc()
 	 * @generated
 	 */
-	EReference getCallProc_Parametro();
+	EReference getCallProc_Parameter();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.N_Comutativa <em>NComutativa</em>}'.
+	 * Returns the meta object for class '{@link pascalito.Atribuition <em>Atribuition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>NComutativa</em>'.
-	 * @see pascalito.N_Comutativa
+	 * @return the meta object for class '<em>Atribuition</em>'.
+	 * @see pascalito.Atribuition
 	 * @generated
 	 */
-	EClass getN_Comutativa();
+	EClass getAtribuition();
 
 	/**
-	 * Returns the meta object for class '{@link pascalito.Comutativa <em>Comutativa</em>}'.
+	 * Returns the meta object for the reference '{@link pascalito.Atribuition#getSets <em>Sets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Comutativa</em>'.
-	 * @see pascalito.Comutativa
+	 * @return the meta object for the reference '<em>Sets</em>'.
+	 * @see pascalito.Atribuition#getSets()
+	 * @see #getAtribuition()
 	 * @generated
 	 */
-	EClass getComutativa();
+	EReference getAtribuition_Sets();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pascalito.Atribuition#getAtribuiResultado <em>Atribui Resultado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Atribui Resultado</em>'.
+	 * @see pascalito.Atribuition#getAtribuiResultado()
+	 * @see #getAtribuition()
+	 * @generated
+	 */
+	EReference getAtribuition_AtribuiResultado();
+
+	/**
+	 * Returns the meta object for class '{@link pascalito.If <em>If</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>If</em>'.
+	 * @see pascalito.If
+	 * @generated
+	 */
+	EClass getIf();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link pascalito.If#getIfExp <em>If Exp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>If Exp</em>'.
+	 * @see pascalito.If#getIfExp()
+	 * @see #getIf()
+	 * @generated
+	 */
+	EReference getIf_IfExp();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pascalito.If#getDo <em>Do</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Do</em>'.
+	 * @see pascalito.If#getDo()
+	 * @see #getIf()
+	 * @generated
+	 */
+	EReference getIf_Do();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pascalito.If#getElseCmd <em>Else Cmd</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Else Cmd</em>'.
+	 * @see pascalito.If#getElseCmd()
+	 * @see #getIf()
+	 * @generated
+	 */
+	EReference getIf_ElseCmd();
 
 	/**
 	 * Returns the meta object for class '{@link pascalito.NumberLiteral <em>Number Literal</em>}'.
@@ -1411,14 +1371,14 @@ public interface PascalitoPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.ProgramaImpl <em>Programa</em>}' class.
+		 * The meta object literal for the '{@link pascalito.impl.ProgramImpl <em>Program</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ProgramaImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getPrograma()
+		 * @see pascalito.impl.ProgramImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getProgram()
 		 * @generated
 		 */
-		EClass PROGRAMA = eINSTANCE.getPrograma();
+		EClass PROGRAM = eINSTANCE.getProgram();
 
 		/**
 		 * The meta object literal for the '<em><b>Ident</b></em>' attribute feature.
@@ -1426,163 +1386,77 @@ public interface PascalitoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROGRAMA__IDENT = eINSTANCE.getPrograma_Ident();
+		EAttribute PROGRAM__IDENT = eINSTANCE.getProgram_Ident();
 
 		/**
-		 * The meta object literal for the '<em><b>Bloco</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Block</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROGRAMA__BLOCO = eINSTANCE.getPrograma_Bloco();
+		EReference PROGRAM__BLOCK = eINSTANCE.getProgram_Block();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.BlocoImpl <em>Bloco</em>}' class.
+		 * The meta object literal for the '{@link pascalito.impl.BlockImpl <em>Block</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.BlocoImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getBloco()
+		 * @see pascalito.impl.BlockImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getBlock()
 		 * @generated
 		 */
-		EClass BLOCO = eINSTANCE.getBloco();
+		EClass BLOCK = eINSTANCE.getBlock();
 
 		/**
-		 * The meta object literal for the '<em><b>Defvariavel</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BLOCO__DEFVARIAVEL = eINSTANCE.getBloco_Defvariavel();
-
-		/**
-		 * The meta object literal for the '<em><b>Defprocedimento</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Def Variable</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BLOCO__DEFPROCEDIMENTO = eINSTANCE.getBloco_Defprocedimento();
+		EReference BLOCK__DEF_VARIABLE = eINSTANCE.getBlock_DefVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Executa</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Defprocedure</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BLOCO__EXECUTA = eINSTANCE.getBloco_Executa();
+		EReference BLOCK__DEFPROCEDURE = eINSTANCE.getBlock_Defprocedure();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.CallVariavelImpl <em>Call Variavel</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.CallVariavelImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getCallVariavel()
-		 * @generated
-		 */
-		EClass CALL_VARIAVEL = eINSTANCE.getCallVariavel();
-
-		/**
-		 * The meta object literal for the '<em><b>Representa</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Execute</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALL_VARIAVEL__REPRESENTA = eINSTANCE.getCallVariavel_Representa();
+		EReference BLOCK__EXECUTE = eINSTANCE.getBlock_Execute();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.ComandoImpl <em>Comando</em>}' class.
+		 * The meta object literal for the '{@link pascalito.impl.CallVariableImpl <em>Call Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ComandoImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getComando()
+		 * @see pascalito.impl.CallVariableImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getCallVariable()
 		 * @generated
 		 */
-		EClass COMANDO = eINSTANCE.getComando();
+		EClass CALL_VARIABLE = eINSTANCE.getCallVariable();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.CallProcedimentoImpl <em>Call Procedimento</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.CallProcedimentoImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getCallProcedimento()
-		 * @generated
-		 */
-		EClass CALL_PROCEDIMENTO = eINSTANCE.getCallProcedimento();
-
-		/**
-		 * The meta object literal for the '<em><b>Definido</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Represent</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALL_PROCEDIMENTO__DEFINIDO = eINSTANCE.getCallProcedimento_Definido();
+		EReference CALL_VARIABLE__REPRESENT = eINSTANCE.getCallVariable_Represent();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametro</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link pascalito.impl.CommandImpl <em>Command</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.CommandImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getCommand()
 		 * @generated
 		 */
-		EReference CALL_PROCEDIMENTO__PARAMETRO = eINSTANCE.getCallProcedimento_Parametro();
-
-		/**
-		 * The meta object literal for the '{@link pascalito.impl.AtribuicaoImpl <em>Atribuicao</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.AtribuicaoImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getAtribuicao()
-		 * @generated
-		 */
-		EClass ATRIBUICAO = eINSTANCE.getAtribuicao();
-
-		/**
-		 * The meta object literal for the '<em><b>Atribui</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ATRIBUICAO__ATRIBUI = eINSTANCE.getAtribuicao_Atribui();
-
-		/**
-		 * The meta object literal for the '<em><b>Atribui Resultado</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ATRIBUICAO__ATRIBUI_RESULTADO = eINSTANCE.getAtribuicao_AtribuiResultado();
-
-		/**
-		 * The meta object literal for the '{@link pascalito.impl.DesvioImpl <em>Desvio</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.DesvioImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getDesvio()
-		 * @generated
-		 */
-		EClass DESVIO = eINSTANCE.getDesvio();
-
-		/**
-		 * The meta object literal for the '<em><b>Se</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DESVIO__SE = eINSTANCE.getDesvio_Se();
-
-		/**
-		 * The meta object literal for the '<em><b>Faca</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DESVIO__FACA = eINSTANCE.getDesvio_Faca();
-
-		/**
-		 * The meta object literal for the '<em><b>Se Nao</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DESVIO__SE_NAO = eINSTANCE.getDesvio_SeNao();
+		EClass COMMAND = eINSTANCE.getCommand();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.LoopImpl <em>Loop</em>}' class.
@@ -1595,30 +1469,30 @@ public interface PascalitoPackage extends EPackage {
 		EClass LOOP = eINSTANCE.getLoop();
 
 		/**
-		 * The meta object literal for the '<em><b>Se</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>While</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LOOP__SE = eINSTANCE.getLoop_Se();
+		EReference LOOP__WHILE = eINSTANCE.getLoop_While();
 
 		/**
-		 * The meta object literal for the '<em><b>Faca</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Do</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LOOP__FACA = eINSTANCE.getLoop_Faca();
+		EReference LOOP__DO = eINSTANCE.getLoop_Do();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.ExpressaoImpl <em>Expressao</em>}' class.
+		 * The meta object literal for the '{@link pascalito.impl.ExpressionImpl <em>Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ExpressaoImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getExpressao()
+		 * @see pascalito.impl.ExpressionImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getExpression()
 		 * @generated
 		 */
-		EClass EXPRESSAO = eINSTANCE.getExpressao();
+		EClass EXPRESSION = eINSTANCE.getExpression();
 
 		/**
 		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -1626,7 +1500,7 @@ public interface PascalitoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXPRESSAO__LEFT = eINSTANCE.getExpressao_Left();
+		EReference EXPRESSION__LEFT = eINSTANCE.getExpression_Left();
 
 		/**
 		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -1634,17 +1508,17 @@ public interface PascalitoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXPRESSAO__RIGHT = eINSTANCE.getExpressao_Right();
+		EReference EXPRESSION__RIGHT = eINSTANCE.getExpression_Right();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.ExpBinLogicaImpl <em>Exp Bin Logica</em>}' class.
+		 * The meta object literal for the '{@link pascalito.impl.ExpBinLogicalImpl <em>Exp Bin Logical</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ExpBinLogicaImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getExpBinLogica()
+		 * @see pascalito.impl.ExpBinLogicalImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getExpBinLogical()
 		 * @generated
 		 */
-		EClass EXP_BIN_LOGICA = eINSTANCE.getExpBinLogica();
+		EClass EXP_BIN_LOGICAL = eINSTANCE.getExpBinLogical();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.ExpNegImpl <em>Exp Neg</em>}' class.
@@ -1657,12 +1531,12 @@ public interface PascalitoPackage extends EPackage {
 		EClass EXP_NEG = eINSTANCE.getExpNeg();
 
 		/**
-		 * The meta object literal for the '<em><b>Nega</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Negate</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXP_NEG__NEGA = eINSTANCE.getExpNeg_Nega();
+		EReference EXP_NEG__NEGATE = eINSTANCE.getExpNeg_Negate();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.newRole15Impl <em>new Role15</em>}' class.
@@ -1675,14 +1549,14 @@ public interface PascalitoPackage extends EPackage {
 		EClass NEW_ROLE15 = eINSTANCE.getnewRole15();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.VariavelImpl <em>Variavel</em>}' class.
+		 * The meta object literal for the '{@link pascalito.impl.VariableImpl <em>Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.VariavelImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getVariavel()
+		 * @see pascalito.impl.VariableImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getVariable()
 		 * @generated
 		 */
-		EClass VARIAVEL = eINSTANCE.getVariavel();
+		EClass VARIABLE = eINSTANCE.getVariable();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1690,41 +1564,25 @@ public interface PascalitoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VARIAVEL__NAME = eINSTANCE.getVariavel_Name();
+		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
+		 * The meta object literal for the '{@link pascalito.impl.ProcedureImpl <em>Procedure</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.ProcedureImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getProcedure()
+		 * @generated
+		 */
+		EClass PROCEDURE = eINSTANCE.getProcedure();
+
+		/**
+		 * The meta object literal for the '<em><b>Block</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VARIAVEL__TIPO = eINSTANCE.getVariavel_Tipo();
-
-		/**
-		 * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VARIAVEL__VALOR = eINSTANCE.getVariavel_Valor();
-
-		/**
-		 * The meta object literal for the '{@link pascalito.impl.ProcedimentoImpl <em>Procedimento</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ProcedimentoImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getProcedimento()
-		 * @generated
-		 */
-		EClass PROCEDIMENTO = eINSTANCE.getProcedimento();
-
-		/**
-		 * The meta object literal for the '<em><b>Bloco</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCEDIMENTO__BLOCO = eINSTANCE.getProcedimento_Bloco();
+		EReference PROCEDURE__BLOCK = eINSTANCE.getProcedure_Block();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1732,15 +1590,61 @@ public interface PascalitoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROCEDIMENTO__NAME = eINSTANCE.getProcedimento_Name();
+		EAttribute PROCEDURE__NAME = eINSTANCE.getProcedure_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametro</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROCEDIMENTO__PARAMETRO = eINSTANCE.getProcedimento_Parametro();
+		EReference PROCEDURE__PARAMETER = eINSTANCE.getProcedure_Parameter();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.CallProcExpImpl <em>Call Proc Exp</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.CallProcExpImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getCallProcExp()
+		 * @generated
+		 */
+		EClass CALL_PROC_EXP = eINSTANCE.getCallProcExp();
+
+		/**
+		 * The meta object literal for the '<em><b>Represent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL_PROC_EXP__REPRESENT = eINSTANCE.getCallProcExp_Represent();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL_PROC_EXP__PARAMETER = eINSTANCE.getCallProcExp_Parameter();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.ExpBinNv1Impl <em>Exp Bin Nv1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.ExpBinNv1Impl
+		 * @see pascalito.impl.PascalitoPackageImpl#getExpBinNv1()
+		 * @generated
+		 */
+		EClass EXP_BIN_NV1 = eINSTANCE.getExpBinNv1();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.ExpBinNv0Impl <em>Exp Bin Nv0</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.ExpBinNv0Impl
+		 * @see pascalito.impl.PascalitoPackageImpl#getExpBinNv0()
+		 * @generated
+		 */
+		EClass EXP_BIN_NV0 = eINSTANCE.getExpBinNv0();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.CallProcImpl <em>Call Proc</em>}' class.
@@ -1753,40 +1657,80 @@ public interface PascalitoPackage extends EPackage {
 		EClass CALL_PROC = eINSTANCE.getCallProc();
 
 		/**
-		 * The meta object literal for the '<em><b>Representa Proc</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Defined</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALL_PROC__REPRESENTA_PROC = eINSTANCE.getCallProc_RepresentaProc();
+		EReference CALL_PROC__DEFINED = eINSTANCE.getCallProc_Defined();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametro</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CALL_PROC__PARAMETRO = eINSTANCE.getCallProc_Parametro();
+		EReference CALL_PROC__PARAMETER = eINSTANCE.getCallProc_Parameter();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.N_ComutativaImpl <em>NComutativa</em>}' class.
+		 * The meta object literal for the '{@link pascalito.impl.AtribuitionImpl <em>Atribuition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.N_ComutativaImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getN_Comutativa()
+		 * @see pascalito.impl.AtribuitionImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getAtribuition()
 		 * @generated
 		 */
-		EClass NCOMUTATIVA = eINSTANCE.getN_Comutativa();
+		EClass ATRIBUITION = eINSTANCE.getAtribuition();
 
 		/**
-		 * The meta object literal for the '{@link pascalito.impl.ComutativaImpl <em>Comutativa</em>}' class.
+		 * The meta object literal for the '<em><b>Sets</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see pascalito.impl.ComutativaImpl
-		 * @see pascalito.impl.PascalitoPackageImpl#getComutativa()
 		 * @generated
 		 */
-		EClass COMUTATIVA = eINSTANCE.getComutativa();
+		EReference ATRIBUITION__SETS = eINSTANCE.getAtribuition_Sets();
+
+		/**
+		 * The meta object literal for the '<em><b>Atribui Resultado</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATRIBUITION__ATRIBUI_RESULTADO = eINSTANCE.getAtribuition_AtribuiResultado();
+
+		/**
+		 * The meta object literal for the '{@link pascalito.impl.IfImpl <em>If</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pascalito.impl.IfImpl
+		 * @see pascalito.impl.PascalitoPackageImpl#getIf()
+		 * @generated
+		 */
+		EClass IF = eINSTANCE.getIf();
+
+		/**
+		 * The meta object literal for the '<em><b>If Exp</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IF__IF_EXP = eINSTANCE.getIf_IfExp();
+
+		/**
+		 * The meta object literal for the '<em><b>Do</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IF__DO = eINSTANCE.getIf_Do();
+
+		/**
+		 * The meta object literal for the '<em><b>Else Cmd</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IF__ELSE_CMD = eINSTANCE.getIf_ElseCmd();
 
 		/**
 		 * The meta object literal for the '{@link pascalito.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
